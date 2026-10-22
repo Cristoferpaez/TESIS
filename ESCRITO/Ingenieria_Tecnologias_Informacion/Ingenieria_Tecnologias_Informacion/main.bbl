@@ -7,8 +7,7 @@
 \providecommand{\BIBentrySTDinterwordspacing}{\spaceskip=0pt\relax}
 \providecommand{\BIBentryALTinterwordstretchfactor}{4}
 \providecommand{\BIBentryALTinterwordspacing}{\spaceskip=\fontdimen2\font plus
-\BIBentryALTinterwordstretchfactor\fontdimen3\font minus
-  \fontdimen4\font\relax}
+\BIBentryALTinterwordstretchfactor\fontdimen3\font minus \fontdimen4\font\relax}
 \providecommand{\BIBforeignlanguage}[2]{{%
 \expandafter\ifx\csname l@#1\endcsname\relax
 \typeout{** WARNING: IEEEtran.bst: No hyphenation pattern has been}%
@@ -22,28 +21,21 @@
 \BIBdecl
 
 \bibitem{vaswani2017attention}
-A.~Vaswani, N.~Shazeer, N.~Parmar, J.~Uszkoreit, L.~Jones, A.~N. Gomez,
-  {\L}.~Kaiser, and I.~Polosukhin, ``Attention is all you need,''
-  \emph{Advances in Neural Information Processing Systems}, vol.~30, 2017.
+A.~Vaswani, N.~Shazeer, N.~Parmar, J.~Uszkoreit, L.~Jones, A.~N. Gomez, {\L}.~Kaiser, and I.~Polosukhin, ``Attention is all you need,'' \emph{Advances in Neural Information Processing Systems}, vol.~30, 2017.
 
 \bibitem{goodfellow2016deep}
-I.~Goodfellow, Y.~Bengio, and A.~Courville, \emph{Deep Learning}.\hskip 1em
-  plus 0.5em minus 0.4em\relax MIT Press, 2016.
+I.~Goodfellow, Y.~Bengio, and A.~Courville, \emph{Deep Learning}.\hskip 1em plus 0.5em minus 0.4em\relax MIT Press, 2016.
 
 \bibitem{sommerville2016software}
-I.~Sommerville, \emph{Software Engineering}, 10th~ed.\hskip 1em plus 0.5em
-  minus 0.4em\relax Pearson, 2016.
+I.~Sommerville, \emph{Software Engineering}, 10th~ed.\hskip 1em plus 0.5em minus 0.4em\relax Pearson, 2016.
 
 \bibitem{boehm1988spiral}
-B.~W. Boehm, ``A spiral model of software development and enhancement,''
-  \emph{Computer}, vol.~21, no.~5, pp. 61--72, 1988.
+B.~W. Boehm, ``A spiral model of software development and enhancement,'' \emph{Computer}, vol.~21, no.~5, pp. 61--72, 1988.
 
 \bibitem{hevner2004design}
-A.~R. Hevner, S.~T. March, J.~Park, and S.~Ram, ``Design science in information
-  systems research,'' \emph{MIS Quarterly}, vol.~28, no.~1, pp. 75--105, 2004.
+A.~R. Hevner, S.~T. March, J.~Park, and S.~Ram, ``Design science in information systems research,'' \emph{MIS Quarterly}, vol.~28, no.~1, pp. 75--105, 2004.
 
 \bibitem{humble2011devops}
-J.~Humble and D.~Farley, ``Continuous delivery and devops: A practical
-  approach,'' in \emph{Agile Conference}, 2011.
+J.~Humble and D.~Farley, ``Continuous delivery and devops: A practical approach,'' in \emph{Agile Conference}, 2011.
 
 \end{thebibliography}
