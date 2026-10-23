@@ -20,17 +20,26 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{vaswani2017attention}
-A.~Vaswani, N.~Shazeer, N.~Parmar, J.~Uszkoreit, L.~Jones, A.~N. Gomez, {\L}.~Kaiser, and I.~Polosukhin, ``Attention is all you need,'' \emph{Advances in Neural Information Processing Systems}, vol.~30, 2017.
+\bibitem{wcag22}
+{World Wide Web Consortium (W3C)}, ``Web content accessibility guidelines ({WCAG}) 2.2,'' W3C Recommendation, Dec. 2024, disponible en: \url{https://www.w3.org/TR/WCAG22/}.
 
-\bibitem{goodfellow2016deep}
-I.~Goodfellow, Y.~Bengio, and A.~Courville, \emph{Deep Learning}.\hskip 1em plus 0.5em minus 0.4em\relax MIT Press, 2016.
+\bibitem{acosta2017analisis}
+T.~Acosta and S.~Luj{\'a}n-Mora, ``An{\'a}lisis de la accesibilidad de los sitios web de las universidades ecuatorianas de excelencia,'' \emph{Enfoque UTE}, vol.~8, no. suplemento 1, pp. 46--61, 2017.
 
-\bibitem{sommerville2016software}
-I.~Sommerville, \emph{Software Engineering}, 10th~ed.\hskip 1em plus 0.5em minus 0.4em\relax Pearson, 2016.
+\bibitem{campoverde2020empirical}
+M.~Campoverde-Molina, S.~Luj{\'a}n-Mora, and L.~Valverde~Garc{\'\i}a, ``Empirical studies on web accessibility of educational websites: A systematic literature review,'' \emph{IEEE Access}, vol.~8, pp. 91\,676--91\,700, 2020.
 
-\bibitem{boehm1988spiral}
-B.~W. Boehm, ``A spiral model of software development and enhancement,'' \emph{Computer}, vol.~21, no.~5, pp. 61--72, 1988.
+\bibitem{chiriboga2024accessibility}
+W.~Chiriboga Casanova~Quevedo, N.~Medina~Medina, and P.~Paderewski~Rodr{\'\i}guez, ``Accessibility analysis of ecuadorian university web sites,'' \emph{InGenio Journal}, vol.~7, no.~2, pp. 137--157, 2024.
+
+\bibitem{jaeger2006assessing}
+P.~T. Jaeger, ``Assessing section 508 compliance on federal e-government web sites: A multi-method, user-centered evaluation of accessibility for persons with disabilities,'' \emph{Government Information Quarterly}, vol.~23, no.~2, pp. 169--190, 2006.
+
+\bibitem{vollenwyder2023how}
+B.~Vollenwyder, S.~Petralito, G.~H. Iten, F.~Br{\"u}hlmann, K.~Opwis, and E.~D. Mekler, ``How compliance with web accessibility standards shapes the experiences of users with and without disabilities,'' \emph{International Journal of Human-Computer Studies}, vol. 170, p. 102956, 2023.
+
+\bibitem{iso9241_210_2019}
+{International Organization for Standardization}, ``{ISO 9241-210:2019 Ergonomics of human-system interaction---Part 210: Human-centred design for interactive systems},'' Geneva, Switzerland, 2019, disponible en: \url{https://www.iso.org/standard/77520.html}.
 
 \bibitem{hevner2004design}
 A.~R. Hevner, S.~T. March, J.~Park, and S.~Ram, ``Design science in information systems research,'' \emph{MIS Quarterly}, vol.~28, no.~1, pp. 75--105, 2004.

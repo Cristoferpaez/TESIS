@@ -2,69 +2,285 @@
 \label{chap:introduccion}
 
 \section{Contextualización}
-\textit{La transformación digital ha convertido a los sitios web en herramientas fundamentales para la comunicación, la consulta de información y la prestación de servicios. A través de estos espacios digitales, las personas pueden acceder a contenidos educativos, realizar trámites, conocer productos y servicios, comunicarse con organizaciones y desarrollar diferentes actividades sin necesidad de desplazarse físicamente. Sin embargo, la disponibilidad de un sitio web no garantiza que todas las personas puedan utilizarlo en condiciones adecuadas. Para que los contenidos y las funcionalidades sean aprovechables por una mayor diversidad de usuarios, es necesario considerar aspectos relacionados con la accesibilidad digital, la usabilidad y la experiencia de usuario.
-La accesibilidad web comprende las características de diseño y desarrollo que permiten que las personas puedan percibir, comprender, navegar e interactuar con los contenidos digitales, incluidas aquellas que presentan discapacidades visuales, auditivas, motoras o cognitivas. También puede beneficiar a usuarios que experimentan limitaciones temporales o situacionales, como una lesión que dificulta el uso del ratón, dificultades para escuchar un audio en un ambiente ruidoso o problemas para leer una pantalla bajo condiciones de iluminación desfavorables. Por esta razón, la accesibilidad debe considerarse un componente del desarrollo web y no únicamente una adaptación posterior.
-En este ámbito, el Consorcio World Wide Web (W3C) establece las Pautas de Accesibilidad para el Contenido Web, conocidas como WCAG, que reúnen recomendaciones y criterios verificables para mejorar la accesibilidad de los contenidos digitales. La versión WCAG 2.2 organiza sus principios en cuatro categorías: perceptible, operable, comprensible y robusto. Estas pautas contemplan aspectos como las alternativas textuales para imágenes, la navegación mediante teclado, la identificación de los elementos de la interfaz, la claridad de los formularios y la compatibilidad con tecnologías de asistencia [1]. Su aplicación proporciona una referencia técnica para evaluar y mejorar los sitios web, aunque el cumplimiento de una norma no garantiza por sí solo que todas las personas tengan una experiencia satisfactoria.
-En el contexto ecuatoriano, la accesibilidad de los sitios web también constituye un tema de interés académico y tecnológico. Acosta y Luján-Mora analizaron sitios web de universidades ecuatorianas y estudiaron sus dificultades de accesibilidad con base en pautas internacionales [2]. Posteriormente, Campoverde-Molina, Luján-Mora y Valverde García realizaron una revisión sistemática de estudios empíricos sobre la accesibilidad de sitios web educativos, en la que identificaron el uso frecuente de herramientas automáticas y la necesidad de complementar estas evaluaciones con mecanismos manuales y participación de usuarios [3]. Estos trabajos evidencian la importancia de incorporar criterios de accesibilidad en las etapas de análisis, diseño, implementación y evaluación de los productos digitales.
-La necesidad de mejorar la accesibilidad no se limita a las instituciones educativas. Cualquier organización que disponga de un sitio web puede requerir una revisión de su estructura, sus contenidos y sus mecanismos de interacción para determinar si responden a las necesidades de sus usuarios. En consecuencia, actualizar un sitio web existente representa una oportunidad para examinar sus funcionalidades, identificar posibles barreras y priorizar mejoras sin que necesariamente sea preciso reemplazar por completo la plataforma tecnológica.
-El presente proyecto de integración curricular, titulado “Actualización de un sitio web mediante diseño centrado en el usuario para mejorar la accesibilidad y la experiencia de personas con discapacidad”, se orienta a la actualización de un sitio web existente mediante un proceso de diseño centrado en el usuario. La propuesta contempla un diagnóstico inicial, la identificación de necesidades y requisitos, el diseño y validación de prototipos, la implementación de mejoras en los flujos prioritarios y una evaluación posterior de los cambios realizados.
-El sitio web específico, la organización responsable, los módulos que se actualizarán y la disponibilidad de participantes se deberán acordar con el docente proponente antes de iniciar la implementación. Por ello, en esta etapa no se afirma que el sitio seleccionado presente errores determinados ni se atribuyen resultados a una evaluación que todavía no se ha ejecutado. El punto de partida será obtener evidencias que permitan establecer el estado inicial y definir las mejoras pertinentes.
-}
+La transformación digital ha convertido a los sitios web en herramientas fundamentales para la comunicación, la consulta de información y la prestación de servicios. A través de estos espacios digitales, las personas pueden acceder a contenidos educativos, realizar trámites, conocer productos y servicios, comunicarse con organizaciones y desarrollar diferentes actividades sin necesidad de desplazarse físicamente. Sin embargo, la disponibilidad de un sitio web no garantiza que todas las personas puedan utilizarlo en condiciones adecuadas. Para que los contenidos y las funcionalidades sean aprovechables por una mayor diversidad de usuarios, es necesario considerar aspectos relacionados con la accesibilidad digital, la usabilidad y la experiencia de usuario.
 
+La accesibilidad web comprende las características de diseño y desarrollo que permiten que las personas puedan percibir, comprender, navegar e interactuar con los contenidos digitales, incluidas aquellas que presentan discapacidades visuales, auditivas, motoras o cognitivas. También puede beneficiar a usuarios que experimentan limitaciones temporales o situacionales, como una lesión que dificulta el uso del ratón, dificultades para escuchar un audio en un ambiente ruidoso o problemas para leer una pantalla bajo condiciones de iluminación desfavorables. Por esta razón, la accesibilidad debe considerarse un componente del desarrollo web y no únicamente una adaptación posterior.
+
+En este ámbito, el Consorcio World Wide Web (W3C) establece las Pautas de Accesibilidad para el Contenido Web, conocidas como WCAG, que reúnen recomendaciones y criterios verificables para mejorar la accesibilidad de los contenidos digitales. La versión WCAG 2.2 organiza sus principios en cuatro categorías: perceptible, operable, comprensible y robusto. Estas pautas contemplan aspectos como las alternativas textuales para imágenes, la navegación mediante teclado, la identificación de los elementos de la interfaz, la claridad de los formularios y la compatibilidad con tecnologías de asistencia \cite{wcag22}. Su aplicación proporciona una referencia técnica para evaluar y mejorar los sitios web, aunque el cumplimiento de una norma no garantiza por sí solo que todas las personas tengan una experiencia satisfactoria.
+
+En el contexto ecuatoriano, la accesibilidad de los sitios web también constituye un tema de interés académico y tecnológico. Acosta y Luján-Mora analizaron sitios web de universidades ecuatorianas y estudiaron sus dificultades de accesibilidad con base en pautas internacionales \cite{acosta2017analisis}. Posteriormente, Campoverde-Molina, Luján-Mora y Valverde García realizaron una revisión sistemática de estudios empíricos sobre la accesibilidad de sitios web educativos, en la que identificaron el uso frecuente de herramientas automáticas y la necesidad de complementar estas evaluaciones con mecanismos manuales y participación de usuarios \cite{campoverde2020empirical}. Estos trabajos evidencian la importancia de incorporar criterios de accesibilidad en las etapas de análisis, diseño, implementación y evaluación de los productos digitales.
+
+La necesidad de mejorar la accesibilidad no se limita a las instituciones educativas. Cualquier organización que disponga de un sitio web puede requerir una revisión de su estructura, sus contenidos y sus mecanismos de interacción para determinar si responden a las necesidades de sus usuarios. En consecuencia, actualizar un sitio web existente representa una oportunidad para examinar sus funcionalidades, identificar posibles barreras y priorizar mejoras sin que necesariamente sea preciso reemplazar por completo la plataforma tecnológica.
+
+El presente proyecto de integración curricular, titulado ``Actualización de un sitio web mediante diseño centrado en el usuario para mejorar la accesibilidad y la experiencia de personas con discapacidad'', se orienta a la actualización de un sitio web existente mediante un proceso de diseño centrado en el usuario. La propuesta contempla un diagnóstico inicial, la identificación de necesidades y requisitos, el diseño y validación de prototipos, la implementación de mejoras en los flujos prioritarios y una evaluación posterior de los cambios realizados.
+
+El sitio web específico, la organización responsable, los módulos que se actualizarán y la disponibilidad de participantes se deberán acordar con el docente proponente antes de iniciar la implementación. Por ello, en esta etapa no se afirma que el sitio seleccionado presente errores determinados ni se atribuyen resultados a una evaluación que todavía no se ha ejecutado. El punto de partida será obtener evidencias que permitan establecer el estado inicial y definir las mejoras pertinentes.
 
 \section{Estado del Arte}
-\textit{[Presentar la revisión de soluciones, tecnologías, metodologías o proyectos similares relacionados con el tema del proyecto. Analizar mínimo cinco (5) trabajos provenientes de fuentes académicas, técnicas o industriales, citados según normas IEEE. Incluir comparación, ventajas, limitaciones y relación con el proyecto propuesto.]}
+La accesibilidad web ha sido estudiada desde diferentes perspectivas, entre ellas la evaluación de estándares técnicos, el análisis de sitios institucionales, la aplicación de herramientas automáticas y la participación de personas con discapacidad en pruebas de uso. La revisión de trabajos anteriores permite identificar métodos útiles para el proyecto, así como limitaciones que justifican combinar la verificación técnica con la evaluación de la experiencia de los usuarios.
 
-Ejemplo de redacción con citas IEEE: para fundamentar una propuesta tecnológica se puede citar el estado del arte en inteligencia artificial y aprendizaje profundo en \cite{vaswani2017attention,goodfellow2016deep}. Del mismo modo, para enfoques de ingeniería de software y proceso de desarrollo pueden emplearse fuentes como \cite{sommerville2016software,boehm1988spiral}.
+Acosta y Luján-Mora \cite{acosta2017analisis} analizaron la accesibilidad de sitios web de universidades ecuatorianas y examinaron su relación con las pautas WCAG 2.0. Su trabajo constituye un antecedente relevante porque aborda el contexto nacional y demuestra la utilidad de realizar evaluaciones sistemáticas para identificar problemas y formular recomendaciones de mejora. Entre sus aportes se encuentra la aplicación de criterios reconocidos para revisar sitios institucionales. No obstante, el análisis de sitios universitarios no determina automáticamente cuáles son las necesidades de cualquier otro sitio web; por tanto, sus resultados deben utilizarse como referencia metodológica y no como evidencia de que el sitio que se actualizará presenta los mismos problemas.
 
-\section{Planteamiento del Problema}
-\textit{[Definir de forma clara y precisa el problema o brecha tecnológica identificada. Describir las causas que lo originan y los efectos que genera en el contexto analizado. No incluir la solución en esta sección.]}
+Campoverde-Molina, Luján-Mora y Valverde García \cite{campoverde2020empirical} desarrollaron una revisión sistemática de estudios empíricos sobre accesibilidad en sitios web educativos. Los autores examinaron los métodos de evaluación empleados en investigaciones previas y señalaron la presencia recurrente de herramientas automáticas, así como la importancia de complementar estas herramientas con evaluaciones manuales y participación de usuarios o especialistas. La principal contribución de este trabajo para el proyecto es metodológica: permite comprender que una herramienta automática puede ayudar a detectar determinados errores, pero no sustituye la comprobación del comportamiento real de la interfaz. Como limitación, al tratarse de una revisión de estudios publicados, sus conclusiones dependen de los trabajos incluidos y no reemplazan el diagnóstico particular del sitio seleccionado.
 
-\section{Justificación}
-\textit{[Redactar un texto argumentativo que exponga la importancia del proyecto, su impacto técnico y operativo, la utilidad de la solución, los beneficiarios directos e indirectos y la factibilidad técnica y operativa de su implementación.]}
+Chiriboga Casanova Quevedo, Medina Medina y Paderewski Rodríguez \cite{chiriboga2024accessibility} estudiaron la accesibilidad de sitios web de universidades ecuatorianas mediante las pautas WCAG 2.1 y herramientas de validación. En el análisis de 61 páginas, los autores reportaron problemas asociados con los principios de accesibilidad y errores de marcado y hojas de estilo. Este antecedente es especialmente pertinente porque se centra en sitios ecuatorianos y ofrece ejemplos de indicadores técnicos que pueden revisarse durante una auditoría. Su aporte consiste en mostrar cómo estructurar una evaluación con criterios verificables. Sin embargo, una revisión técnica de páginas institucionales no permite concluir, por sí sola, que una interfaz sea comprensible o eficiente para todos sus usuarios; además, los resultados obtenidos en esas páginas no deben extrapolarse al sitio del presente proyecto sin realizar pruebas propias.
 
-\section{Objetivos}
-\subsection{Objetivo General}
-\textit{[Redactar el propósito principal del proyecto, alineado con la solución propuesta e incluyendo explícitamente su implementación.]}
-\subsection{Objetivos Específicos}
-\textit{[Enumerar acciones concretas, medibles y verificables que permitan alcanzar el objetivo general. Los objetivos deben cubrir análisis, diseño, implementación y validación.]}
+Jaeger \cite{jaeger2006assessing} realizó una evaluación de sitios web federales de gobierno electrónico de Estados Unidos desde una perspectiva centrada en el usuario. El estudio combinó análisis de políticas, pruebas con usuarios, evaluaciones de expertos, herramientas automáticas y consultas a desarrolladores web. Este enfoque multidimensional permitió estudiar la accesibilidad desde distintas fuentes de evidencia, en lugar de limitarse a una única técnica de comprobación. Para el proyecto propuesto, su principal contribución es la justificación de una metodología combinada que integre revisión técnica y pruebas de tareas. Como diferencia, el estudio se desarrolló en el contexto normativo y organizacional estadounidense, por lo que sus procedimientos deben adaptarse a las características y condiciones del sitio que se actualizará en Ecuador.
 
-\section{Alcance del Proyecto}
-\textit{[Delimitar los límites del proyecto, especificando claramente los componentes, módulos o funcionalidades que se incluyen, así como aquellos que se excluyen.]}
+Vollenwyder y sus colaboradores \cite{vollenwyder2023how} examinaron la relación entre el cumplimiento de estándares de accesibilidad, la usabilidad y la experiencia de usuario mediante un experimento con personas con y sin discapacidad visual. Los autores concluyeron que el cumplimiento de estándares no produce automáticamente mejoras significativas en todos los indicadores de usabilidad y experiencia, y recomendaron complementar las estrategias centradas en la conformidad con métodos centrados en las personas. Este estudio aporta una distinción importante para el proyecto: verificar criterios técnicos es necesario, pero también se debe comprobar si los usuarios pueden completar tareas y comprender la interfaz. Su contexto experimental, basado en una tienda en línea, limita la generalización directa de sus resultados a otros tipos de sitios, por lo que la evaluación propuesta deberá considerar las tareas reales del sitio seleccionado.
 
-\section{Fundamentación Teórica}
-\textit{[Desarrollar los fundamentos teóricos, conceptos, modelos y tecnologías que sustentan el proyecto. Debe estar relacionado directamente con la solución propuesta y su implementación, aplicable a software, hardware o infraestructura.]}
+Por su parte, la norma ISO 9241-210:2019 establece principios y actividades para aplicar el diseño centrado en el ser humano durante el ciclo de vida de los sistemas interactivos \cite{iso9241_210_2019}. Esta referencia destaca la necesidad de comprender a los usuarios, sus tareas y el contexto de uso, y de evaluar las soluciones mediante iteraciones. Aunque la norma no constituye por sí sola una metodología completa de auditoría de accesibilidad, proporciona una base para organizar el proceso de diseño, desde la investigación de necesidades hasta la validación de las propuestas.
 
-\subsection{Ejemplo de Figura 1}
-Como ejemplo de referencia dentro del texto: en la Figura~\ref{fig:ejemplo_1} se presenta un recurso visual demostrativo que guía el formato esperado para los gráficos del documento.
-
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.80\textwidth]{Capítulos/fig/fig_ejemplo_1.png}
-  \caption{Ejemplo de figura para guiar el formato de gráficos en el documento.}
-  \label{fig:ejemplo_1}
-\end{figure}
-\elaboradopor{Estudiante}
-\fuente{Elaboración propia}
-
-\subsection{Ejemplo de Tabla 1}
-Como ejemplo de referencia cruzada en párrafo: la Tabla~\ref{tab:ejemplo_1} resume indicadores base que luego pueden compararse con los resultados de implementación.
+La Tabla~\ref{tab:antecedentes} resume la relación entre los trabajos revisados y el presente proyecto.
 
 \begin{table}[htbp]
   \centering
-  \caption{Ejemplo de tabla para registrar métricas iniciales del diagnóstico.}
-  \label{tab:ejemplo_1}
-  \begin{tabular}{|l|c|c|}
+  \small
+  \caption{Comparación de antecedentes relacionados con la accesibilidad web.}
+  \label{tab:antecedentes}
+  \setlength{\tabcolsep}{4pt}
+  \renewcommand{\arraystretch}{1.3}
+  \begin{tabular}{|p{0.18\textwidth}|p{0.23\textwidth}|p{0.23\textwidth}|p{0.23\textwidth}|}
     \hline
-    Indicador & Valor actual & Meta \\
+    \textbf{Trabajo} & \textbf{Enfoque y aporte principal} & \textbf{Limitación para el presente proyecto} & \textbf{Relación con la propuesta} \\
     \hline
-    Tiempo de respuesta (ms) & 850 & 400 \\
+    Acosta y Luján-Mora \cite{acosta2017analisis} & Análisis de accesibilidad en sitios web universitarios ecuatorianos con referencia a WCAG. & Los resultados corresponden a los sitios evaluados en su estudio. & Aporta antecedentes nacionales y criterios para el diagnóstico inicial. \\
     \hline
-    Disponibilidad (\%) & 96.2 & 99.0 \\
+    Campoverde-Molina et al. \cite{campoverde2020empirical} & Revisión sistemática de métodos de evaluación de accesibilidad en sitios educativos. & Las conclusiones dependen de los estudios seleccionados; no evalúa el sitio del proyecto. & Fundamenta la combinación de herramientas automáticas y revisión manual. \\
     \hline
-    Incidencias mensuales & 14 & 6 \\
+    Chiriboga Casanova Quevedo et al. \cite{chiriboga2024accessibility} & Evaluación de 61 páginas universitarias ecuatorianas con WCAG 2.1 y validadores. & Los resultados técnicos no sustituyen las pruebas de tareas con usuarios. & Orienta la selección de criterios técnicos e indicadores de accesibilidad. \\
+    \hline
+    Jaeger \cite{jaeger2006assessing} & Evaluación multidimensional mediante herramientas, expertos, usuarios y análisis documental. & Se desarrolló en un contexto gubernamental estadounidense. & Justifica combinar distintas fuentes de evidencia. \\
+    \hline
+    Vollenwyder et al. \cite{vollenwyder2023how} & Estudio experimental de la relación entre accesibilidad, usabilidad y experiencia de usuario. & El contexto experimental no representa todos los tipos de sitios web. & Sustenta la evaluación de tareas y experiencia, además del cumplimiento técnico. \\
+    \hline
+    ISO 9241-210:2019 \cite{iso9241_210_2019} & Principios y actividades para el diseño centrado en las personas. & No reemplaza las pautas específicas ni una auditoría de accesibilidad. & Estructura las etapas de análisis, diseño, implementación y evaluación. \\
     \hline
   \end{tabular}
 \end{table}
 \elaboradopor{Estudiante}
-\fuente{Datos de levantamiento inicial}
+\fuente{Elaboración propia a partir de las fuentes citadas}
+
+A partir de los antecedentes se identifican tres ideas principales. Primero, los estándares de accesibilidad ofrecen criterios verificables para examinar una interfaz. Segundo, las herramientas automáticas facilitan la identificación de determinados problemas, pero deben complementarse con revisiones manuales y pruebas funcionales. Tercero, una mejora técnica no demuestra por sí misma que las personas puedan realizar sus tareas de manera sencilla y autónoma.
+
+En consecuencia, el aporte del presente proyecto consistirá en aplicar estos principios a un sitio web existente y a un conjunto delimitado de flujos prioritarios. La propuesta integrará el diagnóstico técnico, la identificación de necesidades, el diseño centrado en el usuario, la implementación de mejoras y una evaluación comparativa antes y después de la actualización. La contribución concreta se determinará mediante los resultados obtenidos en el sitio seleccionado, sin anticipar su estado inicial ni afirmar de antemano el nivel de mejora alcanzado.
+
+\section{Planteamiento del Problema}
+Los sitios web constituyen un medio importante para acceder a información y utilizar servicios digitales. Sin embargo, cuando su diseño y desarrollo no consideran las distintas capacidades, necesidades y formas de interacción de las personas, pueden presentarse barreras que dificulten la lectura, la navegación, la comprensión de contenidos y la ejecución de tareas. Estas barreras pueden relacionarse, por ejemplo, con una estructura semántica inadecuada, contraste insuficiente, controles que no funcionan mediante teclado, formularios poco comprensibles, ausencia de alternativas textuales o incompatibilidades con tecnologías de asistencia.
+
+Las posibles barreras de accesibilidad no deben asumirse sin evidencia, ya que dependen de las características de cada sitio y de sus funcionalidades. Por ello, antes de plantear modificaciones específicas, es necesario estudiar el sitio seleccionado y establecer su estado inicial mediante criterios técnicos y pruebas de uso. Sin este diagnóstico, las decisiones de actualización podrían centrarse en aspectos secundarios, omitir necesidades relevantes o introducir cambios que no mejoren la experiencia de las personas destinatarias.
+
+Entre las causas que pueden contribuir a dificultades de accesibilidad en un sitio web se encuentran la falta de incorporación sistemática de criterios de accesibilidad durante el desarrollo, la ausencia de pruebas con teclado y tecnologías de asistencia, el uso de componentes que no comunican correctamente su función y la evaluación limitada a la apariencia visual o al funcionamiento general. También puede ocurrir que las necesidades de los usuarios no se hayan recogido de manera suficiente o que no existan procedimientos documentados para revisar la accesibilidad cuando se actualizan los contenidos.
+
+Cuando estas situaciones están presentes, sus posibles efectos incluyen dificultades para identificar información, completar formularios, reconocer errores, desplazarse entre secciones y finalizar tareas sin ayuda. Estas limitaciones pueden afectar especialmente a personas con discapacidad, aunque también pueden perjudicar a otros usuarios en circunstancias temporales o situacionales. La magnitud y el tipo de efectos en el sitio que se seleccione deberán establecerse a partir de la evaluación inicial, y no mediante suposiciones.
+
+En este contexto, se requiere un proceso de actualización que permita determinar las necesidades reales, priorizar los flujos más importantes y aplicar mejoras verificables. El problema tecnológico que aborda el proyecto es la necesidad de contar con un procedimiento sistemático para evaluar y mejorar la accesibilidad y la experiencia de usuario de un sitio web existente, integrando criterios técnicos con evidencias obtenidas de la interacción de las personas.
+
+Por lo tanto, la pregunta de investigación que orienta el proyecto es:
+
+\begin{quote}
+\textit{¿Cómo puede la actualización de un sitio web existente, mediante diseño centrado en el usuario y prácticas de accesibilidad digital, contribuir a mejorar la usabilidad y la experiencia de las personas con diversas capacidades?}
+\end{quote}
+
+Para responder esta pregunta, se realizará un diagnóstico del sitio seleccionado, se definirán requisitos de accesibilidad y usabilidad, se diseñarán y validarán propuestas de interfaz, se implementarán mejoras en los flujos acordados y se compararán los resultados de la evaluación inicial y final.
+
+\section{Justificación}
+El proyecto se justifica por la importancia de promover el acceso y el uso de los servicios digitales en condiciones más inclusivas. Un sitio web puede disponer de información relevante y funcionalidades útiles, pero su valor práctico disminuye cuando determinados usuarios encuentran obstáculos para comprender sus contenidos o completar las tareas previstas. Por ello, integrar la accesibilidad desde el análisis y el diseño contribuye a que la tecnología responda mejor a la diversidad de capacidades y contextos de uso.
+
+Desde el punto de vista técnico, el proyecto permitirá examinar la estructura, los componentes y los flujos prioritarios del sitio seleccionado con referencia a criterios reconocidos de accesibilidad. La revisión de elementos como la semántica HTML, el contraste, el foco visible, la navegación mediante teclado, las alternativas textuales y la presentación de errores en formularios permitirá identificar oportunidades de mejora sustentadas en evidencias. La selección de cambios se realizará de acuerdo con los resultados del diagnóstico y la compatibilidad con la plataforma existente.
+
+En el ámbito metodológico, la propuesta incorpora el diseño centrado en el usuario como principio para comprender las necesidades, definir requisitos, validar prototipos y evaluar los cambios. Este enfoque evita que las decisiones se basen únicamente en preferencias estéticas o en el criterio del desarrollador. Asimismo, la combinación de herramientas automáticas, revisión manual y pruebas de tareas permitirá obtener una visión más completa del funcionamiento de la interfaz. La evaluación comparativa contribuirá a determinar cuáles indicadores cambian después de la implementación y qué limitaciones permanecen.
+
+Desde una perspectiva operativa, actualizar un sitio existente puede permitir concentrar los esfuerzos en módulos y flujos prioritarios, siempre que la arquitectura, las tecnologías y los permisos disponibles lo hagan viable. El trabajo incluirá documentación técnica y recomendaciones para el mantenimiento accesible, de modo que los responsables del sitio dispongan de criterios para conservar las mejoras y reducir la incorporación de nuevas barreras en futuras actualizaciones.
+
+Los beneficiarios directos serán las personas que utilicen los flujos actualizados, especialmente quienes encuentren barreras relacionadas con alguna discapacidad. También podrán beneficiarse usuarios con limitaciones temporales o situacionales. Entre los beneficiarios indirectos se encuentran los responsables del sitio, el personal que mantiene sus contenidos, la organización propietaria y los equipos de desarrollo que puedan utilizar la documentación y las recomendaciones generadas.
+
+La factibilidad técnica se apoya en el uso de tecnologías y herramientas habituales del desarrollo web, como HTML semántico, CSS adaptable, JavaScript, control de versiones y herramientas de evaluación de accesibilidad. La selección definitiva dependerá de la plataforma tecnológica del sitio, los permisos de acceso, las restricciones de la organización y la disponibilidad de recursos. Para la evaluación se podrán emplear herramientas automáticas, inspección manual, navegación por teclado y lectores de pantalla, según las características del sitio y las condiciones del proyecto.
+
+La factibilidad operativa deberá confirmarse con el docente proponente y los responsables del sitio. Será necesario acordar los módulos que se pueden modificar, las tareas que se evaluarán, el acceso a un entorno de pruebas y la disponibilidad de participantes. Si se realizan pruebas con personas, su participación deberá ser voluntaria, con información clara sobre el propósito de la actividad y tratamiento responsable de los datos recopilados.
+
+Finalmente, el proyecto es pertinente para la formación en Ingeniería en Tecnologías de la Información porque integra análisis de requisitos, diseño de interfaces, desarrollo web, pruebas de software, evaluación de calidad y documentación técnica. Su resultado no se limitará a una propuesta visual, sino que incluirá la implementación de mejoras acordadas y la evaluación de su efecto mediante indicadores definidos antes de la intervención. De esta manera, se espera generar una solución técnicamente fundamentada, evaluable y susceptible de mantenimiento, sin asumir de antemano que la actualización resolverá todas las necesidades de accesibilidad.
+
+\section{Objetivos}
+\subsection{Objetivo General}
+Actualizar un sitio web existente mediante diseño centrado en el usuario y prácticas de accesibilidad digital, para mejorar la usabilidad y la experiencia de personas con diversas capacidades, mediante la implementación y evaluación de mejoras en sus flujos prioritarios.
+
+\subsection{Objetivos Específicos}
+\begin{itemize}
+  \item Diagnosticar el estado inicial de accesibilidad y usabilidad del sitio web seleccionado mediante criterios técnicos, herramientas de evaluación y revisión de sus flujos prioritarios.
+  \item Identificar y priorizar los requisitos de accesibilidad y experiencia de usuario a partir de los hallazgos del diagnóstico, las tareas principales del sitio y las necesidades de los usuarios y responsables involucrados.
+  \item Diseñar y validar prototipos de los flujos priorizados, aplicando principios de diseño centrado en el usuario y criterios de accesibilidad pertinentes para la plataforma existente.
+  \item Implementar las mejoras aprobadas en los módulos y flujos acordados, incorporando las modificaciones técnicas y de interfaz que resulten viables según los requisitos definidos.
+  \item Evaluar los cambios mediante una comparación entre el estado inicial y el estado posterior a la implementación, utilizando indicadores de accesibilidad, ejecución de tareas, errores, tiempo y satisfacción, según corresponda.
+\end{itemize}
+
+\section{Alcance del Proyecto}
+El proyecto comprende la actualización de un sitio web existente mediante un proceso de diseño centrado en el usuario, con énfasis en la accesibilidad digital, la usabilidad y la experiencia de personas con diversas capacidades. El trabajo se desarrollará de forma iterativa y estará organizado en actividades de diagnóstico, definición de requisitos, diseño, implementación, evaluación y documentación.
+
+El sitio web, la organización responsable y los módulos específicos se determinarán en coordinación con el docente proponente. Esta decisión será necesaria para establecer el contexto real de uso, las funcionalidades que pueden modificarse, las restricciones técnicas y los recursos disponibles. Por tanto, el alcance funcional definitivo se fijará después de conocer la plataforma y completar el diagnóstico inicial.
+
+El proyecto incluirá las siguientes actividades:
+\begin{itemize}
+  \item \textbf{Diagnóstico inicial:} revisión de las páginas y los flujos acordados mediante criterios de accesibilidad, herramientas automáticas y comprobaciones manuales. Se registrarán los hallazgos, las evidencias disponibles y las limitaciones de la evaluación.
+  \item \textbf{Identificación de necesidades y requisitos:} determinación de las tareas prioritarias, las barreras observadas y los requisitos de accesibilidad y usabilidad que deberán atenderse. Los requisitos se organizarán según su relevancia, viabilidad y relación con los objetivos del proyecto.
+  \item \textbf{Diseño de propuestas:} elaboración de la arquitectura de información, los flujos y los prototipos necesarios para representar las mejoras. Las propuestas se revisarán con los responsables y, cuando sea posible, se validarán mediante actividades de evaluación con usuarios.
+  \item \textbf{Implementación:} actualización de los módulos acordados, utilizando tecnologías compatibles con el sitio existente. Según los hallazgos, las mejoras podrán incluir estructura semántica, navegación por teclado, foco visible, alternativas textuales, contraste, formularios comprensibles, mensajes de error y adaptación a distintos tamaños de pantalla.
+  \item \textbf{Evaluación posterior:} aplicación de las comprobaciones seleccionadas para comparar el estado inicial con el resultado de la implementación. Se considerarán indicadores como los hallazgos de accesibilidad, la finalización de tareas, los errores, el tiempo empleado y la satisfacción, siempre que sea posible recogerlos de forma consistente.
+  \item \textbf{Documentación:} elaboración de un informe de diagnóstico y comparación, una matriz de requisitos y evidencias, documentación técnica de los cambios, indicaciones para la instalación o mantenimiento cuando correspondan y recomendaciones para la publicación de contenidos accesibles.
+  \item \textbf{Control de versiones:} uso de un repositorio para registrar las modificaciones del código y facilitar el seguimiento de los cambios realizados.
+\end{itemize}
+
+El proyecto no incluirá, salvo autorización y redefinición formal del alcance:
+\begin{itemize}
+  \item El desarrollo de un sitio web completamente nuevo que sustituya toda la plataforma existente.
+  \item La modificación de módulos ajenos a los flujos priorizados.
+  \item La reconstrucción integral de sistemas externos o servicios de terceros que no estén bajo el control del proyecto.
+  \item La certificación oficial de conformidad con WCAG ni la afirmación de que el sitio será accesible para todas las personas.
+  \item La obtención de resultados de evaluación antes de ejecutar las pruebas correspondientes.
+  \item La implementación de cambios que no hayan sido autorizados por los responsables del sitio.
+\end{itemize}
+
+El proyecto utilizará, de acuerdo con la compatibilidad de la plataforma, tecnologías como HTML, CSS y JavaScript, herramientas de prototipado y control de versiones, validadores automáticos, inspección del navegador y lectores de pantalla. La selección final de herramientas se realizará después de revisar el sitio y las condiciones técnicas disponibles.
+
+La cantidad de módulos, los participantes, las tareas de evaluación y el calendario se definirán antes de la implementación. Cuando se realicen pruebas con personas, se priorizará la participación voluntaria, el consentimiento informado y la recopilación mínima de datos necesarios. La evaluación final permitirá informar qué mejoras se implementaron, cuáles indicadores cambiaron, qué limitaciones persisten y qué recomendaciones se proponen para el mantenimiento futuro.
+
+\section{Fundamentación Teórica}
+
+\subsection{Accesibilidad web}
+La accesibilidad web se refiere al diseño y desarrollo de contenidos y funcionalidades digitales que puedan ser percibidos, comprendidos, navegados y utilizados por personas con distintas capacidades. Su propósito es reducir barreras de interacción y facilitar el acceso a la información y los servicios. No se limita a una discapacidad específica ni consiste únicamente en modificar el aspecto visual de una página, sino que involucra la estructura, el contenido, los controles y la compatibilidad con distintas formas de interacción.
+
+En el contexto del proyecto, la accesibilidad se abordará como un conjunto de requisitos que deben analizarse y comprobarse durante la actualización del sitio. Entre los aspectos relevantes se encuentran la identificación de elementos, las alternativas textuales, el funcionamiento mediante teclado, la visibilidad del foco, la presentación de información y errores, y la adaptación a diferentes dispositivos. La pertinencia de cada criterio dependerá de las características del sitio y de los flujos que se seleccionen.
+
+\subsection{Pautas de Accesibilidad para el Contenido Web (WCAG)}
+Las WCAG son pautas desarrolladas por el W3C para orientar la creación de contenidos web accesibles. La versión 2.2 incluye criterios de éxito verificables y mantiene los cuatro principios fundamentales: perceptible, operable, comprensible y robusto \cite{wcag22}.
+\begin{itemize}
+  \item \textbf{Perceptible:} la información y los componentes de la interfaz deben presentarse de manera que los usuarios puedan percibirlos. Pueden requerirse alternativas textuales para imágenes, subtítulos para contenido audiovisual, contraste adecuado y una estructura que pueda interpretarse mediante tecnologías de asistencia.
+  \item \textbf{Operable:} los controles y la navegación deben poder utilizarse. Entre los aspectos relevantes se encuentran la navegación mediante teclado, la identificación del foco, el tiempo suficiente para completar actividades y controles que no dependan exclusivamente de un tipo de interacción.
+  \item \textbf{Comprensible:} la información y el funcionamiento de la interfaz deben ser entendibles. Esto incluye textos claros, navegación consistente, identificación de campos, instrucciones comprensibles y mensajes que permitan reconocer y corregir errores.
+  \item \textbf{Robusto:} los contenidos deben implementarse de forma que puedan interpretarse de manera fiable mediante navegadores y tecnologías de asistencia compatibles. Para ello son importantes la semántica, la estructura del código y el uso adecuado de los componentes.
+\end{itemize}
+
+Las pautas se utilizarán como referencia técnica para el diagnóstico y la evaluación. La versión WCAG 2.2 será el marco principal de consulta, sin perjuicio de los requisitos normativos o institucionales adicionales que se determinen para el sitio seleccionado. La utilización de criterios WCAG no debe interpretarse como una certificación automática: el resultado dependerá de los criterios aplicables, las pruebas realizadas y las limitaciones documentadas.
+
+\subsection{Diseño centrado en el usuario}
+El diseño centrado en el usuario es un enfoque que incorpora las necesidades, características, tareas y contexto de las personas durante el diseño y desarrollo de sistemas interactivos. La norma ISO 9241-210:2019 presenta principios y actividades para aplicar el diseño centrado en el ser humano a lo largo del ciclo de vida de dichos sistemas \cite{iso9241_210_2019}.
+
+Este enfoque implica comprender el contexto de uso, definir requisitos, generar alternativas de diseño, evaluar las propuestas y repetir las actividades cuando los resultados evidencien la necesidad de ajustes. Su aplicación permite que las decisiones de diseño se fundamenten en información sobre las personas y sus tareas, en lugar de depender exclusivamente de suposiciones del equipo técnico.
+
+En este proyecto, el enfoque se aplicará mediante el análisis de los flujos prioritarios, la identificación de necesidades, la elaboración de prototipos y la validación de las propuestas. Cuando las condiciones lo permitan, se incorporará la participación de usuarios para conocer las dificultades que encuentran y comprobar si las mejoras facilitan las tareas seleccionadas.
+
+\subsection{Usabilidad}
+La usabilidad se relaciona con la medida en que usuarios determinados pueden utilizar un sistema para alcanzar objetivos específicos con efectividad, eficiencia y satisfacción en un contexto de uso definido. En un sitio web, estos aspectos pueden analizarse mediante la capacidad de completar tareas, el tiempo empleado, los errores cometidos y la percepción de facilidad de uso.
+
+La usabilidad y la accesibilidad están relacionadas, pero no son equivalentes. Una interfaz puede ser fácil de utilizar para un grupo de personas y presentar barreras para otro. De manera similar, una página puede cumplir algunos criterios técnicos de accesibilidad y, aun así, ofrecer una secuencia de pasos confusa. Por esta razón, la evaluación propuesta considerará ambos aspectos de manera complementaria.
+
+\subsection{Experiencia de usuario}
+La experiencia de usuario comprende las percepciones y respuestas que se producen antes, durante y después de interactuar con un producto o servicio. En un sitio web, puede relacionarse con la claridad de la información, la facilidad para localizar opciones, la confianza al completar una tarea y la satisfacción general con la interacción.
+
+La experiencia de usuario no puede determinarse únicamente por la apariencia de una interfaz. También depende de la utilidad de sus funciones, la claridad de los mensajes, la consistencia de la navegación y la posibilidad de completar actividades sin obstáculos innecesarios. Vollenwyder y sus colaboradores \cite{vollenwyder2023how} muestran la importancia de distinguir entre el cumplimiento de estándares y los resultados de usabilidad y experiencia. En consecuencia, el proyecto evaluará tanto los aspectos técnicos como los resultados observables de las tareas seleccionadas.
+
+\subsection{Diseño inclusivo}
+El diseño inclusivo busca considerar la diversidad de capacidades, preferencias y contextos de las personas al crear productos y servicios. En el entorno digital, esto supone evitar decisiones que dependan innecesariamente de una única forma de percibir la información o interactuar con una interfaz.
+
+Algunas prácticas relacionadas con este enfoque son ofrecer alternativas textuales, proporcionar instrucciones claras, mantener una navegación consistente, utilizar controles identificables y permitir distintas formas de interacción cuando sea pertinente. La aplicación de estas prácticas puede beneficiar a personas con discapacidad y a usuarios que experimentan limitaciones temporales o situacionales.
+
+Para el proyecto, el diseño inclusivo servirá como criterio para analizar las propuestas y priorizar cambios que reduzcan barreras. No se asumirá que una única solución satisface todas las necesidades; las decisiones deberán apoyarse en criterios técnicos, tareas reales y evidencias obtenidas durante la evaluación.
+
+\subsection{Evaluación automática y manual de accesibilidad}
+La evaluación automática utiliza herramientas de software para identificar determinados problemas en el código, la estructura o los componentes de una página. Puede facilitar la revisión de varias páginas y ayudar a registrar hallazgos de forma consistente. Sin embargo, estas herramientas no detectan todos los problemas de accesibilidad y pueden requerir interpretación técnica.
+
+La evaluación manual complementa este proceso mediante la revisión de criterios que necesitan observación directa o interacción, como el orden de navegación, la visibilidad del foco, la claridad de las instrucciones y el comportamiento de los controles. Las pruebas con teclado y lectores de pantalla permiten examinar aspectos de uso que no siempre pueden comprobarse mediante un análisis automático.
+
+Campoverde-Molina y sus colaboradores \cite{campoverde2020empirical} destacan la importancia de combinar métodos de evaluación, mientras que Jaeger \cite{jaeger2006assessing} muestra la utilidad de reunir evidencias procedentes de usuarios, especialistas y herramientas. Por ello, el proyecto utilizará un enfoque combinado, de acuerdo con los recursos y las condiciones disponibles, y documentará las limitaciones de las comprobaciones realizadas.
+
+\subsection{Desarrollo web adaptable y estructura semántica}
+El desarrollo web adaptable busca que el contenido y los componentes se presenten de manera apropiada en diferentes tamaños de pantalla y dispositivos. Este aspecto es importante porque las personas pueden acceder a un sitio mediante computadoras, tabletas o teléfonos, con diferentes métodos de interacción y condiciones de visualización.
+
+La estructura semántica utiliza elementos HTML según su propósito, como encabezados, navegación, formularios, botones y regiones de contenido. Una estructura coherente facilita la interpretación del documento por parte de navegadores y tecnologías de asistencia, además de contribuir a la organización y mantenimiento del código.
+
+En la actualización del sitio se revisará la pertinencia de la estructura HTML, la presentación adaptable y el funcionamiento de los controles. Las modificaciones concretas dependerán de la plataforma tecnológica y de los hallazgos del diagnóstico inicial.
+
+\subsection{Evaluación comparativa antes y después de la implementación}
+La evaluación comparativa permite examinar cambios entre dos momentos: el estado inicial del sitio y el estado posterior a la implementación. Para que la comparación sea útil, los indicadores, las tareas y las condiciones de evaluación deben definirse de forma clara y, cuando sea posible, mantenerse consistentes.
+
+Entre los indicadores potenciales se encuentran la cantidad de hallazgos de accesibilidad identificados, la proporción de tareas completadas, el tiempo de ejecución, el número de errores y la satisfacción reportada por los participantes. No todos los indicadores serán aplicables a todas las páginas, por lo que su selección se realizará después de conocer el sitio y las tareas prioritarias.
+
+La comparación permitirá describir las variaciones observadas y valorar si los cambios implementados se relacionan con los objetivos del proyecto. Los resultados deberán interpretarse considerando el número de participantes, las condiciones de prueba, las herramientas empleadas y las limitaciones de la evaluación. No se atribuirá una mejora al proyecto sin contar con datos que la respalden.
+
+\subsection{Control de versiones y documentación técnica}
+El control de versiones permite registrar cambios en los archivos del proyecto, conservar un historial de modificaciones y facilitar el seguimiento del trabajo de desarrollo. Un repositorio puede ayudar a identificar qué componentes se modificaron y a mantener una base organizada para las pruebas y la documentación.
+
+La documentación técnica describe los cambios implementados, los requisitos atendidos, las herramientas utilizadas y las condiciones necesarias para mantener el sitio. En un proyecto de accesibilidad, también resulta importante registrar los criterios evaluados, los hallazgos, las correcciones realizadas y los problemas que permanecen pendientes.
+
+El proyecto empleará control de versiones y documentación para mejorar la trazabilidad de las modificaciones y facilitar futuras tareas de mantenimiento. Las instrucciones de instalación, publicación y mantenimiento se ajustarán a la plataforma y a los permisos que estén disponibles.
+
+\subsection{Indicadores para evaluar las mejoras}
+Los indicadores permiten convertir los objetivos del proyecto en aspectos observables y comparables. Para seleccionar los indicadores se considerarán la relevancia para las tareas prioritarias, la posibilidad de medirlos de forma consistente y su relación con los requisitos identificados.
+
+Entre los indicadores previstos se encuentran:
+\begin{itemize}
+  \item \textbf{Hallazgos de accesibilidad:} cantidad y tipo de problemas detectados mediante los criterios y herramientas seleccionados.
+  \item \textbf{Finalización de tareas:} proporción de tareas que los participantes completan según las condiciones definidas para la prueba.
+  \item \textbf{Tiempo de ejecución:} duración necesaria para completar una tarea, cuando la medición sea pertinente y comparable.
+  \item \textbf{Errores durante las tareas:} cantidad o tipo de errores observados al realizar las actividades definidas.
+  \item \textbf{Satisfacción percibida:} valoración de los participantes mediante un instrumento que se seleccione y documente antes de la evaluación.
+\end{itemize}
+
+Los valores iniciales y finales se incorporarán únicamente después de ejecutar las evaluaciones. La meta de cada indicador deberá acordarse con base en el diagnóstico, los requisitos del proyecto y las condiciones reales de medición. La reducción de errores automáticos, por sí sola, no será considerada evidencia suficiente de una mejora integral de la experiencia de usuario.
+
+\subsection{Proceso de actualización del sitio web}
+La Figura~\ref{fig:proceso_actualizacion} representa las etapas previstas para desarrollar el proyecto. El proceso parte del diagnóstico inicial, continúa con la definición de requisitos y el diseño de propuestas, y avanza hacia la implementación y la evaluación. Si la evaluación identifica dificultades pendientes, los hallazgos podrán utilizarse para ajustar el diseño o la implementación, siempre dentro del alcance autorizado.
+
+\begin{figure}[htbp]
+  \centering
+  \fbox{%
+    \parbox{0.92\textwidth}{%
+      \centering\small\vspace{0.6em}
+      \textbf{Diagnóstico inicial} $\rightarrow$
+      \textbf{Identificación y priorización de requisitos} $\rightarrow$
+      \textbf{Diseño y validación de prototipos} $\rightarrow$
+      \textbf{Implementación de mejoras} $\rightarrow$
+      \textbf{Evaluación comparativa} $\rightarrow$
+      \textbf{Documentación y recomendaciones de mantenimiento}
+      \vspace{0.6em}
+    }%
+  }
+  \caption{Proceso de actualización de un sitio web con enfoque centrado en el usuario.}
+  \label{fig:proceso_actualizacion}
+\end{figure}
+\elaboradopor{Estudiante}
+\fuente{Elaboración propia a partir del enfoque de diseño centrado en el usuario descrito en ISO 9241-210:2019 \cite{iso9241_210_2019} y de los métodos de evaluación de accesibilidad examinados en la literatura \cite{campoverde2020empirical,chiriboga2024accessibility,jaeger2006assessing,vollenwyder2023how}}
+
+La figura presenta una secuencia metodológica general y no representa resultados ya obtenidos. Las etapas podrán ajustarse en función de la plataforma seleccionada, los hallazgos del diagnóstico y los acuerdos con los responsables del sitio.
+
+\subsection{Matriz de indicadores del proyecto}
+La Tabla~\ref{tab:matriz_indicadores} presenta los indicadores que podrán utilizarse para comparar el estado inicial y el posterior a la actualización. Se dejan los valores sin completar porque deben obtenerse mediante las pruebas correspondientes. Las metas se definirán una vez que se conozca el estado inicial y se establezcan los criterios de aceptación.
+
+\begin{table}[htbp]
+  \centering
+  \small
+  \caption{Matriz de indicadores para la evaluación de accesibilidad y usabilidad.}
+  \label{tab:matriz_indicadores}
+  \setlength{\tabcolsep}{4pt}
+  \renewcommand{\arraystretch}{1.3}
+  \begin{tabular}{|p{0.23\textwidth}|p{0.20\textwidth}|p{0.20\textwidth}|p{0.23\textwidth}|}
+    \hline
+    \textbf{Indicador} & \textbf{Valor inicial} & \textbf{Valor posterior} & \textbf{Meta o criterio de aceptación} \\
+    \hline
+    Hallazgos de accesibilidad identificados & Por determinar mediante diagnóstico & Por determinar tras la implementación & Definir a partir de los criterios priorizados y los hallazgos iniciales. \\
+    \hline
+    Tareas completadas correctamente & Por medir & Por medir & Establecer después de definir las tareas y las condiciones de prueba. \\
+    \hline
+    Tiempo de ejecución de las tareas & Por medir & Por medir & Definir según la tarea, las condiciones de medición y la línea base. \\
+    \hline
+    Errores durante la ejecución de tareas & Por medir & Por medir & Establecer según los tipos de error identificados y los objetivos de mejora. \\
+    \hline
+    Satisfacción de los participantes & Por medir mediante un instrumento seleccionado & Por medir con el mismo instrumento, cuando sea viable & Definir antes de la evaluación final. \\
+    \hline
+  \end{tabular}
+\end{table}
+\elaboradopor{Estudiante}
+\fuente{Elaboración propia}
+
+La matriz permitirá documentar las condiciones de medición y evitar que los resultados se interpreten sin una referencia inicial. Para garantizar la comparabilidad, las tareas, los instrumentos y las condiciones de prueba deberán mantenerse lo más consistentes posible entre la evaluación inicial y la final.
+
