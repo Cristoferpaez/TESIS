@@ -2,54 +2,48 @@
 \contentsline {chapter}{\numberline {I}Introducción}{16}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Contextualización}{16}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Estado del Arte}{17}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Planteamiento del Problema}{21}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Justificación}{22}{section.1.4}%
-\contentsline {section}{\numberline {1.5}Objetivos}{24}{section.1.5}%
-\contentsline {subsection}{\numberline {1.5.1}Objetivo General}{24}{subsection.1.5.1}%
-\contentsline {subsection}{\numberline {1.5.2}Objetivos Específicos}{24}{subsection.1.5.2}%
-\contentsline {section}{\numberline {1.6}Alcance del Proyecto}{24}{section.1.6}%
-\contentsline {section}{\numberline {1.7}Fundamentación Teórica}{26}{section.1.7}%
-\contentsline {subsection}{\numberline {1.7.1}Accesibilidad web}{26}{subsection.1.7.1}%
-\contentsline {subsection}{\numberline {1.7.2}Pautas de Accesibilidad para el Contenido Web (WCAG)}{27}{subsection.1.7.2}%
-\contentsline {subsection}{\numberline {1.7.3}Diseño centrado en el usuario}{28}{subsection.1.7.3}%
-\contentsline {subsection}{\numberline {1.7.4}Usabilidad}{28}{subsection.1.7.4}%
-\contentsline {subsection}{\numberline {1.7.5}Experiencia de usuario}{29}{subsection.1.7.5}%
-\contentsline {subsection}{\numberline {1.7.6}Diseño inclusivo}{29}{subsection.1.7.6}%
-\contentsline {subsection}{\numberline {1.7.7}Evaluación automática y manual de accesibilidad}{29}{subsection.1.7.7}%
-\contentsline {subsection}{\numberline {1.7.8}Desarrollo web adaptable y estructura semántica}{30}{subsection.1.7.8}%
-\contentsline {subsection}{\numberline {1.7.9}Evaluación comparativa antes y después de la implementación}{30}{subsection.1.7.9}%
-\contentsline {subsection}{\numberline {1.7.10}Control de versiones y documentación técnica}{31}{subsection.1.7.10}%
-\contentsline {subsection}{\numberline {1.7.11}Indicadores para evaluar las mejoras}{31}{subsection.1.7.11}%
-\contentsline {subsection}{\numberline {1.7.12}Proceso de actualización del sitio web}{32}{subsection.1.7.12}%
-\contentsline {subsection}{\numberline {1.7.13}Matriz de indicadores del proyecto}{32}{subsection.1.7.13}%
-\contentsline {chapter}{\numberline {II}Metodología}{35}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Diagnóstico de la Situación Actual}{35}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Área de Estudio}{35}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Metodología de Desarrollo o Implementación}{36}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Técnicas e Instrumentos de Recolección de Información}{36}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Requerimientos del Proyecto}{36}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}Requerimientos Funcionales}{36}{subsection.2.5.1}%
-\contentsline {subsection}{\numberline {2.5.2}Requerimientos No Funcionales}{36}{subsection.2.5.2}%
-\contentsline {section}{\numberline {2.6}Diseño de la Solución}{36}{section.2.6}%
-\contentsline {section}{\numberline {2.7}Justificación Técnica}{36}{section.2.7}%
-\contentsline {subsection}{\numberline {2.7.1}Ejemplo de Imagen 1}{37}{subsection.2.7.1}%
-\contentsline {subsection}{\numberline {2.7.2}Ejemplo de Ecuación 1}{37}{subsection.2.7.2}%
-\contentsline {chapter}{\numberline {III}Implementación, Pruebas y Resultados}{38}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Descripción de la Solución}{38}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Proceso de Implementación}{38}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Pruebas y Validación}{38}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Resultados}{38}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Ejemplo de Figura 2}{38}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Ejemplo de Tabla 2}{39}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Ejemplo de Imagen 2}{39}{subsection.3.4.3}%
-\contentsline {subsection}{\numberline {3.4.4}Ejemplo de Ecuación 2}{39}{subsection.3.4.4}%
-\contentsline {subsection}{\numberline {3.4.5}Ejemplos de Referencias Cruzadas}{40}{subsection.3.4.5}%
-\contentsline {section}{\numberline {3.5}Cronograma y Presupuesto}{40}{section.3.5}%
-\contentsline {chapter}{\numberline {IV}Conclusiones y Recomendaciones}{41}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Conclusiones}{41}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Recomendaciones}{41}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Trabajos Futuros}{41}{section.4.3}%
-\contentsline {chapter}{REFERENCIAS}{42}{section*.9}%
-\contentsline {chapter}{GLOSARIO}{45}{chapter*.11}%
+\contentsline {section}{\numberline {1.3}Planteamiento del Problema}{18}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Justificación}{21}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Objetivos}{22}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Objetivo General}{22}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.2}Objetivos Específicos}{22}{subsection.1.5.2}%
+\contentsline {section}{\numberline {1.6}Alcance del Proyecto}{23}{section.1.6}%
+\contentsline {section}{\numberline {1.7}Fundamentación Teórica}{24}{section.1.7}%
+\contentsline {subsection}{\numberline {1.7.1}Accesibilidad Web y Pautas WCAG 2.2}{24}{subsection.1.7.1}%
+\contentsline {subsection}{\numberline {1.7.2}Diseño Centrado en el Usuario y Usabilidad Web}{25}{subsection.1.7.2}%
+\contentsline {subsection}{\numberline {1.7.3}Arquitectura de Software Basada en Componentes}{25}{subsection.1.7.3}%
+\contentsline {subsection}{\numberline {1.7.4}Optimización de Rendimiento Web y Core Web Vitals}{26}{subsection.1.7.4}%
+\contentsline {subsection}{\numberline {1.7.5}Integración de Sistemas y Servicios mediante APIs REST}{26}{subsection.1.7.5}%
+\contentsline {subsection}{\numberline {1.7.6}Flujo Metodológico de Actualización}{26}{subsection.1.7.6}%
+\contentsline {subsection}{\numberline {1.7.7}Matriz de Indicadores y Criterios de Aceptación}{27}{subsection.1.7.7}%
+\contentsline {chapter}{\numberline {II}Metodología}{28}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Diagnóstico de la Situación Actual}{28}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Área de Estudio}{28}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Metodología de Desarrollo o Implementación}{29}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Técnicas e Instrumentos de Recolección de Información}{29}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Requerimientos del Proyecto}{29}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Requerimientos Funcionales}{29}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Requerimientos No Funcionales}{29}{subsection.2.5.2}%
+\contentsline {section}{\numberline {2.6}Diseño de la Solución}{29}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Justificación Técnica}{29}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}Ejemplo de Imagen 1}{30}{subsection.2.7.1}%
+\contentsline {subsection}{\numberline {2.7.2}Ejemplo de Ecuación 1}{30}{subsection.2.7.2}%
+\contentsline {chapter}{\numberline {III}Implementación, Pruebas y Resultados}{31}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Descripción de la Solución}{31}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Proceso de Implementación}{31}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Pruebas y Validación}{31}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Resultados}{31}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Ejemplo de Figura 2}{31}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Ejemplo de Tabla 2}{32}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Ejemplo de Imagen 2}{32}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}Ejemplo de Ecuación 2}{32}{subsection.3.4.4}%
+\contentsline {subsection}{\numberline {3.4.5}Ejemplos de Referencias Cruzadas}{33}{subsection.3.4.5}%
+\contentsline {section}{\numberline {3.5}Cronograma y Presupuesto}{33}{section.3.5}%
+\contentsline {chapter}{\numberline {IV}Conclusiones y Recomendaciones}{34}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Conclusiones}{34}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Recomendaciones}{34}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Trabajos Futuros}{34}{section.4.3}%
+\contentsline {chapter}{REFERENCIAS}{35}{section*.10}%
+\contentsline {chapter}{GLOSARIO}{38}{chapter*.12}%
 \renewcommand {\cftchappresnum }{ANEXO~}
-\contentsline {chapter}{\numberline {A}Título del Anexo A}{46}{appendix.A}%
+\contentsline {chapter}{\numberline {A}Título del Anexo A}{39}{appendix.A}%
