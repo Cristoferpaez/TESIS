@@ -2,74 +2,196 @@
 \label{chap:metodologia}
 
 \section{Diagnóstico de la Situación Actual}
-\textit{[Analizar el estado inicial del sistema, proceso o infraestructura antes de la implementación del proyecto. Describir cómo funciona actualmente y las principales limitaciones técnicas.]}
+El punto de partida del proyecto consistió en la evaluación exhaustiva del portal web actual de la Facultad de Ingeniería de la Universidad Indoamérica (\url{https://ingenieria.uti.edu.ec}). La infraestructura tecnológica existente responde a un modelo web tradicional monolítico donde la lógica de presentación, las hojas de estilo y los scripts de interacción se encuentran estrechamente acoplados sin una separación modular de responsabilidades.
+
+A través de la auditoría técnica preliminar formalizada en el Capítulo~\ref{chap:introduccion}, se evidenciaron barreras críticas de accesibilidad digital y penalizaciones severas en el rendimiento de carga:
+\begin{itemize}
+  \item \textbf{Barreras de accesibilidad sensorial y motriz:} El 100\,\% de los elementos interactivos desplegables carecen de soporte para navegación por teclado, generando trampas de foco (incumplimiento de WCAG 2.2 Criterio 2.1.2) e indicadores visuales de foco inexistentes (Criterio 2.4.7). Asimismo, se detectaron 46 fallas de contraste cromático texto-fondo (Criterio 1.4.3) y 22 recursos gráficos sin alternativa textual (Criterio 1.1.1).
+  \item \textbf{Deficiencias de rendimiento frontend:} El hilo principal del navegador se bloquea durante 520 ms (\textit{Total Blocking Time} - TBT) debido a la ejecución síncrona de librerías globales heredadas, duplicando el límite recomendado de 200 ms. El despliegue visual del contenido principal (\textit{Largest Contentful Paint} - LCP) alcanza 4.3 s y la inestabilidad acumulada del diseño (\textit{Cumulative Layout Shift} - CLS) se sitúa en 0.28, penalizando notablemente el acceso en redes móviles.
+\end{itemize}
 
 \section{Área de Estudio}
+El estudio se delimita en el ámbito de la ingeniería de software web, la accesibilidad digital y la interacción persona-ordenador (HCI), aplicándose sobre el canal digital institucional de la Facultad de Ingeniería de la Universidad Indoamérica. La Tabla~\ref{tab:area_estudio} formaliza los parámetros institucionales y técnicos del área de estudio.
 
 \begin{table}[htbp]
   \centering
-  \caption{Área de estudio.}
+  \caption{Caracterización del área de estudio del proyecto de titulación.}
   \label{tab:area_estudio}
-  \renewcommand{\arraystretch}{1.35}
-  \begin{tabular}{|p{0.39\textwidth}|p{0.53\textwidth}|}
+  \renewcommand{\arraystretch}{1.30}
+  \small
+  \begin{tabular}{|p{0.32\textwidth}|p{0.62\textwidth}|}
     \hline
-    \textbf{Dominio:} & \textit{[Indique el dominio académico o científico del proyecto.]} \\
+    \textbf{Dominio:} & Ingeniería de Software Web, Accesibilidad Universal e Interacción Persona-Ordenador (HCI). \\
     \hline
     \textbf{Línea de investigación:} & \UTILineaInvestigacion \\
     \hline
     \textbf{Sublínea de investigación:} & \UTISublineaInvestigacion \\
     \hline
-    \textbf{Campo:} & Tecnologías de la información y la comunicación (TIC) \\
+    \textbf{Campo de estudio:} & Tecnologías de la Información y Comunicación (TIC). \\
     \hline
-    \textbf{Área:} & \textit{[Defina el área técnica específica del proyecto.]} \\
+    \textbf{Área específica:} & Desarrollo Frontend Basado en Componentes y Accesibilidad Web (WCAG 2.2 / WAI-ARIA 1.2). \\
     \hline
-    \textbf{Aspectos:} & \textit{[Describa los procesos, tecnologías o problemas que serán analizados.]} \\
+    \textbf{Aspectos analizados:} & Usabilidad percibida, conformidad WCAG 2.2, métricas de rendimiento web y navegación asistida por teclado y lectores de pantalla. \\
     \hline
-    \textbf{Objeto de estudio:} & \textit{[Indique la organización, sistema, proceso o infraestructura objeto del estudio.]} \\
+    \textbf{Objeto de estudio:} & Portal web institucional de la Facultad de Ingeniería de la Universidad Indoamérica (campus Ambato y sede Quito). \\
     \hline
-    \textbf{Periodo de estudio:} & \textit{[Indique las fechas o el intervalo de tiempo que comprende el estudio.]} \\
+    \textbf{Periodo de estudio:} & Octubre de 2026 -- Enero de 2027 (16 semanas calendario). \\
     \hline
   \end{tabular}
 \end{table}
+\elaboradopor{Cristofer Paez}
+\fuente{Elaboración propia a partir de las líneas de investigación institucionales de la UTI}
 
-\section{Metodología de Desarrollo o Implementación}
-\textit{[Describir y justificar la metodología empleada según la naturaleza del proyecto, indicando las fases y actividades a ejecutar. Por ejemplo, metodologías ágiles o tradicionales para software, o modelos de diseño, implementación o despliegue para hardware o infraestructura.]}
+\section{Metodología de Desarrollo: Diseño Centrado en el Usuario (ISO 9241-210)}
+Para garantizar que la actualización del sitio web responda a las necesidades concretas de la comunidad académica y de las personas con discapacidad, se adopta como marco de referencia el estándar internacional \textbf{ISO 9241-210:2019} (\textit{Human-centred design for interactive systems}) \cite{iso9241_210_2019}. 
+
+Este marco prescribe un enfoque interactivo e iterativo estructurado en cuatro actividades esenciales, complementadas con la ingeniería de software basada en componentes:
+\begin{enumerate}
+  \item \textbf{Actividad 1: Entender y especificar el contexto de uso e investigación con usuarios:} Se caracterizan los perfiles de usuario (estudiantes, aspirantes y personas con discapacidad visual y motriz), sus entornos tecnológicos, sus dispositivos de asistencia y las tareas críticas que ejecutan en el portal.
+  \item \textbf{Actividad 2: Especificar los requisitos del usuario y de la organización:} A partir de la investigación con usuarios y la auditoría técnica diagnóstica, se formalizan los requerimientos funcionales, los requisitos no funcionales de rendimiento y los criterios de accesibilidad WCAG 2.2 Nivel AA.
+  \item \textbf{Actividad 3: Producir soluciones de diseño y desarrollo modular:} Se diseñan los árboles de navegación, wireframes accesibles y prototipos de alta fidelidad, implementando posteriormente la arquitectura frontend basada en componentes desacoplados con atributos WAI-ARIA 1.2 y consumo de servicios RESTful.
+  \item \textbf{Actividad 4: Evaluar los diseños frente a los requisitos:} Se ejecutan evaluaciones empíricas mediante pruebas de usabilidad guiadas con usuarios reales (midiendo efectividad y satisfacción SUS \cite{brooke1996sus}), acompañadas de re-auditorías automatizadas con Lighthouse, WAVE y axe-core. Si se detectan deficiencias, el ciclo retroalimenta iterativamente las soluciones de diseño.
+\end{enumerate}
+
+La Figura~\ref{fig:flujo_iso9241_210} representa el flujo metodológico implementado conforme a la norma ISO 9241-210.
+
+\begin{figure}[htbp]
+  \centering
+  \begin{tikzpicture}[
+    node distance=1.0cm and 0.3cm,
+    auto,
+    fase/.style={
+      rectangle,
+      rounded corners=4pt,
+      draw=black!75,
+      fill=blue!6,
+      thick,
+      text width=2.45cm,
+      minimum height=1.4cm,
+      align=center,
+      font=\scriptsize\sffamily
+    },
+    linea/.style={
+      draw=black!75,
+      -Latex,
+      thick
+    },
+    retorno/.style={
+      draw=red!70!black,
+      -Latex,
+      dashed,
+      thick
+    }
+  ]
+    \node [fase] (act1) {\textbf{Actividad 1}\\Contexto de uso e investigación con usuarios};
+    \node [fase, right=0.35cm of act1] (act2) {\textbf{Actividad 2}\\Requisitos de usuario, sistema y WCAG 2.2};
+    \node [fase, right=0.35cm of act2] (act3) {\textbf{Actividad 3}\\Diseño modular, prototipos y componentes};
+    \node [fase, right=0.35cm of act3] (act4) {\textbf{Actividad 4}\\Evaluación con usuarios (SUS) y auditorías};
+
+    \path [linea] (act1) -- (act2);
+    \path [linea] (act2) -- (act3);
+    \path [linea] (act3) -- (act4);
+
+    % Iterative feedback loops
+    \path [retorno] (act4.south) -- ++(0,-0.45cm) -| node[pos=0.25, below, font=\tiny\sffamily] {Retroalimentación iterativa ante fallas de usabilidad} (act3.south);
+  \end{tikzpicture}
+  \caption{Ciclo de vida de Diseño Centrado en el Humano aplicado a la actualización del portal web.}
+  \label{fig:flujo_iso9241_210}
+\end{figure}
+\elaboradopor{Cristofer Paez}
+\fuente{Adaptado de la norma internacional ISO 9241-210:2019 \cite{iso9241_210_2019}}
 
 \section{Técnicas e Instrumentos de Recolección de Información}
-\textit{[Describir las técnicas utilizadas para obtener información durante el diagnóstico y la validación del proyecto, tales como entrevistas, encuestas u observación directa.]}
+Para recabar y validar la información técnica y de experiencia de usuario, se articulan métodos cuantitativos y cualitativos estructurados en dos vertientes:
+
+\subsection{Instrumentos de Inspección Técnica Automatizada}
+\begin{itemize}
+  \item \textbf{Google Lighthouse (v11):} Herramienta automatizada de auditoría en entorno emulado para evaluar el índice global de rendimiento (0--100), accesibilidad (0--100), LCP, TBT y CLS.
+  \item \textbf{WAVE (\textit{Web Accessibility Evaluation Tool}) y axe-core:} Motores de evaluación heurística de reglas de accesibilidad que detectan violaciones a las directrices WCAG 2.2, contrastes cromáticos deficientes y ausencia de textos alternativos.
+\end{itemize}
+
+\subsection{Protocolo de Evaluación Empírica con Usuarios y Personas con Discapacidad}
+La validación con usuarios se planifica sobre una muestra intencional de participantes que incluye:
+\begin{enumerate}
+  \item \textbf{Usuarios con discapacidad visual:} Dos participantes con baja visión y un participante con ceguera total usuario habitual del lector de pantalla NVDA sobre navegador web.
+  \item \textbf{Usuarios con discapacidad motriz:} Dos participantes con limitaciones motoras en miembros superiores que interactúan exclusivamente mediante teclado físico.
+  \item \textbf{Estudiantes regulares y aspirantes:} Cinco estudiantes sin discapacidad para evaluar la navegabilidad general de las mallas y formularios.
+\end{enumerate}
+
+Para evaluar la usabilidad percibida se utiliza la escala estandarizada \textbf{System Usability Scale (SUS)} formalizada por Brooke \cite{brooke1996sus}. El cuestionario consta de 10 ítems con escala Likert de 1 a 5, generando un puntaje global estandarizado de 0 a 100 puntos, donde valores iguales o superiores a 80 indican una usabilidad excelente \cite{binyamin2024accessibility}.
+
+\section{Matriz de Indicadores y Criterios de Aceptación}
+Para verificar empíricamente la efectividad de las mejoras implementadas, el proyecto establece una matriz de indicadores cuantitativos que contrasta el estado diagnosticado en la línea base frente a las metas de aceptación obligatorias. La Tabla~\ref{tab:matriz_indicadores} consolida los criterios técnicos y de usabilidad del proyecto.
+
+\begin{table}[htbp]
+  \centering
+  \small
+  \caption{Matriz de indicadores de rendimiento, accesibilidad y usabilidad del proyecto.}
+  \label{tab:matriz_indicadores}
+  \setlength{\tabcolsep}{4pt}
+  \renewcommand{\arraystretch}{1.25}
+  \begin{tabular}{|p{0.25\textwidth}|p{0.18\textwidth}|p{0.18\textwidth}|p{0.25\textwidth}|}
+    \hline
+    \textbf{Indicador Clave} & \textbf{Línea Base (Inicial)} & \textbf{Meta de Aceptación} & \textbf{Método de Verificación} \\
+    \hline
+    Puntaje Rendimiento & 42 / 100 & $\ge$ 90 / 100 & Auditoría Google Lighthouse \\
+    \hline
+    Puntaje Accesibilidad & 56 / 100 & $\ge$ 95 / 100 & Auditoría Google Lighthouse \\
+    \hline
+    Largest Contentful Paint (LCP) & 4.3 s & $\le$ 2.0 s & Métricas Core Web Vitals \\
+    \hline
+    Total Blocking Time (TBT) & 520 ms & $\le$ 200 ms & Métricas Core Web Vitals \\
+    \hline
+    Cumulative Layout Shift (CLS) & 0.28 & $\le$ 0.05 & Métricas Core Web Vitals \\
+    \hline
+    Errores de contraste (WAVE) & 46 detectados & 0 detectados & Validador automatizado WAVE \\
+    \hline
+    Imágenes sin texto alternativo & 22 recursos & 0 recursos & Validador WAVE / axe-core \\
+    \hline
+    Trampas de teclado & Presentes & 0 trampas & Inspección manual (WCAG 2.1.2) \\
+    \hline
+    Tasa de finalización de tareas & Por evaluar & $\ge$ 90\,\% & Pruebas de tareas con usuarios \\
+    \hline
+    Satisfacción del usuario (SUS) & Por evaluar & $\ge$ 80 / 100 & Cuestionario estandarizado SUS \\
+    \hline
+  \end{tabular}
+\end{table}
+\elaboradopor{Cristofer Paez}
+\fuente{Elaboración propia a partir del diagnóstico inicial y estándares ISO 9241-11 \cite{iso9241_11_2018}}
 
 \section{Requerimientos del Proyecto}
-\subsection{Requerimientos Funcionales}
-\textit{[Enumerar y describir los requerimientos funcionales que la solución debe cumplir.]}
-\subsection{Requerimientos No Funcionales}
-\textit{[Describir requerimientos relacionados con seguridad, rendimiento, disponibilidad, escalabilidad u otros aplicables.]}
+Con base en el alcance priorizado de los flujos críticos, se definen los siguientes requerimientos:
+
+\subsection{Requerimientos Funcionales (RF)}
+\begin{itemize}
+  \item \textbf{RF01 - Consulta de Oferta Académica y Mallas Curriculares:} El sistema debe permitir explorar las carreras de ingeniería de la facultad, visualizando materias por niveles, créditos y prerrequisitos en formato semántico navegable por teclado.
+  \item \textbf{RF02 - Proceso de Admisiones y Formulario Accesible:} El sistema debe proveer un formulario de contacto y postulación vocacional con validación de campos en tiempo real, mensajes descriptivos de error accesibles para lectores de pantalla y asistencia a la entrada (WCAG 3.3).
+  \item \textbf{RF03 - Barra de Accesibilidad Digital:} La plataforma debe incluir un panel de accesibilidad persistente que permita alternar modo de alto contraste cromático, modo oscuro, escalado de fuente tipográfica y activación de tipografía accesible para dislexia.
+  \item \textbf{RF04 - Compatibilidad con Lectores de Pantalla:} Todos los componentes dinámicos interactivos (botones, menús, acordeones) deben incorporar atributos WAI-ARIA 1.2 (\texttt{aria-expanded}, \texttt{aria-live}, \texttt{role}) para transmitir su estado a tecnologías de asistencia.
+\end{itemize}
+
+\subsection{Requerimientos No Funcionales (RNF)}
+\begin{itemize}
+  \item \textbf{RNF01 - Rendimiento y Tiempos de Carga:} El despliegue visual del contenido principal (LCP) debe ser inferior a 2.5 s y el TBT inferior a 200 ms bajo condiciones normales de conexión.
+  \item \textbf{RNF02 - Conformidad de Accesibilidad:} El sitio debe satisfacer el 100\,\% de los criterios de éxito de nivel A y AA de las pautas WCAG 2.2 y la norma NTE INEN-ISO/IEC 40500.
+  \item \textbf{RNF03 - Diseño Adaptable (Responsive):} La interfaz debe adaptarse fluidamente a dispositivos móviles, tabletas y computadores de escritorio (resoluciones desde 320 px hasta 1920 px) sin pérdidas de contenido ni desplazamientos horizontales no intencionados.
+  \item \textbf{RNF04 - Modularidad y Mantenibilidad:} La arquitectura frontend debe estructurarse en componentes desacoplados reutilizables, facilitando actualizaciones futuras sin introducir regresiones en el código.
+\end{itemize}
 
 \section{Diseño de la Solución}
 \label{sec:diseno_solucion}
-\textit{[Describir el diseño técnico de la solución propuesta. Puede incluir arquitectura del sistema o infraestructura, diagramas lógicos y físicos, modelos de datos, componentes o configuraciones técnicas.]}
+La arquitectura de la solución se concibe bajo el paradigma basado en componentes modulares desacoplados \cite{peltonen2021microfrontends,richards2020fundamentals}. Se estructura en tres capas principales:
+\begin{enumerate}
+  \item \textbf{Capa de Presentación y Componentes Accesibles:} Conjunto de módulos UI reutilizables construidos con HTML5 semántico y CSS3 modular (diseño \textit{Mobile-First}), encapsulando la accesibilidad en cada componente (tarjetas de materias, campos de formulario con etiquetas asociadas mediante \texttt{for}/\texttt{id}, y controles de accesibilidad).
+  \item \textbf{Capa de Estado y Lógica Frontend:} Maneja el estado reactivo de las preferencias de accesibilidad del usuario (almacenadas localmente para persistencia entre sesiones) y valida las entradas de formularios antes de enviarlas al servidor.
+  \item \textbf{Capa de Integración de Datos (APIs REST):} Módulo desacoplado de comunicación asíncrona mediante peticiones HTTP/JSON con servicios de contenido académico, permitiendo la actualización descentralizada de mallas curriculares y comunicados institucionales.
+\end{enumerate}
 
-\section{Justificación Técnica}
-\textit{[Argumentar técnicamente la selección de tecnologías, herramientas, plataformas, equipos o servicios utilizados en el proyecto.]}
-
-Ejemplo de cita metodológica: la justificación de decisiones técnicas puede apoyarse en literatura de diseño e implementación de sistemas como \cite{hevner2004design,humble2011devops}.
-
-\subsection{Ejemplo de Imagen 1}
-Ejemplo de referencia en el cuerpo del texto: la Imagen~\ref{img:ejemplo_1} puede usarse para documentar evidencia técnica del entorno, componentes o interfaz.
-
-\begin{imagen}[htbp]
-  \centering
-  \includegraphics[width=0.80\textwidth]{Capítulos/img/img_ejemplo_1.png}
-  \caption{Ejemplo de imagen para documentación visual de infraestructura o evidencias.}
-  \label{img:ejemplo_1}
-\end{imagen}
-\elaboradopor{Estudiante}
-\fuente{Captura referencial del proyecto}
-
-\subsection{Ejemplo de Ecuación 1}
-Otro ejemplo de referencia: la Ecuación~\ref{eq:disponibilidad} muestra un cálculo típico para validación de disponibilidad del servicio.
-
-\begin{equation}
-\label{eq:disponibilidad}
-Disponibilidad\,(\%) = \frac{T_{operativo}}{T_{total}} \times 100
-\end{equation}
-\addeqtolist{Cálculo de disponibilidad del servicio}
+\section{Justificación Técnica de Herramientas y Estándares}
+La selección de tecnologías responde a criterios de robustez técnica, compatibilidad con tecnologías de asistencia, conformidad legal y apertura de código:
+\begin{itemize}
+  \item \textbf{HTML5 Semántico y CSS3 Modular:} Permite prescindir de librerías propietarias pesadas, reduciendo el peso de transferencia y asegurando una jerarquía estructural legible por agentes de usuario.
+  \item \textbf{WAI-ARIA 1.2 y WCAG 2.2:} Garantizan la interoperabilidad técnica universal con tecnologías de asistencia de última generación, cumpliendo con la legislación ecuatoriana (LOD y NTE INEN 40500).
+  \item \textbf{Lector de Pantalla NVDA:} Software libre líder en accesibilidad digital en el entorno hispanohablante, garantizando pruebas reales de compatibilidad técnica.
+  \item \textbf{Control de Versiones Git:} Asegura trazabilidad, reproducibilidad y colaboración ordenada en el repositorio de código fuente del proyecto.
+\end{itemize}
