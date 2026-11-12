@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.10.21)  12 NOV 2026 07:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.10.21)  12 NOV 2026 08:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1082,7 +1082,7 @@ Package hyperref Info: Link coloring OFF on input line 26.
 \openout4 = `main.out'.
 
 Package babel Info: Main language set to 'spanish'.
-<Logos/LOGO-UTI-1.png, id=193, 3011.25pt x 3011.25pt>
+<Logos/LOGO-UTI-1.png, id=201, 3011.25pt x 3011.25pt>
 File: Logos/LOGO-UTI-1.png Graphic file (type png)
 <use Logos/LOGO-UTI-1.png>
 Package pdftex.def Info: Logos/LOGO-UTI-1.png  used on input line 97.
@@ -1471,87 +1471,125 @@ LaTeX Font Info:    Font shape `OT1/ntxtlf/b/it' will be
 Cap\'{\i }tulo II.
 [29
 
-] [30]
+] [30] [31] [32]
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 8.0pt on input line 86.
-LaTeX Font Info:    Trying to load font information for OT1+qag on input line 8
-6.
+(Font)              scaled to size 8.0pt on input line 104.
+LaTeX Font Info:    Trying to load font information for OT1+qag on input line 1
+04.
  (c:/texlive/2026/texmf-dist/tex/latex/tex-gyre/ot1qag.fd
 File: ot1qag.fd 2009/09/25 v1.2 font definition file for OT1/qag
 )
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 6.0pt on input line 96.
- [31{c:/texlive/2026/texmf-dist/fonts/enc/dvips/tex-gyre/q-rm.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 135--135
+(Font)              scaled to size 6.0pt on input line 114.
+
+[33{c:/texlive/2026/texmf-dist/fonts/enc/dvips/tex-gyre/q-rm.enc}] [34]
+Underfull \hbox (badness 10000) in paragraph at lines 163--163
 []\OT1/ntxtlf/b/n/10.95 L[]^^Pnea Ba-se
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 137--138
+Underfull \hbox (badness 1776) in paragraph at lines 163--164
+[]\OT1/ntxtlf/b/n/10.95 M[]eto-do de Ve-ri-fi-ca-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 165--166
 []\OT1/minntx/m/n/10.95 Auditor[]^^Pa Goo-gle
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 139--140
+Underfull \hbox (badness 10000) in paragraph at lines 167--168
 []\OT1/minntx/m/n/10.95 Auditor[]^^Pa Goo-gle
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 141--141
-[]\OT1/minntx/m/n/10.95 Largest Con-tent-ful
+Underfull \hbox (badness 2401) in paragraph at lines 169--169
+[]\OT1/minntx/m/n/10.95 Largest Con-tent-ful Paint
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 145--145
-[]\OT1/minntx/m/n/10.95 Cumulative La-yout
+Underfull \hbox (badness 1931) in paragraph at lines 173--173
+[]\OT1/minntx/m/n/10.95 Cumulative La-yout Shift
  []
 
 
-Underfull \hbox (badness 2005) in paragraph at lines 147--147
-[]\OT1/minntx/m/n/10.95 Errores de con-tras-te
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 151--152
+Underfull \hbox (badness 10000) in paragraph at lines 179--180
 []\OT1/minntx/m/n/10.95 Inspecci[]on ma-nual
  []
 
-[32] [33] [34] [35]) (./Capítulos/03_Implementación.tex [36]
+
+Underfull \hbox (badness 3965) in paragraph at lines 183--183
+[]\OT1/minntx/m/n/10.95 Satisfacci[]on del usua-rio
+ []
+
+
+Underfull \hbox (badness 2635) in paragraph at lines 205--205
+[]\OT1/ntxtlf/b/n/10.95 Nombre del Re-que-ri-
+ []
+
+LaTeX Font Info:    Font shape `OT1/ntxtt/m/n' will be
+(Font)              scaled to size 10.95pt on input line 207.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 20
+9.
+(c:/texlive/2026/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+Underfull \hbox (badness 1281) in paragraph at lines 209--210
+\OT1/minntx/m/n/10.95 co expl[]^^Pci-to (\OT1/ntxtt/m/n/10.95 <label for="...[]
+\OT1/minntx/m/n/10.95 ), agru-pa-
+ []
+
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/it' will be
+(Font)              scaled to size 10.95pt on input line 215.
+[35]
+Underfull \hbox (badness 2635) in paragraph at lines 236--236
+[]\OT1/ntxtlf/b/n/10.95 Nombre del Re-que-ri-
+ []
+
+[36] [37]
+<Capítulos/img/img_ejemplo_1.png, id=575, 1405.25pt x 903.375pt>
+File: Capítulos/img/img_ejemplo_1.png Graphic file (type png)
+<use Capítulos/img/img_ejemplo_1.png>
+Package pdftex.def Info: Capítulos/img/img_ejemplo_1.png  used on input line 2
+75.
+(pdftex.def)             Requested size: 298.75394pt x 192.0577pt.
+Package hyperref Info: bookmark level for unknown imagen defaults to 0 on input
+ line 276.
+ [38] [39 <./Capítulos/img/img_ejemplo_1.png (PNG copy)>])
+(./Capítulos/03_Implementación.tex [40]
 Cap\'{\i }tulo III.
-<Capítulos/fig/fig_ejemplo_2.png, id=536, 1405.25pt x 903.375pt>
+<Capítulos/fig/fig_ejemplo_2.png, id=600, 1405.25pt x 903.375pt>
 File: Capítulos/fig/fig_ejemplo_2.png Graphic file (type png)
 <use Capítulos/fig/fig_ejemplo_2.png>
 Package pdftex.def Info: Capítulos/fig/fig_ejemplo_2.png  used on input line 2
 1.
 (pdftex.def)             Requested size: 318.67209pt x 204.86337pt.
-[37
+[41
 
 ]
-<Capítulos/img/img_ejemplo_2.png, id=543, 1405.25pt x 903.375pt>
+<Capítulos/img/img_ejemplo_2.png, id=607, 1405.25pt x 903.375pt>
 File: Capítulos/img/img_ejemplo_2.png Graphic file (type png)
 <use Capítulos/img/img_ejemplo_2.png>
 Package pdftex.def Info: Capítulos/img/img_ejemplo_2.png  used on input line 5
 5.
 (pdftex.def)             Requested size: 318.67209pt x 204.86337pt.
-Package hyperref Info: bookmark level for unknown imagen defaults to 0 on input
- line 56.
- [38 <./Capítulos/fig/fig_ejemplo_2.png (PNG copy)>])
-(./Capítulos/04_Conclusiones.tex [39 <./Capítulos/img/img_ejemplo_2.png (PNG 
+ [42 <./Capítulos/fig/fig_ejemplo_2.png (PNG copy)>])
+(./Capítulos/04_Conclusiones.tex [43 <./Capítulos/img/img_ejemplo_2.png (PNG 
 copy)>]
 Cap\'{\i }tulo IV.
-) (./Capítulos/05_Referencias.tex [40
+) (./Capítulos/05_Referencias.tex [44
 
-] (./main.bbl [41
+] (./main.bbl [45
 
-] [42
+] [46
 
-] [43]))
-(./Capítulos/06_Glosario.tex [44]) [45
+] [47]))
+(./Capítulos/06_Glosario.tex [48]) [49
 
 
 ] (./Anexos/01_Anexo.tex
 Ap\'{e}ndice A.
-) [46
+) [50
 
 
 ] (./main.aux
@@ -1563,29 +1601,31 @@ LaTeX2e <2026-06-01>
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: F311D84F0C461582AC660E05058D667A;9640.
+(rerunfilecheck)             Checksum: 0EC4F82C85FA2B1970ED693BBDEE31DF;10133.
  ) 
 Here is how much of TeX's memory you used:
- 30315 strings out of 467050
- 552584 string characters out of 5410549
- 957205 words of memory out of 5000000
- 58966 multiletter control sequences out of 15000+600000
- 686231 words of font info for 138 fonts, out of 8000000 for 9000
+ 30382 strings out of 467050
+ 553821 string characters out of 5410549
+ 963649 words of memory out of 5000000
+ 59008 multiletter control sequences out of 15000+600000
+ 690540 words of font info for 148 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  92i,12n,131p,1016b,910s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2026/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb><c:/texlive/
-2026/texmf-dist/fonts/type1/public/tex-gyre/qagb.pfb><c:/texlive/2026/texmf-dis
-t/fonts/type1/public/tex-gyre/qagr.pfb><c:/texlive/2026/texmf-dist/fonts/type1/
-public/tex-gyre/qtmr.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/newtx/t
-xmiaX.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/newtx/txsys.pfb><c:/te
-xlive/2026/texmf-dist/fonts/type1/public/txfonts/txtt.pfb><c:/texlive/2026/texm
-f-dist/fonts/type1/public/newtx/ztmb.pfb><c:/texlive/2026/texmf-dist/fonts/type
-1/public/newtx/ztmbi.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/newtx/z
-tmr.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on main.pdf (47 pages, 470148 bytes).
+2026/texmf-dist/fonts/type1/public/amsfonts/latxfont/lasy10.pfb><c:/texlive/202
+6/texmf-dist/fonts/type1/public/tex-gyre/qagb.pfb><c:/texlive/2026/texmf-dist/f
+onts/type1/public/tex-gyre/qagr.pfb><c:/texlive/2026/texmf-dist/fonts/type1/pub
+lic/tex-gyre/qtmr.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/newtx/txex
+s.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb><c:/texli
+ve/2026/texmf-dist/fonts/type1/public/newtx/txsys.pfb><c:/texlive/2026/texmf-di
+st/fonts/type1/public/txfonts/txtt.pfb><c:/texlive/2026/texmf-dist/fonts/type1/
+public/newtx/ztmb.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/newtx/ztmb
+i.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/newtx/ztmr.pfb><c:/texlive
+/2026/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
+Output written on main.pdf (51 pages, 507649 bytes).
 PDF statistics:
- 690 PDF objects out of 1000 (max. 8388607)
- 607 compressed objects within 7 object streams
- 146 named destinations out of 1000 (max. 500000)
- 404 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 762 PDF objects out of 1000 (max. 8388607)
+ 670 compressed objects within 7 object streams
+ 160 named destinations out of 1000 (max. 500000)
+ 425 words of extra memory for PDF output out of 10000 (max. 10000000)
 

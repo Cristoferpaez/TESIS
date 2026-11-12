@@ -137,4 +137,8 @@ R.~S. Pressman and B.~R. Maxim, \emph{Software Engineering: A Practitioner's
   Approach}, 9th~ed.\hskip 1em plus 0.5em minus 0.4em\relax New York, NY, USA:
   McGraw-Hill, 2020.
 
+\bibitem{hevner2004design}
+A.~R. Hevner, S.~T. March, J.~Park, and S.~Ram, ``Design science in information
+  systems research,'' \emph{MIS Quarterly}, vol.~28, no.~1, pp. 75--105, 2004.
+
 \end{thebibliography}
