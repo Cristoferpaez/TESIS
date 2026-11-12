@@ -8,52 +8,49 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: referencias.bib
-Warning--I didn't find a database entry for "hevner2004design"
-Warning--I didn't find a database entry for "humble2011devops"
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
-You've used 18 entries,
+You've used 22 entries,
             4087 wiz_defined-function locations,
-            923 strings with 10564 characters,
-and the built_in function-call counts, 11777 in all, are:
-= -- 987
-> -- 237
-< -- 90
-+ -- 129
-- -- 46
-* -- 546
-:= -- 1854
-add.period$ -- 36
-call.type$ -- 18
-change.case$ -- 23
-chr.to.int$ -- 198
-cite$ -- 18
-duplicate$ -- 876
-empty$ -- 938
-format.name$ -- 51
-if$ -- 2710
+            948 strings with 11702 characters,
+and the built_in function-call counts, 14238 in all, are:
+= -- 1190
+> -- 282
+< -- 99
++ -- 152
+- -- 55
+* -- 644
+:= -- 2235
+add.period$ -- 46
+call.type$ -- 22
+change.case$ -- 31
+chr.to.int$ -- 222
+cite$ -- 22
+duplicate$ -- 1070
+empty$ -- 1174
+format.name$ -- 61
+if$ -- 3292
 int.to.chr$ -- 0
-int.to.str$ -- 18
-missing$ -- 152
-newline$ -- 77
-num.names$ -- 18
-pop$ -- 343
+int.to.str$ -- 22
+missing$ -- 190
+newline$ -- 89
+num.names$ -- 24
+pop$ -- 444
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 915
+skip$ -- 1106
 stack$ -- 0
-substring$ -- 494
-swap$ -- 688
-text.length$ -- 24
+substring$ -- 570
+swap$ -- 825
+text.length$ -- 25
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 18
+type$ -- 22
 warning$ -- 0
-while$ -- 53
-width$ -- 20
-write$ -- 192
-(There were 2 warnings)
+while$ -- 63
+width$ -- 24
+write$ -- 229

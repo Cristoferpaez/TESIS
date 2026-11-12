@@ -7,7 +7,8 @@
 \providecommand{\BIBentrySTDinterwordspacing}{\spaceskip=0pt\relax}
 \providecommand{\BIBentryALTinterwordstretchfactor}{4}
 \providecommand{\BIBentryALTinterwordspacing}{\spaceskip=\fontdimen2\font plus
-\BIBentryALTinterwordstretchfactor\fontdimen3\font minus \fontdimen4\font\relax}
+\BIBentryALTinterwordstretchfactor\fontdimen3\font minus
+  \fontdimen4\font\relax}
 \providecommand{\BIBforeignlanguage}[2]{{%
 \expandafter\ifx\csname l@#1\endcsname\relax
 \typeout{** WARNING: IEEEtran.bst: No hyphenation pattern has been}%
@@ -21,57 +22,119 @@
 \BIBdecl
 
 \bibitem{almarashdeh2020portals}
-D.~Al-Fraihat, M.~Joy, R.~Masa'deh, and J.~Sinclair, ``Evaluating e-learning systems success: An empirical study,'' \emph{Computers in Human Behavior}, vol. 102, pp. 67--86, 2020.
+D.~Al-Fraihat, M.~Joy, R.~Masa'deh, and J.~Sinclair, ``Evaluating e-learning
+  systems success: An empirical study,'' \emph{Computers in Human Behavior},
+  vol. 102, pp. 67--86, 2020.
 
 \bibitem{wcag22}
-{World Wide Web Consortium (W3C)}, ``Web content accessibility guidelines ({WCAG}) 2.2,'' W3C Recommendation, Dec. 2024, disponible en: \url{https://www.w3.org/TR/WCAG22/}.
+{World Wide Web Consortium (W3C)}, ``Web content accessibility guidelines
+  ({WCAG}) 2.2,'' W3C Recommendation, Oct. 2023, disponible en:
+  \url{https://www.w3.org/TR/WCAG22/}.
 
 \bibitem{wai_aria12}
-------, ``Accessible rich internet applications ({WAI-ARIA}) 1.2,'' W3C Recommendation, Jun. 2023, disponible en: \url{https://www.w3.org/TR/wai-aria-1.2/}.
+------, ``Accessible rich internet applications ({WAI-ARIA}) 1.2,'' W3C
+  Recommendation, Jun. 2023, disponible en:
+  \url{https://www.w3.org/TR/wai-aria-1.2/}.
 
 \bibitem{iso9241_210_2019}
-{International Organization for Standardization}, ``{ISO 9241-210:2019 Ergonomics of human-system interaction---Part 210: Human-centred design for interactive systems},'' Geneva, Switzerland, 2019, disponible en: \url{https://www.iso.org/standard/77520.html}.
+{International Organization for Standardization}, ``{ISO 9241-210:2019
+  Ergonomics of human-system interaction---Part 210: Human-centred design for
+  interactive systems},'' Geneva, Switzerland, 2019, disponible en:
+  \url{https://www.iso.org/standard/77520.html}.
 
 \bibitem{iso9241_11_2018}
-------, ``{ISO 9241-11:2018 Ergonomics of human-system interaction---Part 11: Usability: Definitions and concepts},'' Geneva, Switzerland, 2018, disponible en: \url{https://www.iso.org/standard/63500.html}.
-
-\bibitem{nielsen2022usability}
-J.~Nielsen and R.~Budiu, ``Mobile usability and responsive design in modern higher education systems,'' \emph{Nielsen Norman Group Research Reports}, 2022, disponible en: \url{https://www.nngroup.com/}.
+------, ``{ISO 9241-11:2018 Ergonomics of human-system interaction---Part 11:
+  Usability: Definitions and concepts},'' Geneva, Switzerland, 2018, disponible
+  en: \url{https://www.iso.org/standard/63500.html}.
 
 \bibitem{acosta2017analisis}
-T.~Acosta and S.~Luj{\'a}n-Mora, ``An{\'a}lisis de la accesibilidad de los sitios web de las universidades ecuatorianas de excelencia,'' \emph{Enfoque UTE}, vol.~8, no. suplemento 1, pp. 46--61, 2017.
+T.~Acosta and S.~Luj{\'a}n-Mora, ``An{\'a}lisis de la accesibilidad de los
+  sitios web de las universidades ecuatorianas de excelencia,'' \emph{Enfoque
+  UTE}, vol.~8, no. suplemento 1, pp. 46--61, 2017.
 
 \bibitem{campoverde2020empirical}
-M.~Campoverde-Molina, S.~Luj{\'a}n-Mora, and L.~Valverde~Garc{\'\i}a, ``Empirical studies on web accessibility of educational websites: A systematic literature review,'' \emph{IEEE Access}, vol.~8, pp. 91\,676--91\,700, 2020.
+M.~Campoverde-Molina, S.~Luj{\'a}n-Mora, and L.~Valverde-Garc{\'\i}a,
+  ``Empirical studies on web accessibility of educational websites: A
+  systematic literature review,'' \emph{IEEE Access}, vol.~8, pp.
+  91\,676--91\,700, 2020.
 
 \bibitem{chiriboga2024accessibility}
-W.~Chiriboga Casanova~Quevedo, N.~Medina~Medina, and P.~Paderewski~Rodr{\'\i}guez, ``Accessibility analysis of ecuadorian university web sites,'' \emph{InGenio Journal}, vol.~7, no.~2, pp. 137--157, 2024.
+W.~Chiriboga-Casanova, N.~Medina-Medina, and P.~Paderewski-Rodr{\'\i}guez,
+  ``Accessibility analysis of ecuadorian university web sites,'' \emph{InGenio
+  Journal}, vol.~7, no.~2, pp. 137--157, 2024.
 
 \bibitem{jaeger2006assessing}
-P.~T. Jaeger, ``Assessing section 508 compliance on federal e-government web sites: A multi-method, user-centered evaluation of accessibility for persons with disabilities,'' \emph{Government Information Quarterly}, vol.~23, no.~2, pp. 169--190, 2006.
+P.~T. Jaeger, ``Assessing section 508 compliance on federal e-government web
+  sites: A multi-method, user-centered evaluation of accessibility for persons
+  with disabilities,'' \emph{Government Information Quarterly}, vol.~23, no.~2,
+  pp. 169--190, 2006.
 
 \bibitem{vollenwyder2023how}
-B.~Vollenwyder, S.~Petralito, G.~H. Iten, F.~Br{\"u}hlmann, K.~Opwis, and E.~D. Mekler, ``How compliance with web accessibility standards shapes the experiences of users with and without disabilities,'' \emph{International Journal of Human-Computer Studies}, vol. 170, p. 102956, 2023.
+B.~Vollenwyder, S.~Petralito, G.~H. Iten, F.~Br{\"u}hlmann, K.~Opwis, and E.~D.
+  Mekler, ``How compliance with web accessibility standards shapes the
+  experiences of users with and without disabilities,'' \emph{International
+  Journal of Human-Computer Studies}, vol. 170, p. 102956, 2023.
+
+\bibitem{binyamin2024accessibility}
+S.~S. Binyamin and M.~Z. Aslam, ``Evaluating higher education web accessibility
+  and usability: An empirical assessment of university portals,''
+  \emph{Universal Access in the Information Society}, vol.~23, no.~2, pp.
+  415--433, 2024.
 
 \bibitem{peltonen2021microfrontends}
-E.~Peltonen, L.~Mezzalira, A.~Taivalsaari, and T.~Mikkonen, ``Micro-frontends in web application development: A survey,'' \emph{IEEE Software}, vol.~38, no.~5, pp. 42--48, 2021.
+S.~Peltonen, L.~Mezzalira, and D.~Taibi, ``Motivations, benefits, and issues
+  for adopting micro-frontends: A multivocal literature review,''
+  \emph{Information and Software Technology}, vol. 136, p. 106571, 2021.
 
 \bibitem{richards2020fundamentals}
-M.~Richards and N.~Ford, \emph{Fundamentals of Software Architecture: An Engineering Approach}.\hskip 1em plus 0.5em minus 0.4em\relax Sebastopol, CA, USA: O'Reilly Media, 2020.
-
-\bibitem{sommerville2016software}
-I.~Sommerville, \emph{Software Engineering}, 10th~ed.\hskip 1em plus 0.5em minus 0.4em\relax Pearson, 2016.
+M.~Richards and N.~Ford, \emph{Fundamentals of Software Architecture: An
+  Engineering Approach}.\hskip 1em plus 0.5em minus 0.4em\relax Sebastopol, CA,
+  USA: O'Reilly Media, 2020.
 
 \bibitem{google2023corewebvitals}
-{Google Developers}, ``Web vitals: Essential metrics for a healthy site,'' 2024, disponible en: \url{https://web.dev/vitals/}.
+{Google Developers}, ``Web vitals: Essential metrics for a healthy site,''
+  2024, disponible en: \url{https://web.dev/vitals/}.
 
-\bibitem{taivalsaari2021webapps}
-A.~Taivalsaari and T.~Mikkonen, ``A roadmap to modern web development: Architecture, frameworks, and evolution,'' \emph{Journal of Web Engineering}, vol.~20, no.~6, pp. 1649--1688, 2021.
+\bibitem{pautasso2008rest}
+C.~Pautasso, O.~Zimmermann, and F.~Leymann, ``Restful web services vs. big web
+  services: Making the right architectural decision,'' in \emph{Proceedings of
+  the 17th International Conference on World Wide Web (WWW '08)}.\hskip 1em
+  plus 0.5em minus 0.4em\relax New York, NY, USA: ACM, 2008, pp. 805--814.
 
-\bibitem{biornhansen2020webframeworks}
-A.~Bi{\o}rn-Hansen, G.~Ghinea, and T.-M. Gr{\o}nli, ``Web frameworks for efficient single-page application development: An empirical evaluation,'' \emph{ACM Computing Surveys}, vol.~53, no.~4, pp. 1--34, 2020.
+\bibitem{biornhansen2020crossplatform}
+A.~Bi{\o}rn-Hansen, T.-M. Gr{\o}nli, G.~Ghinea, and C.~Alcock, ``A survey and
+  taxonomy of core concepts and approaches in mobile cross-platform and web
+  development,'' \emph{ACM Computing Surveys}, vol.~53, no.~4, pp. 1--34, 2020.
+
+\bibitem{conadis2023estadisticas}
+{Consejo Nacional para la Igualdad de Discapacidades (CONADIS)},
+  ``Estad{\'i}sticas del registro nacional de discapacidades,'' Quito, Ecuador,
+  2023, disponible en: \url{https://www.consejodiscapacidades.gob.ec/}.
+
+\bibitem{lod_ecuador}
+{Asamblea Nacional del Ecuador}, ``Ley org{\'a}nica de discapacidades,''
+  Registro Oficial N.° 796, Quito, Ecuador, 2012, con reformas vigentes a
+  2023. Artículos 64 y 65 sobre accesibilidad TIC.
+
+\bibitem{inen40500}
+{Servicio Ecuatoriano de Normalizaci{\'o}n (INEN)}, ``{NTE INEN-ISO/IEC
+  40500:2016 Tecnología de la información --- Directrices de accesibilidad
+  para el contenido web (WCAG 2.0) (ISO/IEC 40500:2012, IDT)},'' Quito,
+  Ecuador, 2016, norma Técnica Ecuatoriana Oficial.
+
+\bibitem{brooke1996sus}
+J.~Brooke, ``{SUS}: A `quick and dirty' usability scale,'' in \emph{Usability
+  Evaluation in Industry}, P.~W. Jordan, B.~Thomas, I.~L. McClelland, and
+  B.~Weerdmeester, Eds.\hskip 1em plus 0.5em minus 0.4em\relax London, UK:
+  Taylor \& Francis, 1996, pp. 189--194.
+
+\bibitem{sommerville2016software}
+I.~Sommerville, \emph{Software Engineering}, 10th~ed.\hskip 1em plus 0.5em
+  minus 0.4em\relax Boston, MA, USA: Pearson, 2016.
 
 \bibitem{pressman2020software}
-R.~S. Pressman and B.~R. Maxim, \emph{Software Engineering: A Practitioner's Approach}, 9th~ed.\hskip 1em plus 0.5em minus 0.4em\relax McGraw-Hill, 2020.
+R.~S. Pressman and B.~R. Maxim, \emph{Software Engineering: A Practitioner's
+  Approach}, 9th~ed.\hskip 1em plus 0.5em minus 0.4em\relax New York, NY, USA:
+  McGraw-Hill, 2020.
 
 \end{thebibliography}
