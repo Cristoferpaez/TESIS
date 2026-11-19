@@ -1,0 +1,300 @@
+\documentclass[landscape,9pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[spanish,es-tabla,es-noshorthands]{babel}
+\usepackage[a4paper,landscape,margin=0.6cm]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, shapes.misc, arrows.meta, positioning, calc, fit, backgrounds, shadows.blur, decorations.pathreplacing, babel}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+
+% Paleta de colores institucional y moderna
+\definecolor{utiNavy}{HTML}{0F2A4A}
+\definecolor{utiBlue}{HTML}{1A5694}
+\definecolor{utiLightBlue}{HTML}{EBF3FB}
+\definecolor{utiAccent}{HTML}{D97706}
+\definecolor{phaseGreen}{HTML}{0D6832}
+\definecolor{phaseGreenLight}{HTML}{EDF9F0}
+\definecolor{phasePurple}{HTML}{5B21B6}
+\definecolor{phasePurpleLight}{HTML}{F5F3FF}
+\definecolor{phaseRed}{HTML}{B91C1C}
+\definecolor{phaseRedLight}{HTML}{FEF2F2}
+\definecolor{phaseAmber}{HTML}{B45309}
+\definecolor{phaseAmberLight}{HTML}{FFFBEB}
+\definecolor{borderSlate}{HTML}{94A3B8}
+\definecolor{cardBg}{HTML}{FFFFFF}
+
+\pagestyle{empty}
+
+\begin{document}
+\begin{center}
+
+\begin{tikzpicture}[
+    scale=0.70, transform shape,
+    % Estilos de nodos
+    banner/.style={
+        rectangle, rounded corners=8pt, fill=utiNavy, text=white,
+        inner sep=10pt, align=center, drop shadow={opacity=0.25}
+    },
+    phaseBox/.style={
+        rectangle, rounded corners=10pt, draw=#1, line width=1.5pt, fill=#1!4,
+        inner sep=10pt
+    },
+    startStop/.style={
+        ellipse, draw=utiNavy, line width=1.5pt, fill=utiLightBlue, text=utiNavy,
+        font=\bfseries\small, align=center, inner sep=6pt, drop shadow={opacity=0.15}
+    },
+    endNode/.style={
+        ellipse, draw=phaseGreen, line width=1.8pt, fill=phaseGreenLight, text=phaseGreen,
+        font=\bfseries\small, align=center, inner sep=6pt, drop shadow={opacity=0.2}
+    },
+    process/.style={
+        rectangle, rounded corners=6pt, draw=utiBlue, line width=1.2pt, fill=cardBg,
+        font=\small, align=left, inner sep=8pt, drop shadow={opacity=0.12}
+    },
+    activityISO/.style={
+        rectangle, rounded corners=6pt, draw=phasePurple, line width=1.4pt, fill=white,
+        font=\small, align=left, inner sep=8pt, drop shadow={opacity=0.15}
+    },
+    decision/.style={
+        diamond, aspect=1.8, draw=phaseRed, line width=1.6pt, fill=phaseRedLight, text=phaseRed,
+        font=\bfseries\small, align=center, inner sep=4pt, drop shadow={opacity=0.2}
+    },
+    outputBox/.style={
+        rectangle, rounded corners=5pt, draw=phaseGreen, line width=1.2pt, fill=phaseGreenLight,
+        font=\small, align=left, inner sep=7pt, drop shadow={opacity=0.1}
+    },
+    subCard/.style={
+        rectangle, rounded corners=4pt, draw=borderSlate!60, line width=0.8pt, fill=white,
+        font=\footnotesize, align=left, inner sep=5pt
+    },
+    normBox/.style={
+        rectangle, rounded corners=4pt, draw=phaseAmber, dashed, line width=1pt, fill=phaseAmberLight,
+        font=\footnotesize, align=center, inner sep=5pt
+    },
+    % Estilos de líneas
+    arrowMain/.style={
+        ->, >=Stealth, line width=2pt, color=utiNavy
+    },
+    arrowFlow/.style={
+        ->, >=Stealth, line width=1.5pt, color=utiBlue
+    },
+    arrowISO/.style={
+        ->, >=Stealth, line width=1.5pt, color=phasePurple
+    },
+    arrowSuccess/.style={
+        ->, >=Stealth, line width=1.8pt, color=phaseGreen
+    },
+    arrowFeedback/.style={
+        ->, >=Stealth, line width=2pt, color=phaseRed, dashed
+    },
+    arrowAux/.style={
+        ->, >=Stealth, line width=1pt, color=borderSlate, dotted
+    }
+]
+
+% 0. BANNER SUPERIOR DE ENCABEZADO
+\node[banner, minimum width=39.5cm] (header) at (19.75, 23.2) {
+    \begin{minipage}{39cm}
+    \centering
+    {\scriptsize\textbf{\color{utiLightBlue}UNIVERSIDAD TECNOLÓGICA INDOAMÉRICA \quad $\bullet$ \quad FACULTAD DE INGENIERÍAS Y TECNOLOGÍAS DE LA INFORMACIÓN \quad $\bullet$ \quad INGENIERÍA EN TECNOLOGÍAS DE LA INFORMACIÓN}}\\[3pt]
+    {\Large\textbf{\color{white}DIAGRAMA DE FLUJO METODOLÓGICO Y CICLO DE INGENIERÍA DEL TRABAJO DE TITULACIÓN}}\\[3pt]
+    {\normalsize\textbf{\color{white}Tema: Actualización de un sitio web mediante diseño centrado en el usuario para mejorar la accesibilidad y la experiencia de personas con discapacidad}}\\[2pt]
+    {\footnotesize\color{utiLightBlue}\textbf{Caso de Estudio:} Portal Web de la Facultad de Ingeniería UTI (\texttt{https://ingenieria.uti.edu.ec}) \quad $\vert$ \quad \textbf{Autor:} Cristofer Alexander Páez Caza \quad $\vert$ \quad \textbf{Tutora:} Ing. María Cristina Jiménez, Mg. \quad $\vert$ \quad \textbf{Normativas:} ISO 9241-210:2019 / WCAG 2.2 AA}
+    \end{minipage}
+};
+
+% FASE 1: DIAGNÓSTICO PRELIMINAR, AUDITORÍA Y LÍNEA BASE
+\coordinate (f1_center) at (4.5, 11);
+
+\node[startStop, minimum width=6cm] (n_start) at (4.5, 20.8) {
+    \textbf{INICIO DEL PROYECTO}\\
+    Portal Institucional Existente\\
+    \texttt{https://ingenieria.uti.edu.ec}
+};
+
+\node[process, minimum width=7.2cm] (n_audit) at (4.5, 17.5) {
+    \textbf{\color{utiBlue}Auditoría Técnica Inicial (Diagnóstico Lab)}\\
+    \rule{6.8cm}{0.4pt}\\[2pt]
+    $\bullet$ \textbf{Lighthouse v11:} Móvil, estrangulamiento 4G\\
+    $\bullet$ \textbf{axe-core v4.8:} Motor automatizado de reglas\\
+    $\bullet$ \textbf{WAVE Web Accessibility Tool:} Errores estructurales\\
+    $\bullet$ \textbf{Inspección manual:} Trampas de teclado (WCAG 2.1.2)
+};
+
+\node[normBox, minimum width=7.2cm] (n_normas) at (4.5, 14.3) {
+    \textbf{\color{phaseAmber}Marco Legal y Técnico Obligatorio}\\
+    NTE INEN-ISO/IEC 40500:2014 \quad $\vert$ \quad WCAG 2.2 Nivel AA\\
+    Ley Orgánica de Discapacidades (Art. 71)\\
+    Datos CONADIS 2023 (471.205 PCD en Ecuador)
+};
+
+\node[outputBox, minimum width=7.2cm] (n_baseline) at (4.5, 10.5) {
+    \textbf{\color{phaseGreen}Salida: Matriz de Línea Base Formal}\\
+    \rule{6.8cm}{0.4pt}\\[2pt]
+    $\bullet$ \textbf{Puntaje Rendimiento:} $42/100$ (Crítico)\\
+    $\bullet$ \textbf{Puntaje Accesibilidad:} $56/100$ (Deficiente)\\
+    $\bullet$ \textbf{Total Blocking Time (TBT):} $520\text{ ms}$ (Bloqueo severo)\\
+    $\bullet$ \textbf{Largest Contentful Paint (LCP):} $4.3\text{ s}$ (Lento)\\
+    $\bullet$ \textbf{Contraste Cromático:} 46 fallos WCAG 1.4.3\\
+    $\bullet$ \textbf{Navegación Teclado:} Foco invisible y trampas
+};
+
+\begin{scope}[on background layer]
+    \node[phaseBox=utiBlue, fit=(n_start)(n_audit)(n_normas)(n_baseline), inner sep=12pt] (box_fase1) {};
+    \node[anchor=north west, font=\bfseries\small, text=utiBlue, fill=cardBg, rounded corners=3pt, draw=utiBlue, inner sep=4pt] at ($(box_fase1.north west)+(8pt,-8pt)$) {FASE I: DIAGNÓSTICO Y LÍNEA BASE TÉCNICA};
+\end{scope}
+
+% FASE 2: CICLO METODOLÓGICO DCU (ISO 9241-210) E INGENIERÍA
+\node[activityISO, minimum width=8.5cm] (n_act1) at (14.2, 20.3) {
+    \textbf{\color{phasePurple}Actividad 1 (ISO 9241-210): Entender el Contexto de Uso}\\
+    \rule{8.1cm}{0.4pt}\\[2pt]
+    \textbf{Participación activa de personas con discapacidad (PCD):}\\
+    $\bullet$ \textbf{PCD Visual:} Baja visión (zoom 200\%) y ceguera (lector NVDA)\\
+    $\bullet$ \textbf{PCD Motriz:} Miembros superiores (navegación 100\% teclado)\\
+    $\bullet$ \textbf{Usuarios Control:} Estudiantes y aspirantes UTI sin discapacidad\\[3pt]
+    \textbf{Técnicas:} Entrevistas contextuales, shadowing y test exploratorio\\
+    \textbf{Salida:} Catálogo empírico de barreras y mapas de empatía
+};
+
+\node[activityISO, minimum width=8.5cm] (n_act2) at (14.2, 15.5) {
+    \textbf{\color{phasePurple}Actividad 2 (ISO 9241-210): Especificar Requisitos y Alcance}\\
+    \rule{8.1cm}{0.4pt}\\[2pt]
+    \textbf{Ingeniería de Requerimientos y Acotamiento de Flujos:}\\
+    $\bullet$ \textbf{6 Requisitos Funcionales:} RF01 (Malla accesible), RF02 (Filtros),\\
+    \phantom{$\bullet$ }RF03 (Formulario dinámico), RF04 (Barra preferencias), etc.\\
+    $\bullet$ \textbf{5 Requisitos No Funcionales:} RNF01 (WCAG 2.2 AA), RNF02 (TBT\\
+    \phantom{$\bullet$ }$< 200\text{ ms}$), RNF03 (Responsive), RNF04 (Compatibilidad NVDA)\\
+    $\bullet$ \textbf{Alcance Acotado:} M1 Oferta Académica $\vert$ M2 Admisiones $\vert$ M3 Barra
+};
+
+\node[activityISO, minimum width=9.2cm] (n_act3) at (24.7, 20.1) {
+    \textbf{\color{phasePurple}Actividad 3 (ISO 9241-210): Diseño y Desarrollo Modular}\\
+    \rule{8.8cm}{0.4pt}\\[2pt]
+    \textbf{Arquitectura Frontend Desacoplada en 3 Capas:}\\
+    \begin{tikzpicture}[every node/.style={subCard, minimum width=8.4cm}]
+        \node (c1) at (0, 1.4) {\textbf{\color{utiBlue}Capa 1: Presentación UI y Componentes Accesibles}\\
+        $\bullet$ HTML5 semántico nativo (\texttt{nav}, \texttt{main}, \texttt{article})\\
+        $\bullet$ WAI-ARIA 1.2: \texttt{aria-live="polite"}, \texttt{aria-expanded}, \texttt{role}\\
+        $\bullet$ WCAG 2.2: 2.1.2 (Sin trampas), 2.4.11 (Foco visible), 2.5.8 (24px)};
+        \node (c2) at (0, 0.2) {\textbf{\color{utiNavy}Capa 2: Lógica y Preferencias de Accesibilidad}\\
+        $\bullet$ \texttt{FocusTrapManager}: Gestión controlada del foco Tab\\
+        $\bullet$ \texttt{PreferencesManager}: Contraste $\ge 7:1$, OpenDyslexic, zoom\\
+        $\bullet$ Persistencia síncrona en cliente (\texttt{localStorage})};
+        \node (c3) at (0, -0.9) {\textbf{\color{phaseGreen}Capa 3: Integración y Servicios Asíncronos RESTful}\\
+        $\bullet$ Endpoints desacoplados en formato JSON (\texttt{/api/mallas})\\
+        $\bullet$ Carga asíncrona diferida (Lazy Loading y compresión WebP)};
+    \end{tikzpicture}
+};
+
+\node[activityISO, minimum width=8.5cm] (n_act4) at (14.2, 9.8) {
+    \textbf{\color{phasePurple}Actividad 4 (ISO 9241-210): Evaluación Empírica y Pruebas}\\
+    \rule{8.1cm}{0.4pt}\\[2pt]
+    \textbf{Evaluación Experimental Triangulada:}\\
+    $\bullet$ \textbf{1. Pruebas de Rendimiento de Tareas con PCD:}\\
+    \phantom{$\bullet$ }Efectividad (\% tareas completadas) y Eficiencia (tiempo en tarea)\\
+    $\bullet$ \textbf{2. Medición Psicométrica de Usabilidad:}\\
+    \phantom{$\bullet$ }Cuestionario SUS (10 ítems, Brooke 1996) normalizado\\
+    $\bullet$ \textbf{3. Re-auditoría Técnica Automatizada:}\\
+    \phantom{$\bullet$ }Lighthouse v11 (Rendimiento y Accesibilidad) + WAVE + axe-core
+};
+
+\node[decision, minimum width=6cm] (n_decision) at (24.7, 9.8) {
+    \textbf{¿CUMPLE CRITERIOS}\\
+    \textbf{DE ACEPTACIÓN?}\\
+    \scriptsize $\text{SUS} \ge 80$ (Excelente)\\
+    \scriptsize $\text{Accesibilidad} \ge 95$\\
+    \scriptsize $\text{Rendimiento} \ge 90$\\
+    \scriptsize 0 trampas teclado
+};
+
+\begin{scope}[on background layer]
+    \node[phaseBox=phasePurple, fit=(n_act1)(n_act2)(n_act3)(n_act4)(n_decision), inner sep=12pt] (box_fase2) {};
+    \node[anchor=north west, font=\bfseries\small, text=phasePurple, fill=cardBg, rounded corners=3pt, draw=phasePurple, inner sep=4pt] at ($(box_fase2.north west)+(8pt,-8pt)$) {FASE II: CICLO ITERATIVO DCU (ISO 9241-210) Y CONSTRUCCIÓN MODULAR};
+\end{scope}
+
+% FASE 3: VALIDACIÓN FINAL, ARTEFACTOS Y TITULACIÓN
+\node[process, minimum width=7.2cm] (n_comparativa) at (34.8, 18.8) {
+    \textbf{\color{phaseGreen}Análisis Comparativo Cuantitativo}\\
+    \rule{6.8cm}{0.4pt}\\[2pt]
+    $\bullet$ \textbf{Contraste estadístico Pre vs. Post}\\
+    $\bullet$ Validación de superación de la Línea Base:\\
+    \phantom{$\bullet$ }Lighthouse: $42 \rightarrow \ge 90$ $\vert$ Accesibilidad: $56 \rightarrow \ge 95$\\
+    \phantom{$\bullet$ }TBT: $520\text{ ms} \rightarrow \le 200\text{ ms}$ $\vert$ Errores: $46 \rightarrow 0$\\
+    $\bullet$ Verificación formal de cumplimiento WCAG 2.2 AA
+};
+
+\node[outputBox, minimum width=7.2cm] (n_entregables) at (34.8, 14.0) {
+    \textbf{\color{phaseGreen}Artefactos y Entregables de Titulación}\\
+    \rule{6.8cm}{0.4pt}\\[2pt]
+    $\bullet$ \textbf{1. Software Desplegado:} Código fuente y prototipo\\
+    \phantom{$\bullet$ }modular operativo en entorno institucional\\
+    $\bullet$ \textbf{2. Guía Técnica de Accesibilidad:} Manual de\\
+    \phantom{$\bullet$ }buenas prácticas para administradores web UTI\\
+    $\bullet$ \textbf{3. Memoria Técnica:} Escrito formal con los 4 capítulos\\
+    \phantom{$\bullet$ }completados, métricas validadas y DOIs depurados
+};
+
+\node[endNode, minimum width=6cm] (n_end) at (34.8, 8.8) {
+    \textbf{FIN DEL PROYECTO}\\
+    Aprobación de Tutora de Titulación\\
+    y Defensa Pública ante Tribunal
+};
+
+\begin{scope}[on background layer]
+    \node[phaseBox=phaseGreen, fit=(n_comparativa)(n_entregables)(n_end), inner sep=12pt] (box_fase3) {};
+    \node[anchor=north west, font=\bfseries\small, text=phaseGreen, fill=cardBg, rounded corners=3pt, draw=phaseGreen, inner sep=4pt] at ($(box_fase3.north west)+(8pt,-8pt)$) {FASE III: TRANSFERENCIA Y TITULACIÓN};
+\end{scope}
+
+% CONEXIONES
+\draw[arrowFlow] (n_start) -- (n_audit);
+\draw[arrowAux] (n_normas) -- (n_audit);
+\draw[arrowFlow] (n_audit) -- (n_baseline);
+
+\draw[arrowMain] (n_baseline.east) -- ++(0.8,0) |- (n_act1.west)
+    node[pos=0.25, above, font=\scriptsize\bfseries, color=utiNavy] {Entrada a DCU};
+
+\draw[arrowISO] (n_act1) -- (n_act2)
+    node[midway, right, font=\scriptsize\bfseries, color=phasePurple] {Requerimientos};
+
+\draw[arrowISO] (n_act2.east) -- ++(0.8,0) |- (n_act3.west)
+    node[pos=0.25, above, font=\scriptsize\bfseries, color=phasePurple] {Especificaciones};
+
+\draw[arrowISO] (n_act3.south) -- (n_decision.north)
+    node[midway, right, font=\scriptsize\bfseries, color=phasePurple] {Prototipo Integrado};
+
+\draw[arrowISO] (n_act4.east) -- (n_decision.west)
+    node[midway, above, font=\scriptsize\bfseries, color=phasePurple] {Métricas};
+
+\draw[arrowFlow] (n_act2) -- (n_act4)
+    node[midway, right, font=\scriptsize\bfseries, color=phasePurple] {Protocolo de Pruebas};
+
+\draw[arrowFeedback] (n_decision.north east) -- ++(1.2, 1.2) |- ($(n_act3.east)+(0, -0.5)$)
+    node[pos=0.18, right, font=\footnotesize\bfseries, color=phaseRed] {NO CUMPLE METAS (Bucle Iterativo: Refactorización UI/UX)};
+
+\draw[arrowSuccess] (n_decision.south) -- ++(0, -1.2) -| ($(n_comparativa.west)+(-0.6, 0)$) -- (n_comparativa.west)
+    node[pos=0.22, below, font=\footnotesize\bfseries, color=phaseGreen] {SÍ: CUMPLE CRITERIOS ($\text{SUS} \ge 80$, $\text{Acc} \ge 95$)};
+
+\draw[arrowSuccess] (n_comparativa) -- (n_entregables);
+\draw[arrowSuccess] (n_entregables) -- (n_end);
+
+% LEYENDA TÉCNICA INFERIOR
+\node[rectangle, rounded corners=6pt, draw=borderSlate, fill=cardBg, inner sep=8pt, minimum width=39.5cm] (legend) at (19.75, 4.3) {
+    \begin{minipage}{39cm}
+    \centering\footnotesize
+    \textbf{\color{utiNavy}SIMBOLOGÍA Y CONVENCIONES DEL FLUJO METODOLÓGICO:}\quad
+    \tikz[baseline=-3pt]{\node[startStop, inner sep=2pt, minimum width=1.5cm, font=\tiny]{Inicio/Fin};} Punto Inicial/Final \quad $\vert$ \quad
+    \tikz[baseline=-3pt]{\node[process, inner sep=2pt, minimum width=1.5cm, font=\tiny]{Proceso};} Procedimiento Técnico \quad $\vert$ \quad
+    \tikz[baseline=-3pt]{\node[activityISO, inner sep=2pt, minimum width=1.8cm, font=\tiny]{Actividad ISO};} Fase ISO 9241-210 \quad $\vert$ \quad
+    \tikz[baseline=-3pt]{\node[decision, inner sep=1pt, minimum width=1cm, font=\tiny]{Decisión};} Control de Calidad \quad $\vert$ \quad
+    \tikz[baseline=-3pt]{\node[outputBox, inner sep=2pt, minimum width=1.5cm, font=\tiny]{Entregable};} Salida / Métrica \quad $\vert$ \quad
+    \tikz[baseline=-3pt]{\draw[arrowMain] (0,0) -- (0.8,0);} Flujo Principal \quad $\vert$ \quad
+    \tikz[baseline=-3pt]{\draw[arrowFeedback] (0,0) -- (0.8,0);} Bucle de Retroalimentación Iterativo \quad $\vert$ \quad
+    \tikz[baseline=-3pt]{\draw[arrowSuccess] (0,0) -- (0.8,0);} Transición de Éxito Validada
+    \end{minipage}
+};
+
+\end{tikzpicture}
+\end{center}
+\end{document}
