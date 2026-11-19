@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flujo Metodológico Completo - Tesis Cristofer Paez</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @media print {
+      .no-print { display: none !important; }
+      body { background: white !important; color: black !important; }
+      .print-shadow-none { box-shadow: none !important; border: 1px solid #cbd5e1 !important; }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 p-4 md:p-8 font-sans antialiased min-h-screen">
+
+  <!-- Header Banner -->
+  <header class="max-w-6xl mx-auto bg-gradient-to-r from-blue-900 via-indigo-900 to-slate-900 text-white p-6 rounded-2xl shadow-xl mb-8 border border-blue-800/40">
+    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/20 text-blue-200 border border-blue-400/30 mb-2">
+          <span>Universidad Tecnológica Indoamérica</span> &bull; <span>Ingeniería en Tecnologías de la Información</span>
+        </div>
+        <h1 class="text-2xl md:text-3xl font-extrabold tracking-tight text-white mb-2">
+          Flujo Metodológico Integral del Proyecto
+        </h1>
+        <p class="text-sm md:text-base text-blue-100/90 max-w-3xl leading-relaxed">
+          <strong class="text-white">Tema:</strong> Actualización de un sitio web mediante diseño centrado en el usuario para mejorar la accesibilidad y la experiencia de personas con discapacidad (Caso de Estudio: Facultad de Ingeniería UTI).
+        </p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-2 no-print self-start md:self-center">
+        <button onclick="window.print()" class="px-4 py-2.5 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-sm font-semibold shadow-md transition flex items-center gap-2 cursor-pointer">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4H7v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+          Imprimir / Guardar PDF
+        </button>
+      </div>
+    </div>
+    
+    <!-- Meta Info Tags -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-6 pt-6 border-t border-blue-800/60 text-xs">
+      <div>
+        <span class="text-blue-300 block">Autor:</span>
+        <strong class="text-white text-sm">Cristofer Paez (1754161709)</strong>
+      </div>
+      <div>
+        <span class="text-blue-300 block">Tutora:</span>
+        <strong class="text-white text-sm">Ing. María Cristina Jiménez, Mg.</strong>
+      </div>
+      <div>
+        <span class="text-blue-300 block">Estándar Rector:</span>
+        <strong class="text-white text-sm">ISO 9241-210 / WCAG 2.2 AA</strong>
+      </div>
+      <div>
+        <span class="text-blue-300 block">Duración:</span>
+        <strong class="text-white text-sm">16 Semanas (4 Meses)</strong>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Tabs -->
+  <div class="max-w-6xl mx-auto mb-6 no-print">
+    <div class="flex flex-wrap gap-2 p-1.5 bg-slate-200/80 rounded-xl border border-slate-300/80 text-sm font-medium">
+      <button onclick="switchTab('flujo-completo')" id="btn-flujo-completo" class="tab-btn px-4 py-2 rounded-lg bg-white text-blue-900 shadow-sm font-semibold transition cursor-pointer">
+        1. Diagrama de Flujo Integral (End-to-End)
+      </button>
+      <button onclick="switchTab('fases-iso')" id="btn-fases-iso" class="tab-btn px-4 py-2 rounded-lg text-slate-600 hover:text-slate-900 transition cursor-pointer">
+        2. Las 4 Actividades ISO 9241-210 Detalladas
+      </button>
+      <button onclick="switchTab('arquitectura')" id="btn-arquitectura" class="tab-btn px-4 py-2 rounded-lg text-slate-600 hover:text-slate-900 transition cursor-pointer">
+        3. Arquitectura Técnica y Flujos Priorizados
+      </button>
+      <button onclick="switchTab('indicadores')" id="btn-indicadores" class="tab-btn px-4 py-2 rounded-lg text-slate-600 hover:text-slate-900 transition cursor-pointer">
+        4. Matriz de Validación y Criterios de Aceptación
+      </button>
+    </div>
+  </div>
+
+  <main class="max-w-6xl mx-auto space-y-8">
+
+    <!-- TAB 1: FLUJO COMPLETO END-TO-END -->
+    <section id="tab-flujo-completo" class="tab-content space-y-6">
+      
+      <!-- Stepper Visual -->
+      <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <span class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">Ciclo Metodológico Completo</span>
+          <h2 class="text-2xl font-bold text-slate-900 mt-2">De la Problemática a la Solución Verificada</h2>
+          <p class="text-slate-600 text-sm mt-1">Estructura secuencial con bucles de retroalimentación iterativos que sustentan el Trabajo de Titulación.</p>
+        </div>
+
+        <!-- Flowchart Steps -->
+        <div class="relative space-y-8 before:absolute before:inset-0 before:left-8 md:before:left-1/2 before:-translate-x-1/2 before:h-full before:w-1 before:bg-gradient-to-b before:from-blue-600 before:via-indigo-500 before:to-emerald-500">
+
+          <!-- Paso 0: Entrada y Diagnóstico Base -->
+          <div class="relative flex flex-col md:flex-row items-start md:items-center gap-6 group">
+            <div class="flex-1 md:text-right order-2 md:order-1">
+              <span class="inline-block px-2.5 py-0.5 rounded text-xs font-bold bg-amber-100 text-amber-800 mb-1">Punto de Partida</span>
+              <h3 class="text-lg font-bold text-slate-900">Entrada: Diagnóstico Técnico Inicial y Normativa</h3>
+              <p class="text-sm text-slate-600 mt-1">
+                Auditoría en <code class="text-xs bg-slate-100 px-1.5 py-0.5 rounded text-indigo-700">ingenieria.uti.edu.ec</code> con Lighthouse, WAVE y axe-core. Línea base: Rendimiento 42/100, TBT 520 ms, LCP 4.3 s, 46 errores de contraste cromático y trampas de teclado (WCAG 2.1.2).
+              </p>
+              <div class="flex flex-wrap md:justify-end gap-1.5 mt-2">
+                <span class="text-xs bg-slate-100 text-slate-700 px-2 py-0.5 rounded border border-slate-200">NTE INEN-ISO/IEC 40500</span>
+                <span class="text-xs bg-slate-100 text-slate-700 px-2 py-0.5 rounded border border-slate-200">Ley Orgánica de Discapacidades</span>
+                <span class="text-xs bg-slate-100 text-slate-700 px-2 py-0.5 rounded border border-slate-200">CONADIS 2023 (471k personas)</span>
+              </div>
+            </div>
+            <div class="z-10 flex items-center justify-center w-16 h-16 rounded-2xl bg-amber-500 text-white font-bold text-xl shadow-lg ring-4 ring-white order-1 md:order-2 shrink-0">
+              01
+            </div>
+            <div class="flex-1 order-3 hidden md:block"></div>
+          </div>
+
+          <!-- Paso 1: Investigación con Usuarios (ISO Fase 1) -->
+          <div class="relative flex flex-col md:flex-row items-start md:items-center gap-6 group">
+            <div class="flex-1 order-3 md:order-1 hidden md:block"></div>
+            <div class="z-10 flex items-center justify-center w-16 h-16 rounded-2xl bg-blue-600 text-white font-bold text-xl shadow-lg ring-4 ring-white order-1 md:order-2 shrink-0">
+              02
+            </div>
+            <div class="flex-1 order-2 md:order-3">
+              <span class="inline-block px-2.5 py-0.5 rounded text-xs font-bold bg-blue-100 text-blue-800 mb-1">ISO 9241-210 &bull; Actividad 1</span>
+              <h3 class="text-lg font-bold text-slate-900">Entender el Contexto de Uso e Investigación</h3>
+              <p class="text-sm text-slate-600 mt-1">
+                Caracterización rigurosa de los usuarios de la Facultad de Ingeniería UTI mediante muestra intencional de participantes reales:
+              </p>
+              <ul class="text-xs text-slate-700 space-y-1 mt-2 list-disc list-inside bg-blue-50/60 p-3 rounded-xl border border-blue-100">
+                <li><strong>Discapacidad Visual:</strong> Baja visión (escalado y contraste) y ceguera total usando lector <strong>NVDA</strong>.</li>
+                <li><strong>Discapacidad Motriz:</strong> Miembros superiores operando 100% mediante teclado físico (sin puntero mouse).</li>
+                <li><strong>Comunidad General:</strong> Estudiantes y aspirantes en interacción con mallas curriculares y admisiones.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Paso 2: Requisitos y Alcance (ISO Fase 2) -->
+          <div class="relative flex flex-col md:flex-row items-start md:items-center gap-6 group">
+            <div class="flex-1 md:text-right order-2 md:order-1">
+              <span class="inline-block px-2.5 py-0.5 rounded text-xs font-bold bg-indigo-100 text-indigo-800 mb-1">ISO 9241-210 &bull; Actividad 2</span>
+              <h3 class="text-lg font-bold text-slate-900">Especificar Requerimientos y Acotar Alcance</h3>
+              <p class="text-sm text-slate-600 mt-1">
+                Priorización de los 3 flujos críticos más demandados para garantizar un artefacto técnicamente demostrado y sustentable:
+              </p>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 mt-2 text-left">
+                <div class="p-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs">
+                  <strong class="text-indigo-900 block">Módulo 1: Oferta Académica</strong>
+                  Consulta interactiva de mallas, asignaturas y prerrequisitos navegables con teclado.
+                </div>
+                <div class="p-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs">
+                  <strong class="text-indigo-900 block">Módulo 2: Admisiones</strong>
+                  Formulario dinámico accesible con prevención de errores y asistencia en vivo.
+                </div>
+                <div class="p-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs">
+                  <strong class="text-indigo-900 block">Módulo 3: Barra Accesibilidad</strong>
+                  Contraste $\ge 7:1$, modo dislexia, foco visible persistente y almacenamiento local.
+                </div>
+              </div>
+            </div>
+            <div class="z-10 flex items-center justify-center w-16 h-16 rounded-2xl bg-indigo-600 text-white font-bold text-xl shadow-lg ring-4 ring-white order-1 md:order-2 shrink-0">
+              03
+            </div>
+            <div class="flex-1 order-3 hidden md:block"></div>
+          </div>
+
+          <!-- Paso 3: Diseño y Desarrollo Modular (ISO Fase 3) -->
+          <div class="relative flex flex-col md:flex-row items-start md:items-center gap-6 group">
+            <div class="flex-1 order-3 md:order-1 hidden md:block"></div>
+            <div class="z-10 flex items-center justify-center w-16 h-16 rounded-2xl bg-purple-600 text-white font-bold text-xl shadow-lg ring-4 ring-white order-1 md:order-2 shrink-0">
+              04
+            </div>
+            <div class="flex-1 order-2 md:order-3">
+              <span class="inline-block px-2.5 py-0.5 rounded text-xs font-bold bg-purple-100 text-purple-800 mb-1">ISO 9241-210 &bull; Actividad 3</span>
+              <h3 class="text-lg font-bold text-slate-900">Diseño UI/UX y Construcción de Componentes</h3>
+              <p class="text-sm text-slate-600 mt-1">
+                Ingeniería de software frontend desacoplada en 3 capas (Presentación UI, Estado de Preferencias y Servicios RESTful):
+              </p>
+              <div class="grid grid-cols-2 gap-2 mt-2 text-xs">
+                <div class="p-2 bg-purple-50/70 border border-purple-200 rounded-lg">
+                  <span class="font-semibold text-purple-900">Criterios WCAG 2.2 implementados:</span>
+                  <ul class="list-disc list-inside mt-1 text-slate-600 text-[11px]">
+                    <li>2.4.11/12 Foco no oculto (Focus Not Obscured)</li>
+                    <li>2.5.8 Área táctil mínima de 24&times;24 px</li>
+                    <li>3.3.7 Entrada no redundante de datos</li>
+                  </ul>
+                </div>
+                <div class="p-2 bg-purple-50/70 border border-purple-200 rounded-lg">
+                  <span class="font-semibold text-purple-900">Optimizaciones Core Web Vitals:</span>
+                  <ul class="list-disc list-inside mt-1 text-slate-600 text-[11px]">
+                    <li>Compresión moderna de imágenes (WebP)</li>
+                    <li>División de código (Code Splitting)</li>
+                    <li>Carga diferida (Lazy Loading de activos)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Paso 4: Evaluación y Retroalimentación Iterativa (ISO Fase 4) -->
+          <div class="relative flex flex-col md:flex-row items-start md:items-center gap-6 group">
+            <div class="flex-1 md:text-right order-2 md:order-1">
+              <span class="inline-block px-2.5 py-0.5 rounded text-xs font-bold bg-emerald-100 text-emerald-800 mb-1">ISO 9241-210 &bull; Actividad 4</span>
+              <h3 class="text-lg font-bold text-slate-900">Evaluación Empírica, Auditoría y Bucle Iterativo</h3>
+              <p class="text-sm text-slate-600 mt-1">
+                Contraste riguroso entre la línea base y la versión actualizada mediante dos ejes complementarios:
+              </p>
+              <div class="inline-block text-left bg-emerald-50/80 p-3 rounded-xl border border-emerald-200 mt-2 text-xs">
+                <div>&bull; <strong>Auditorías automatizadas:</strong> Lighthouse ($\ge 90$ Rendimiento, $\ge 95$ Accesibilidad) y WAVE (0 errores).</div>
+                <div>&bull; <strong>Validación psicométrica:</strong> Cuestionario SUS de 10 ítems aplicado a los participantes (Meta: $\ge 80/100$).</div>
+                <div class="mt-1.5 pt-1.5 border-t border-emerald-200 text-emerald-900 font-semibold flex items-center gap-1">
+                  <svg class="w-4 h-4 text-emerald-600 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                  Bucle de Retroalimentación: Si no alcanza la meta, se itera sobre los componentes hasta lograr conformidad plena.
+                </div>
+              </div>
+            </div>
+            <div class="z-10 flex items-center justify-center w-16 h-16 rounded-2xl bg-emerald-600 text-white font-bold text-xl shadow-lg ring-4 ring-white order-1 md:order-2 shrink-0">
+              05
+            </div>
+            <div class="flex-1 order-3 hidden md:block"></div>
+          </div>
+
+          <!-- Paso 5: Entregables Finales -->
+          <div class="relative flex flex-col md:flex-row items-start md:items-center gap-6 group">
+            <div class="flex-1 order-3 md:order-1 hidden md:block"></div>
+            <div class="z-10 flex items-center justify-center w-16 h-16 rounded-2xl bg-slate-900 text-white font-bold text-xl shadow-lg ring-4 ring-white order-1 md:order-2 shrink-0">
+              06
+            </div>
+            <div class="flex-1 order-2 md:order-3">
+              <span class="inline-block px-2.5 py-0.5 rounded text-xs font-bold bg-slate-200 text-slate-800 mb-1">Cierre y Entrega</span>
+              <h3 class="text-lg font-bold text-slate-900">Artefactos Software y Titulación</h3>
+              <p class="text-sm text-slate-600 mt-1">
+                Despliegue operativo, reporte comparativo pre vs. post intervención, guía de accesibilidad institucional, aprobación de la tutora y defensa formal ante el tribunal de lectores.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 2: LAS 4 ACTIVIDADES ISO 9241-210 -->
+    <section id="tab-fases-iso" class="tab-content hidden space-y-6">
+      <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200">
+        <h2 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+          <span class="w-8 h-8 rounded-lg bg-blue-100 text-blue-800 flex items-center justify-center text-sm font-black">ISO</span>
+          Desglose Metodológico según ISO 9241-210:2019
+        </h2>
+        <p class="text-sm text-slate-600 mb-6">
+          La norma internacional establece que el desarrollo de sistemas interactivos debe fundamentarse en la comprensión explícita de los usuarios, sus tareas y sus entornos.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <!-- Tarjeta 1 -->
+          <div class="p-5 rounded-xl border border-blue-200 bg-blue-50/40 hover:bg-blue-50/70 transition space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold tracking-wider uppercase text-blue-700 bg-blue-100 px-2.5 py-1 rounded-md">Actividad 1</span>
+              <span class="text-xs text-slate-500 font-mono">Investigación</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900">Entender y Especificar el Contexto de Uso</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Consiste en levantar quiénes usan el portal, para qué fines y bajo qué condiciones de acceso asistido.
+            </p>
+            <div class="text-xs bg-white p-3 rounded-lg border border-blue-100 space-y-1.5">
+              <div><strong class="text-slate-800">Entradas:</strong> Diagnóstico técnico preliminar (Lighthouse 42/100, WAVE 46 fallos).</div>
+              <div><strong class="text-slate-800">Actividades:</strong> Sesiones de observación inicial con personas con discapacidad visual y motriz en la UTI.</div>
+              <div><strong class="text-slate-800">Salidas:</strong> Mapa de empatía, perfiles de usuario (Personas) y catálogo de barreras de navegación.</div>
+            </div>
+          </div>
+
+          <!-- Tarjeta 2 -->
+          <div class="p-5 rounded-xl border border-indigo-200 bg-indigo-50/40 hover:bg-indigo-50/70 transition space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold tracking-wider uppercase text-indigo-700 bg-indigo-100 px-2.5 py-1 rounded-md">Actividad 2</span>
+              <span class="text-xs text-slate-500 font-mono">Requerimientos</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900">Especificar Requisitos del Usuario y del Sistema</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Traducción de las necesidades identificadas en especificaciones de ingeniería formalmente verificables.
+            </p>
+            <div class="text-xs bg-white p-3 rounded-lg border border-indigo-100 space-y-1.5">
+              <div><strong class="text-slate-800">Entradas:</strong> Catálogo de barreras y normativa técnica (NTE INEN 40500 / WCAG 2.2).</div>
+              <div><strong class="text-slate-800">Actividades:</strong> Formulación de Requerimientos Funcionales (RF01--RF06) y No Funcionales (RNF01--RNF05).</div>
+              <div><strong class="text-slate-800">Salidas:</strong> Matriz de indicadores comparativos y criterios de aceptación cuantitativos.</div>
+            </div>
+          </div>
+
+          <!-- Tarjeta 3 -->
+          <div class="p-5 rounded-xl border border-purple-200 bg-purple-50/40 hover:bg-purple-50/70 transition space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold tracking-wider uppercase text-purple-700 bg-purple-100 px-2.5 py-1 rounded-md">Actividad 3</span>
+              <span class="text-xs text-slate-500 font-mono">Diseño & Desarrollo</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900">Producir Soluciones de Diseño y Desarrollo Modular</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Construcción progresiva de la interfaz mediante prototipos iterativos y arquitectura basada en componentes (CBSE).
+            </p>
+            <div class="text-xs bg-white p-3 rounded-lg border border-purple-100 space-y-1.5">
+              <div><strong class="text-slate-800">Entradas:</strong> Matriz de requerimientos y especificación WAI-ARIA 1.2.</div>
+              <div><strong class="text-slate-800">Actividades:</strong> Wireframes, prototipos UI/UX en alta fidelidad y codificación modular en HTML5/CSS3/JavaScript.</div>
+              <div><strong class="text-slate-800">Salidas:</strong> Componentes accesibles integrados (malla curricular, formulario y barra de accesibilidad).</div>
+            </div>
+          </div>
+
+          <!-- Tarjeta 4 -->
+          <div class="p-5 rounded-xl border border-emerald-200 bg-emerald-50/40 hover:bg-emerald-50/70 transition space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold tracking-wider uppercase text-emerald-700 bg-emerald-100 px-2.5 py-1 rounded-md">Actividad 4</span>
+              <span class="text-xs text-slate-500 font-mono">Evaluación Empírica</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900">Evaluar los Diseños Frente a los Requisitos</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Verificación experimental mediante pruebas con usuarios y herramientas automáticas para validar el cumplimiento de metas.
+            </p>
+            <div class="text-xs bg-white p-3 rounded-lg border border-emerald-100 space-y-1.5">
+              <div><strong class="text-slate-800">Entradas:</strong> Prototipo funcional desplegado y usuarios convocados (visuales, motrices y control).</div>
+              <div><strong class="text-slate-800">Actividades:</strong> Medición de tasa de éxito de tareas, aplicación de escala psicométrica SUS y re-auditoría Lighthouse/WAVE.</div>
+              <div><strong class="text-slate-800">Salidas:</strong> Reporte cuantitativo pre vs. post intervención y retroalimentación iterativa.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 3: ARQUITECTURA TÉCNICA Y FLUJOS PRIORIZADOS -->
+    <section id="tab-arquitectura" class="tab-content hidden space-y-6">
+      <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200">
+        <h2 class="text-xl font-bold text-slate-900 mb-2">Arquitectura de Software y Flujos Priorizados</h2>
+        <p class="text-sm text-slate-600 mb-6">
+          Separación limpia de responsabilidades mediante una arquitectura frontend en 3 capas desacopladas que garantizan mantenibilidad y alto rendimiento.
+        </p>
+
+        <!-- 3 Layers diagram -->
+        <div class="space-y-4">
+          
+          <!-- Capa 1 -->
+          <div class="p-4 bg-slate-50 border-2 border-dashed border-blue-300 rounded-xl">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="w-6 h-6 rounded bg-blue-600 text-white font-bold flex items-center justify-center text-xs">C1</span>
+              <h4 class="font-bold text-sm text-blue-900">Capa de Presentación y Componentes UI Accesibles</h4>
+            </div>
+            <p class="text-xs text-slate-600 mb-3">Construida bajo HTML5 semántico nativo, CSS3 modular (diseño responsive mobile-first) y roles dinámicos WAI-ARIA 1.2.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div class="bg-white p-3 rounded-lg border border-slate-200 text-xs">
+                <span class="font-bold text-slate-800 block mb-1">Módulo Oferta Académica</span>
+                Mallas curriculares por niveles, acordeones accesibles, prerrequisitos navegables con teclas Tab y flechas.
+              </div>
+              <div class="bg-white p-3 rounded-lg border border-slate-200 text-xs">
+                <span class="font-bold text-slate-800 block mb-1">Módulo Admisiones</span>
+                Formularios con validación en tiempo real, etiquetas for/id explícitas y anuncios accesibles para lectores NVDA.
+              </div>
+              <div class="bg-white p-3 rounded-lg border border-slate-200 text-xs">
+                <span class="font-bold text-slate-800 block mb-1">Barra de Accesibilidad</span>
+                Conmutador flotante de contraste alto ($\ge 7:1$), ajuste tipográfico escalable (+20%, +40%) y fuente OpenDyslexic.
+              </div>
+            </div>
+          </div>
+
+          <!-- Capa 2 -->
+          <div class="p-4 bg-slate-50 border-2 border-dashed border-indigo-300 rounded-xl">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="w-6 h-6 rounded bg-indigo-600 text-white font-bold flex items-center justify-center text-xs">C2</span>
+              <h4 class="font-bold text-sm text-indigo-900">Capa de Lógica y Preferencias de Accesibilidad</h4>
+            </div>
+            <p class="text-xs text-slate-600 mb-2">Manejo de estado reactivo y persistencia de configuración del usuario:</p>
+            <div class="flex flex-wrap gap-2 text-xs">
+              <span class="px-2.5 py-1 bg-white border border-indigo-200 rounded text-indigo-800 font-mono">Gestor de Preferencias (localStorage)</span>
+              <span class="px-2.5 py-1 bg-white border border-indigo-200 rounded text-indigo-800 font-mono">Gestor de Foco del Teclado (Trap Prevention)</span>
+              <span class="px-2.5 py-1 bg-white border border-indigo-200 rounded text-indigo-800 font-mono">Validación de Formularios (Client-Side)</span>
+            </div>
+          </div>
+
+          <!-- Capa 3 -->
+          <div class="p-4 bg-slate-50 border-2 border-dashed border-emerald-300 rounded-xl">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="w-6 h-6 rounded bg-emerald-600 text-white font-bold flex items-center justify-center text-xs">C3</span>
+              <h4 class="font-bold text-sm text-emerald-900">Capa de Integración y Datos Desacoplados (APIs RESTful)</h4>
+            </div>
+            <p class="text-xs text-slate-600 mb-2">Consumo asíncrono de fuentes de datos académicas en formato JSON:</p>
+            <div class="flex flex-wrap gap-2 text-xs">
+              <span class="px-2.5 py-1 bg-white border border-emerald-200 rounded text-emerald-800 font-mono">GET /api/carreras/mallas</span>
+              <span class="px-2.5 py-1 bg-white border border-emerald-200 rounded text-emerald-800 font-mono">POST /api/admisiones/contacto</span>
+              <span class="px-2.5 py-1 bg-white border border-emerald-200 rounded text-emerald-800 font-mono">GET /api/comunicados</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 4: MATRIZ DE VALIDACIÓN -->
+    <section id="tab-indicadores" class="tab-content hidden space-y-6">
+      <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200">
+        <h2 class="text-xl font-bold text-slate-900 mb-2">Matriz de Indicadores: Línea Base vs. Metas de Aceptación</h2>
+        <p class="text-sm text-slate-600 mb-6">
+          Criterios cuantitativos y científicos para validar el éxito de la intervención frente a la tutora y el tribunal de grado.
+        </p>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-xs text-left border-collapse">
+            <thead>
+              <tr class="bg-slate-100 text-slate-700 uppercase tracking-wider text-[11px] border-b border-slate-300">
+                <th class="p-3 font-bold">Dimensión / Métrica</th>
+                <th class="p-3 font-bold">Línea Base (Diagnóstico Inicial)</th>
+                <th class="p-3 font-bold">Meta de Aceptación (Tesis)</th>
+                <th class="p-3 font-bold">Instrumento de Medición</th>
+                <th class="p-3 font-bold">Criterio / Norma</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200">
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-medium text-slate-900">Puntaje Lighthouse Rendimiento</td>
+                <td class="p-3 text-red-600 font-semibold">42 / 100 (Crítico)</td>
+                <td class="p-3 text-emerald-700 font-bold">&ge; 90 / 100</td>
+                <td class="p-3 text-slate-600">Google Lighthouse v11 (Móvil)</td>
+                <td class="p-3 text-slate-500">Google Web Vitals</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-medium text-slate-900">Puntaje Lighthouse Accesibilidad</td>
+                <td class="p-3 text-amber-600 font-semibold">56 / 100 (Deficiente)</td>
+                <td class="p-3 text-emerald-700 font-bold">&ge; 95 / 100</td>
+                <td class="p-3 text-slate-600">Google Lighthouse v11</td>
+                <td class="p-3 text-slate-500">WCAG 2.2 Nivel AA</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-medium text-slate-900">Largest Contentful Paint (LCP)</td>
+                <td class="p-3 text-red-600 font-semibold">4.3 s (Lento)</td>
+                <td class="p-3 text-emerald-700 font-bold">&le; 2.0 s</td>
+                <td class="p-3 text-slate-600">Métricas Core Web Vitals</td>
+                <td class="p-3 text-slate-500">Google LCP Standard</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-medium text-slate-900">Total Blocking Time (TBT)</td>
+                <td class="p-3 text-red-600 font-semibold">520 ms (Bloqueo Severo)</td>
+                <td class="p-3 text-emerald-700 font-bold">&le; 200 ms</td>
+                <td class="p-3 text-slate-600">Métricas Core Web Vitals</td>
+                <td class="p-3 text-slate-500">Google TBT Standard</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-medium text-slate-900">Cumulative Layout Shift (CLS)</td>
+                <td class="p-3 text-amber-600 font-semibold">0.28 (Inestable)</td>
+                <td class="p-3 text-emerald-700 font-bold">&le; 0.05</td>
+                <td class="p-3 text-slate-600">Métricas Core Web Vitals</td>
+                <td class="p-3 text-slate-500">Google CLS Standard</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-medium text-slate-900">Errores de Contraste Cromático</td>
+                <td class="p-3 text-red-600 font-semibold">46 incidencias</td>
+                <td class="p-3 text-emerald-700 font-bold">0 incidencias</td>
+                <td class="p-3 text-slate-600">Validador automatizado WAVE</td>
+                <td class="p-3 text-slate-500">WCAG 2.2 Criterio 1.4.3</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-medium text-slate-900">Imágenes sin Texto Alternativo</td>
+                <td class="p-3 text-red-600 font-semibold">22 recursos sin alt</td>
+                <td class="p-3 text-emerald-700 font-bold">0 recursos</td>
+                <td class="p-3 text-slate-600">Validador WAVE / axe-core</td>
+                <td class="p-3 text-slate-500">WCAG 2.2 Criterio 1.1.1</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-medium text-slate-900">Navegación por Teclado</td>
+                <td class="p-3 text-red-600 font-semibold">Trampas y foco invisible</td>
+                <td class="p-3 text-emerald-700 font-bold">100% navegable sin trampas</td>
+                <td class="p-3 text-slate-600">Inspección manual con teclado</td>
+                <td class="p-3 text-slate-500">WCAG 2.2 Criterios 2.1.2 y 2.4.7</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-medium text-slate-900">Tasa de Éxito de Tareas</td>
+                <td class="p-3 text-slate-500 italic">Por evaluar formalmente</td>
+                <td class="p-3 text-emerald-700 font-bold">&ge; 90 %</td>
+                <td class="p-3 text-slate-600">Pruebas con usuarios guiadas</td>
+                <td class="p-3 text-slate-500">ISO 9241-11 (Efectividad)</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-medium text-slate-900">Satisfacción Percibida (SUS)</td>
+                <td class="p-3 text-slate-500 italic">Por evaluar formalmente</td>
+                <td class="p-3 text-emerald-700 font-bold">&ge; 80 / 100 (Excelente)</td>
+                <td class="p-3 text-slate-600">Cuestionario estandarizado SUS</td>
+                <td class="p-3 text-slate-500">Brooke (1996) / Bangor et al.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Script for Tab Switching -->
+  <script>
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('bg-white', 'text-blue-900', 'shadow-sm', 'font-semibold');
+        btn.classList.add('text-slate-600');
+      });
+
+      const activeSection = document.getElementById('tab-' + tabId);
+      if (activeSection) activeSection.classList.remove('hidden');
+
+      const activeBtn = document.getElementById('btn-' + tabId);
+      if (activeBtn) {
+        activeBtn.classList.remove('text-slate-600');
+        activeBtn.classList.add('bg-white', 'text-blue-900', 'shadow-sm', 'font-semibold');
+      }
+    }
+  </script>
+
+</body>
+</html>
