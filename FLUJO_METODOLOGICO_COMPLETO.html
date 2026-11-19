@@ -8,8 +8,24 @@
   <style>
     @media print {
       .no-print { display: none !important; }
-      body { background: white !important; color: black !important; }
-      .print-shadow-none { box-shadow: none !important; border: 1px solid #cbd5e1 !important; }
+      body { background: white !important; color: #0f172a !important; padding: 0 !important; margin: 0 !important; font-size: 9pt !important; }
+      .tab-content { display: block !important; margin-bottom: 1rem !important; }
+      .tab-content.hidden { display: block !important; }
+      .page-break-before { page-break-before: always !important; break-before: page !important; }
+      .print-avoid-break { page-break-inside: avoid !important; break-inside: avoid !important; }
+      header { page-break-inside: avoid !important; break-inside: avoid !important; margin-bottom: 1rem !important; padding: 1.25rem !important; border-radius: 0.75rem !important; }
+      .space-y-8 > :not([hidden]) ~ :not([hidden]) { margin-top: 1rem !important; }
+      .space-y-6 > :not([hidden]) ~ :not([hidden]) { margin-top: 0.75rem !important; }
+      .grid-print-2 { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 12px !important; }
+      .grid-print-3 { display: grid !important; grid-template-columns: 1fr 1fr 1fr !important; gap: 10px !important; }
+      .card-box { page-break-inside: avoid !important; break-inside: avoid !important; }
+      table { page-break-inside: avoid !important; break-inside: avoid !important; font-size: 8.5pt !important; }
+      th, td { padding: 5px 8px !important; }
+      * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+      @page {
+        size: A4 portrait;
+        margin: 1cm 1cm 1cm 1cm;
+      }
     }
   </style>
 </head>
@@ -151,7 +167,7 @@
                 </div>
                 <div class="p-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs">
                   <strong class="text-indigo-900 block">Módulo 3: Barra Accesibilidad</strong>
-                  Contraste $\ge 7:1$, modo dislexia, foco visible persistente y almacenamiento local.
+                  Contraste &ge; 7:1, modo dislexia, foco visible persistente y almacenamiento local.
                 </div>
               </div>
             </div>
@@ -203,8 +219,8 @@
                 Contraste riguroso entre la línea base y la versión actualizada mediante dos ejes complementarios:
               </p>
               <div class="inline-block text-left bg-emerald-50/80 p-3 rounded-xl border border-emerald-200 mt-2 text-xs">
-                <div>&bull; <strong>Auditorías automatizadas:</strong> Lighthouse ($\ge 90$ Rendimiento, $\ge 95$ Accesibilidad) y WAVE (0 errores).</div>
-                <div>&bull; <strong>Validación psicométrica:</strong> Cuestionario SUS de 10 ítems aplicado a los participantes (Meta: $\ge 80/100$).</div>
+                <div>&bull; <strong>Auditorías automatizadas:</strong> Lighthouse (&ge; 90 Rendimiento, &ge; 95 Accesibilidad) y WAVE (0 errores).</div>
+                <div>&bull; <strong>Validación psicométrica:</strong> Cuestionario SUS de 10 ítems aplicado a los participantes (Meta: &ge; 80/100).</div>
                 <div class="mt-1.5 pt-1.5 border-t border-emerald-200 text-emerald-900 font-semibold flex items-center gap-1">
                   <svg class="w-4 h-4 text-emerald-600 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
                   Bucle de Retroalimentación: Si no alcanza la meta, se itera sobre los componentes hasta lograr conformidad plena.
@@ -237,7 +253,7 @@
     </section>
 
     <!-- TAB 2: LAS 4 ACTIVIDADES ISO 9241-210 -->
-    <section id="tab-fases-iso" class="tab-content hidden space-y-6">
+    <section id="tab-fases-iso" class="tab-content hidden space-y-6 page-break-before">
       <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200">
         <h2 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
           <span class="w-8 h-8 rounded-lg bg-blue-100 text-blue-800 flex items-center justify-center text-sm font-black">ISO</span>
@@ -247,7 +263,7 @@
           La norma internacional establece que el desarrollo de sistemas interactivos debe fundamentarse en la comprensión explícita de los usuarios, sus tareas y sus entornos.
         </p>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 grid-print-2">
 
           <!-- Tarjeta 1 -->
           <div class="p-5 rounded-xl border border-blue-200 bg-blue-50/40 hover:bg-blue-50/70 transition space-y-3">
@@ -322,7 +338,7 @@
     </section>
 
     <!-- TAB 3: ARQUITECTURA TÉCNICA Y FLUJOS PRIORIZADOS -->
-    <section id="tab-arquitectura" class="tab-content hidden space-y-6">
+    <section id="tab-arquitectura" class="tab-content hidden space-y-6 page-break-before">
       <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200">
         <h2 class="text-xl font-bold text-slate-900 mb-2">Arquitectura de Software y Flujos Priorizados</h2>
         <p class="text-sm text-slate-600 mb-6">
@@ -339,7 +355,7 @@
               <h4 class="font-bold text-sm text-blue-900">Capa de Presentación y Componentes UI Accesibles</h4>
             </div>
             <p class="text-xs text-slate-600 mb-3">Construida bajo HTML5 semántico nativo, CSS3 modular (diseño responsive mobile-first) y roles dinámicos WAI-ARIA 1.2.</p>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 grid-print-3">
               <div class="bg-white p-3 rounded-lg border border-slate-200 text-xs">
                 <span class="font-bold text-slate-800 block mb-1">Módulo Oferta Académica</span>
                 Mallas curriculares por niveles, acordeones accesibles, prerrequisitos navegables con teclas Tab y flechas.
@@ -350,7 +366,7 @@
               </div>
               <div class="bg-white p-3 rounded-lg border border-slate-200 text-xs">
                 <span class="font-bold text-slate-800 block mb-1">Barra de Accesibilidad</span>
-                Conmutador flotante de contraste alto ($\ge 7:1$), ajuste tipográfico escalable (+20%, +40%) y fuente OpenDyslexic.
+                Conmutador flotante de contraste alto (&ge; 7:1), ajuste tipográfico escalable (+20%, +40%) y fuente OpenDyslexic.
               </div>
             </div>
           </div>
@@ -388,7 +404,7 @@
     </section>
 
     <!-- TAB 4: MATRIZ DE VALIDACIÓN -->
-    <section id="tab-indicadores" class="tab-content hidden space-y-6">
+    <section id="tab-indicadores" class="tab-content hidden space-y-6 page-break-before">
       <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200">
         <h2 class="text-xl font-bold text-slate-900 mb-2">Matriz de Indicadores: Línea Base vs. Metas de Aceptación</h2>
         <p class="text-sm text-slate-600 mb-6">
@@ -507,3 +523,4 @@
 
 </body>
 </html>
+
