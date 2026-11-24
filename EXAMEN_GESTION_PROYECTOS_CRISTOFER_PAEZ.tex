@@ -67,40 +67,98 @@
 \textbf{\color{utiNavy}PREGUNTA 1 (5.00 puntos): Planificación Integral del Proyecto de Titulación}
 \end{tcolorbox}
 
-\subsection*{\normalsize\color{utiNavy}a) Estructura de Desglose del Trabajo (EDT) en Forma de Árbol (3 Niveles Codificados)}
+\subsection*{\normalsize\color{utiNavy}a) Estructura de Desglose del Trabajo (EDT / WBS) en Forma de Árbol Jerárquico (3 Niveles Codificados)}
 
-\begin{itemize}\setlength\itemsep{1pt}\small
-    \item \textbf{1. Proyecto:} Actualización accesible del sitio web de la Facultad de Ingeniería UTI
-    \begin{itemize}\setlength\itemsep{1pt}
-        \item \textbf{1.1 Entregable 1: Diagnóstico técnico y marco inicial}
-        \begin{itemize}\footnotesize
-            \item \textbf{1.1.1} Auditoría de línea base (Lighthouse, WAVE, axe-core e inspección de trampas de teclado).
-            \item \textbf{1.1.2} Subsanación de observaciones, marco normativo (LOD, CONADIS) y aprobación del Cap. I.
-        \end{itemize}
-        \item \textbf{1.2 Entregable 2: Especificación y diseño centrado en el usuario (ISO 9241-210)}
-        \begin{itemize}\footnotesize
-            \item \textbf{1.2.1} Investigación del contexto de uso con personas con discapacidad (PCD visual y motriz).
-            \item \textbf{1.2.2} Especificación formal de requisitos (RF01--RF06 / RNF01--RNF05) y acotamiento a 3 flujos.
-            \item \textbf{1.2.3} Prototipado interactivo accesible UI/UX en baja y alta fidelidad con ratios WCAG 2.2.
-        \end{itemize}
-        \item \textbf{1.3 Entregable 3: Desarrollo de la arquitectura frontend modular en 3 capas}
-        \begin{itemize}\footnotesize
-            \item \textbf{1.3.1} Desarrollo de componentes UI accesibles y atributos WAI-ARIA 1.2 (Capa 1: Oferta y Admisiones).
-            \item \textbf{1.3.2} Desarrollo de lógica de preferencias, accesibilidad y gestor de foco Tab (Capa 2).
-            \item \textbf{1.3.3} Integración de servicios asíncronos RESTful y consumo de fuentes de datos JSON (Capa 3).
-            \item \textbf{1.3.4} Optimización de rendimiento Core Web Vitals (TBT $<200\text{ ms}$, compresión WebP, lazy loading).
-        \end{itemize}
-        \item \textbf{1.4 Entregable 4: Pruebas empíricas y auditoría de accesibilidad}
-        \begin{itemize}\footnotesize
-            \item \textbf{1.4.1} Re-auditoría técnica automatizada de control (Lighthouse $\ge 90$ Rendimiento, $\ge 95$ Accesibilidad).
-            \item \textbf{1.4.2} Pruebas de usabilidad guiadas con usuarios reales con discapacidad y aplicación de escala SUS.
-        \end{itemize}
-        \item \textbf{1.5 Entregable 5: Memoria técnica, transferencia y cierre de titulación}
-        \begin{itemize}\footnotesize
-            \item \textbf{1.5.1} Redacción de Cap. IV (Resultados), Conclusiones, Recomendaciones y Guía institucional UTI.
-            \item \textbf{1.5.2} Verificación final de normas UTI con tutora, entrega de borrador completo y solicitud de tribunal.
-        \end{itemize}
-    \end{itemize}
+A continuación se presenta el diagrama de árbol jerárquico de la EDT estructurado en tres niveles (Proyecto, 5 Entregables principales y sus respectivos Paquetes de Trabajo codificados):
+
+\begin{center}
+\resizebox{\textwidth}{!}{
+\begin{tikzpicture}[
+    rootBox/.style={rectangle, rounded corners=4pt, draw=utiNavy, line width=1.5pt, fill=utiNavy, text=white, align=center, font=\bfseries\small, inner sep=6pt},
+    delivBox/.style={rectangle, rounded corners=3pt, draw=utiBlue, line width=1.2pt, fill=utiLightBlue, text=utiNavy, align=center, font=\bfseries\scriptsize, inner sep=4pt, minimum width=3.4cm, minimum height=1.1cm},
+    wpBox/.style={rectangle, rounded corners=2pt, draw=borderSlate, line width=0.8pt, fill=white, text=black, align=left, font=\scriptsize, inner sep=4pt, minimum width=3.4cm},
+    treeLine/.style={draw=utiNavy, line width=1.1pt}
+]
+
+% Nivel 1: Proyecto
+\node[rootBox] (root) at (0, 3.6) {\textbf{1. Actualización Accesible del Sitio Web de la Facultad de Ingeniería UTI}};
+
+% Línea colectora horizontal (Bus)
+\coordinate (busL) at (-7.2, 2.6);
+\coordinate (busR) at (7.2, 2.6);
+\draw[treeLine] (root.south) -- (0, 2.6);
+\draw[treeLine] (busL) -- (busR);
+
+% Nivel 2: 5 Entregables Principales
+\node[delivBox] (d1) at (-7.2, 1.6) {\textbf{1.1 Diagnóstico}\\\tiny Marco y Línea Base};
+\node[delivBox] (d2) at (-3.6, 1.6) {\textbf{1.2 Diseño DCU}\\\tiny ISO 9241-210 y Requisitos};
+\node[delivBox] (d3) at (0, 1.6) {\textbf{1.3 Desarrollo}\\\tiny Frontend Modular 3 Capas};
+\node[delivBox] (d4) at (3.6, 1.6) {\textbf{1.4 Pruebas}\\\tiny Auditorías y Escala SUS};
+\node[delivBox] (d5) at (7.2, 1.6) {\textbf{1.5 Cierre}\\\tiny Memoria y Titulación};
+
+\draw[treeLine] (-7.2, 2.6) -- (d1.north);
+\draw[treeLine] (-3.6, 2.6) -- (d2.north);
+\draw[treeLine] (0, 2.6) -- (d3.north);
+\draw[treeLine] (3.6, 2.6) -- (d4.north);
+\draw[treeLine] (7.2, 2.6) -- (d5.north);
+
+% Nivel 3: Paquetes de Trabajo por Entregable
+% Columna 1.1
+\node[wpBox] (wp111) at (-7.2, 0.4) {\textbf{1.1.1} Auditoría Línea Base};
+\node[wpBox] (wp112) at (-7.2, -0.6) {\textbf{1.1.2} Subsanación Cap. I};
+\draw[treeLine] (d1.south) -- (wp111.north);
+\draw[treeLine] (wp111.south) -- (wp112.north);
+
+% Columna 1.2
+\node[wpBox] (wp121) at (-3.6, 0.4) {\textbf{1.2.1} Contexto con PCD};
+\node[wpBox] (wp122) at (-3.6, -0.6) {\textbf{1.2.2} Requisitos RF/RNF};
+\node[wpBox] (wp123) at (-3.6, -1.6) {\textbf{1.2.3} Prototipos UI/UX};
+\draw[treeLine] (d2.south) -- (wp121.north);
+\draw[treeLine] (wp121.south) -- (wp122.north);
+\draw[treeLine] (wp122.south) -- (wp123.north);
+
+% Columna 1.3
+\node[wpBox] (wp131) at (0, 0.4) {\textbf{1.3.1} Capa 1: UI WAI-ARIA};
+\node[wpBox] (wp132) at (0, -0.6) {\textbf{1.3.2} Capa 2: Foco Tab};
+\node[wpBox] (wp133) at (0, -1.6) {\textbf{1.3.3} Capa 3: APIs REST};
+\node[wpBox] (wp134) at (0, -2.6) {\textbf{1.3.4} Optimización Vitals};
+\draw[treeLine] (d3.south) -- (wp131.north);
+\draw[treeLine] (wp131.south) -- (wp132.north);
+\draw[treeLine] (wp132.south) -- (wp133.north);
+\draw[treeLine] (wp133.south) -- (wp134.north);
+
+% Columna 1.4
+\node[wpBox] (wp141) at (3.6, 0.4) {\textbf{1.4.1} Re-auditoría WCAG};
+\node[wpBox] (wp142) at (3.6, -0.6) {\textbf{1.4.2} Pruebas con PCD (SUS)};
+\draw[treeLine] (d4.south) -- (wp141.north);
+\draw[treeLine] (wp141.south) -- (wp142.north);
+
+% Columna 1.5
+\node[wpBox] (wp151) at (7.2, 0.4) {\textbf{1.5.1} Cap. IV y Guía UTI};
+\node[wpBox] (wp152) at (7.2, -0.6) {\textbf{1.5.2} Cierre y Tribunal};
+\draw[treeLine] (d5.south) -- (wp151.north);
+\draw[treeLine] (wp151.south) -- (wp152.north);
+
+\end{tikzpicture}
+}
+\end{center}
+
+\vspace{-0.2cm}
+\textbf{Descripción Detallada de los Paquetes de Trabajo Codificados (Nivel 3):}
+\begin{itemize}\setlength\itemsep{0.5pt}\footnotesize
+    \item \textbf{1.1.1 Auditoría técnica de línea base:} Evaluación automatizada con Google Lighthouse, WAVE y axe-core, e inspección manual de trampas de teclado (WCAG 2.1.2) en el portal existente.
+    \item \textbf{1.1.2 Subsanación de observaciones y aprobación del Cap. I:} Integración de normativa ecuatoriana (LOD, CONADIS, NTE INEN 40500) y aprobación formal de la tutora.
+    \item \textbf{1.2.1 Investigación del contexto de uso con PCD:} Sesiones de entrevistas contextuales y observación con usuarios con discapacidad visual (lector NVDA) y motriz (teclado exclusivo).
+    \item \textbf{1.2.2 Formulación de requisitos (RF/RNF) y acotamiento:} Definición de 6 requerimientos funcionales y 5 no funcionales, acotados a los 3 flujos críticos priorizados.
+    \item \textbf{1.2.3 Prototipado interactivo accesible UI/UX:} Wireframes de baja fidelidad y prototipos interactivos en Figma con contrastes cromáticos WCAG 2.2 validados ($\ge 4.5:1$ y $\ge 7:1$).
+    \item \textbf{1.3.1 Desarrollo de Componentes UI y WAI-ARIA 1.2 (Capa 1):} Maquetación semántica HTML5 modular para la Oferta Académica accesible y formulario dinámico de Admisiones.
+    \item \textbf{1.3.2 Lógica de preferencias y gestor de foco Tab (Capa 2):} Implementación de \texttt{FocusTrapManager} y persistencia local en cliente (\texttt{localStorage}) para modo de contraste y dislexia.
+    \item \textbf{1.3.3 Integración de servicios RESTful y datos JSON (Capa 3):} Endpoints asíncronos desacoplados para mallas y consumo de servicios académicos.
+    \item \textbf{1.3.4 Optimización técnica Core Web Vitals:} Reducción del Total Blocking Time (TBT $\le 200\text{ ms}$), compresión de imágenes WebP y carga diferida (lazy loading).
+    \item \textbf{1.4.1 Re-auditoría automatizada de accesibilidad:} Validación técnica con Lighthouse ($\ge 95/100$) y WAVE (0 errores) verificando cumplimiento WCAG 2.2 nivel AA.
+    \item \textbf{1.4.2 Pruebas de usabilidad guiadas con PCD y escala SUS:} Medición de tasa de éxito de tareas y aplicación del cuestionario estandarizado SUS de 10 ítems (meta $\ge 80/100$).
+    \item \textbf{1.5.1 Redacción del Cap. IV (Resultados) y Guía institucional:} Elaboración de tablas comparativas de indicadores pre vs. post implementación y manual para administradores UTI.
+    \item \textbf{1.5.2 Cierre formal, formato institucional UTI y tribunal:} Aprobación unánime de la tutora, verificación de estilo y solicitud formal de designación de lectores de grado.
 \end{itemize}
 
 \subsection*{\normalsize\color{utiNavy}b) Cronograma de Paquetes de Trabajo, Predecesoras, Hitos y Ruta Crítica (16 Semanas)}
@@ -311,3 +369,4 @@ Convocatoria e instrucciones de pruebas de usabilidad & Usuarios con discapacida
 \end{enumerate}
 
 \end{document}
+
