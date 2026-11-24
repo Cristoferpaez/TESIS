@@ -1,0 +1,314 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[spanish,es-tabla,es-noshorthands]{babel}
+\usepackage[margin=1.4cm]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, shapes.misc, arrows.meta, positioning, calc, fit, backgrounds, shadows.blur, babel}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{amsmath,amssymb}
+\usepackage{fancyhdr}
+\usepackage{tcolorbox}
+
+% Paleta de colores institucional UTI
+\definecolor{utiNavy}{HTML}{0F2A4A}
+\definecolor{utiBlue}{HTML}{1A5694}
+\definecolor{utiLightBlue}{HTML}{EBF3FB}
+\definecolor{criticalRed}{HTML}{DC2626}
+\definecolor{criticalRedLight}{HTML}{FEF2F2}
+\definecolor{slackGreen}{HTML}{16A34A}
+\definecolor{slackGreenLight}{HTML}{F0FDF4}
+\definecolor{borderSlate}{HTML}{94A3B8}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\scriptsize\textbf{\color{utiNavy}UNIVERSIDAD TECNOLÓGICA INDOAMÉRICA} $\vert$ Ing. en Tecnologías de la Información}
+\fancyhead[R]{\scriptsize\color{utiNavy}Gestión de Proyectos $\vert$ Método de la Ruta Crítica (CPM)}
+\fancyfoot[L]{\scriptsize\color{gray}Autor: Cristofer Alexander Paez Caza (1754161709)}
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\begin{document}
+
+% ==============================================================================
+% ENCABEZADO FORMAL
+% ==============================================================================
+\begin{tcolorbox}[colback=utiNavy, colframe=utiNavy, arc=4pt, colupper=white, boxrule=0pt, left=10pt, right=10pt, top=8pt, bottom=8pt]
+\begin{center}
+    {\scriptsize\textbf{\color{utiLightBlue}FACULTAD DE INGENIERÍAS Y TECNOLOGÍAS DE LA INFORMACIÓN \quad $\bullet$ \quad UTI}}\\[3pt]
+    {\large\textbf{\color{white}MODELADO Y EVALUACIÓN DE RUTA CRÍTICA (CPM / PERT)}}\\[2pt]
+    {\small\textbf{\color{utiLightBlue}TRABAJO DE TITULACIÓN: CRONOGRAMA DE 16 SEMANAS}}\\[4pt]
+    {\footnotesize\color{white}\textbf{Tema:} Actualización de un sitio web mediante diseño centrado en el usuario para mejorar la accesibilidad y la experiencia de personas con discapacidad}\\
+    {\scriptsize\color{utiLightBlue}\textbf{Autor:} Cristofer Alexander Paez Caza \quad $\vert$ \quad \textbf{Tutora:} Ing. María Cristina Jiménez, Mg. \quad $\vert$ \quad \textbf{Período:} Octubre 2026 -- Enero 2027}
+\end{center}
+\end{tcolorbox}
+
+\vspace{0.3cm}
+
+% ==============================================================================
+% 1. FUNDAMENTOS TEÓRICOS DE LA RED CPM
+% ==============================================================================
+\section*{\normalsize\color{utiNavy}1. Estructura del Nodo y Parámetros del Método de la Ruta Crítica (CPM)}
+
+El método de la ruta crítica (CPM, por sus siglas en inglés) utiliza un diagrama de red de actividades en los nodos (AON). Cada actividad $i$ se modela mediante un bloque estructurado en 6 cuadrantes:
+
+\begin{center}
+\begin{tikzpicture}[every node/.style={font=\footnotesize}]
+    \draw[line width=1.1pt, draw=utiNavy] (0,0) rectangle (6.6,1.8);
+    \draw[line width=0.7pt, draw=utiNavy] (0,0.9) -- (6.6,0.9);
+    \draw[line width=0.7pt, draw=utiNavy] (2.2,0) -- (2.2,1.8);
+    \draw[line width=0.7pt, draw=utiNavy] (4.4,0) -- (4.4,1.8);
+    
+    % Fila superior (Ida)
+    \node at (1.1, 1.35) {\textbf{IT}};
+    \node at (3.3, 1.35) {\textbf{Duración ($D$)}};
+    \node at (5.5, 1.35) {\textbf{FT}};
+    
+    % Fila inferior (Regreso)
+    \node at (1.1, 0.45) {\textbf{IL}};
+    \node at (3.3, 0.45) {\textbf{Holgura ($H$)}};
+    \node at (5.5, 0.45) {\textbf{FL}};
+    
+    % Etiqueta
+    \node[anchor=north, font=\bfseries\scriptsize, text=utiNavy] at (3.3, -0.1) {NOMBRE O CÓDIGO DE LA ACTIVIDAD};
+\end{tikzpicture}
+\end{center}
+
+\vspace{-0.2cm}
+
+\begin{itemize}\setlength\itemsep{1pt}
+    \item \textbf{IT (Inicio Temprano / Early Start - ES):} El momento más temprano en que la actividad puede iniciar tras terminar sus predecesores inmediatos. $\text{IT} = \max(\text{FT}_{\text{predecesores}})$. Para la primera actividad, $\text{IT} = 0$.
+    \item \textbf{FT (Fin Temprano / Early Finish - EF):} El momento más temprano en que la actividad puede culminar. $\text{FT} = \text{IT} + D$.
+    \item \textbf{FL (Fin Tardío / Late Finish - LF):} El momento más tardío en que la actividad puede finalizar sin retrasar la fecha de culminación del proyecto. $\text{FL} = \min(\text{IL}_{\text{sucesores}})$. Para la última actividad, $\text{FL} = \text{FT}$.
+    \item \textbf{IL (Inicio Tardío / Late Start - LS):} El momento más tardío en que la actividad puede iniciar sin retrasar el proyecto. $\text{IL} = \text{FL} - D$.
+    \item \textbf{Holgura Total ($H$):} Margen de reprogramación o holgura de la actividad:
+    \begin{equation}
+        H = \text{IL} - \text{IT} = \text{FL} - \text{FT}
+    \end{equation}
+    \item \textbf{Ruta Crítica:} Cadena continua de actividades desde el inicio hasta el fin donde \textbf{la holgura es cero ($H = 0$)}. Cualquier retraso en estas actividades aplaza directamente la titulación.
+\end{itemize}
+
+% ==============================================================================
+% 2. TABLA DE ACTIVIDADES DEL PROYECTO DE TITULACIÓN
+% ==============================================================================
+\section*{\normalsize\color{utiNavy}2. Matriz de Actividades y Dependencias del Proyecto (16 Semanas)}
+
+\begin{center}
+\footnotesize
+\renewcommand{\arraystretch}{1.1}
+\begin{tabularx}{\textwidth}{c X c c}
+\toprule
+\textbf{Cód.} & \textbf{Descripción de la Actividad en el Trabajo de Titulación} & \textbf{Predecesor} & \textbf{Dur. ($D$)} \\
+\midrule
+\textbf{A} & Diagnóstico técnico de laboratorio (Lighthouse/WAVE) y setup de Git & Ninguno & 2 sem \\
+\textbf{B} & Subsanación y aprobación del Capítulo I (Contextualización y LOD/CONADIS) & A & 2 sem \\
+\textbf{C} & Metodología DCU (ISO 9241-210) y caracterización de usuarios con discapacidad & B & 2 sem \\
+\textbf{D} & Especificación formal de Requisitos (RF01--RF06 / RNF01--RNF05) y alcance & C & 1 sem \\
+\textbf{E} & Prototipado interactivo accesible UI/UX en baja y alta fidelidad & D & 1 sem \\
+\textbf{F} & Arquitectura modular frontend: Capa 1 (UI WAI-ARIA) y Capa 2 (Lógica Foco) & E & 2 sem \\
+\textbf{G} & Desarrollo de Capa 3: Servicios RESTful y consumo de endpoints de datos & E & 1 sem \\
+\textbf{H} & Optimización técnica y rendimiento: Core Web Vitals (TBT, LCP, WebP, Lazy) & F, G & 2 sem \\
+\textbf{I} & Redacción preliminar de la memoria del Capítulo III (Implementación de software) & F & 1 sem \\
+\textbf{J} & Re-auditorías técnicas automatizadas de control (Lighthouse $\ge 90$, WAVE = 0) & H & 1 sem \\
+\textbf{K} & Pruebas empíricas con usuarios con discapacidad (NVDA/Teclado) y escala SUS & H & 2 sem \\
+\textbf{L} & Capítulo IV (Resultados), Conclusiones, formato UTI y solicitud de lectores & I, J, K & 2 sem \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\newpage
+
+% ==============================================================================
+% 3. CÁLCULO PASO A PASO (IDA, REGRESO Y HOLGURAS)
+% ==============================================================================
+\section*{\normalsize\color{utiNavy}3. Memoria de Cálculo Matemático Paso a Paso}
+
+\subsection*{\small\color{utiBlue}A. Paso Hacia Adelante (Forward Pass) $\rightarrow$ Tiempos Tempranos ($\text{FT} = \text{IT} + D$)}
+\begin{enumerate}\setlength\itemsep{2pt}\footnotesize
+    \item \textbf{Actividad A:} $\text{IT}_A = 0 \implies \text{FT}_A = 0 + 2 = \mathbf{2}$.
+    \item \textbf{Actividad B:} Viene de A: $\text{IT}_B = \text{FT}_A = 2 \implies \text{FT}_B = 2 + 2 = \mathbf{4}$.
+    \item \textbf{Actividad C:} Viene de B: $\text{IT}_C = \text{FT}_B = 4 \implies \text{FT}_C = 4 + 2 = \mathbf{6}$.
+    \item \textbf{Actividad D:} Viene de C: $\text{IT}_D = \text{FT}_C = 6 \implies \text{FT}_D = 6 + 1 = \mathbf{7}$.
+    \item \textbf{Actividad E:} Viene de D: $\text{IT}_E = \text{FT}_D = 7 \implies \text{FT}_E = 7 + 1 = \mathbf{8}$.
+    \item \textbf{Actividad F:} Viene de E: $\text{IT}_F = \text{FT}_E = 8 \implies \text{FT}_F = 8 + 2 = \mathbf{10}$.
+    \item \textbf{Actividad G (En paralelo con F):} Viene de E: $\text{IT}_G = \text{FT}_E = 8 \implies \text{FT}_G = 8 + 1 = \mathbf{9}$.
+    \item \textbf{Actividad H (Convergencia):} Predecesores F ($\text{FT}=10$) y G ($\text{FT}=9$). Aplicamos el \textbf{máximo}:\\
+    $\text{IT}_H = \max(\text{FT}_F, \text{FT}_G) = \max(10, 9) = \mathbf{10} \implies \text{FT}_H = 10 + 2 = \mathbf{12}$.
+    \item \textbf{Actividad I (En paralelo con H):} Viene de F: $\text{IT}_I = \text{FT}_F = 10 \implies \text{FT}_I = 10 + 1 = \mathbf{11}$.
+    \item \textbf{Actividad J:} Viene de H: $\text{IT}_J = \text{FT}_H = 12 \implies \text{FT}_J = 12 + 1 = \mathbf{13}$.
+    \item \textbf{Actividad K (En paralelo con J):} Viene de H: $\text{IT}_K = \text{FT}_H = 12 \implies \text{FT}_K = 12 + 2 = \mathbf{14}$.
+    \item \textbf{Actividad L (Convergencia Final):} Predecesores I ($\text{FT}=11$), J ($\text{FT}=13$) y K ($\text{FT}=14$).\\
+    $\text{IT}_L = \max(\text{FT}_I, \text{FT}_J, \text{FT}_K) = \max(11, 13, 14) = \mathbf{14} \implies \text{FT}_L = 14 + 2 = \mathbf{16}$.
+\end{enumerate}
+\vspace{-0.1cm}
+\begin{tcolorbox}[colback=utiLightBlue, colframe=utiBlue, arc=3pt, left=8pt, right=8pt, top=4pt, bottom=4pt]
+\footnotesize\textbf{Duración Total del Proyecto de Titulación:} $\mathbf{16\text{ semanas}}$ (Correspondiente a las 16 semanas calendario oficiales del semestre UTI).
+\end{tcolorbox}
+
+\subsection*{\small\color{utiBlue}B. Paso Hacia Atrás (Backward Pass) $\rightarrow$ Tiempos Tardíos ($\text{IL} = \text{FL} - D$)}
+\begin{enumerate}\setlength\itemsep{2pt}\footnotesize
+    \item \textbf{Actividad L (Última):} $\text{FL}_L = \text{FT}_L = 16 \implies \text{IL}_L = 16 - 2 = \mathbf{14}$.
+    \item \textbf{Actividad K:} Sucesor L: $\text{FL}_K = \text{IL}_L = 14 \implies \text{IL}_K = 14 - 2 = \mathbf{12}$.
+    \item \textbf{Actividad J:} Sucesor L: $\text{FL}_J = \text{IL}_L = 14 \implies \text{IL}_J = 14 - 1 = \mathbf{13}$.
+    \item \textbf{Actividad I:} Sucesor L: $\text{FL}_I = \text{IL}_L = 14 \implies \text{IL}_I = 14 - 1 = \mathbf{13}$.
+    \item \textbf{Actividad H (Divergencia de retorno):} Sucesores J ($\text{IL}=13$) y K ($\text{IL}=12$). Aplicamos el \textbf{mínimo}:\\
+    $\text{FL}_H = \min(\text{IL}_J, \text{IL}_K) = \min(13, 12) = \mathbf{12} \implies \text{IL}_H = 12 - 2 = \mathbf{10}$.
+    \item \textbf{Actividad G:} Sucesor H: $\text{FL}_G = \text{IL}_H = 10 \implies \text{IL}_G = 10 - 1 = \mathbf{9}$.
+    \item \textbf{Actividad F (Divergencia de retorno):} Sucesores H ($\text{IL}=10$) e I ($\text{IL}=13$).\\
+    $\text{FL}_F = \min(\text{IL}_H, \text{IL}_I) = \min(10, 13) = \mathbf{10} \implies \text{IL}_F = 10 - 2 = \mathbf{8}$.
+    \item \textbf{Actividad E (Divergencia de retorno):} Sucesores F ($\text{IL}=8$) y G ($\text{IL}=9$).\\
+    $\text{FL}_E = \min(\text{IL}_F, \text{IL}_G) = \min(8, 9) = \mathbf{8} \implies \text{IL}_E = 8 - 1 = \mathbf{7}$.
+    \item \textbf{Actividad D:} Sucesor E: $\text{FL}_D = \text{IL}_E = 7 \implies \text{IL}_D = 7 - 1 = \mathbf{6}$.
+    \item \textbf{Actividad C:} Sucesor D: $\text{FL}_C = \text{IL}_D = 6 \implies \text{IL}_C = 6 - 2 = \mathbf{4}$.
+    \item \textbf{Actividad B:} Sucesor C: $\text{FL}_B = \text{IL}_C = 4 \implies \text{IL}_B = 4 - 2 = \mathbf{2}$.
+    \item \textbf{Actividad A:} Sucesor B: $\text{FL}_A = \text{IL}_B = 2 \implies \text{IL}_A = 2 - 2 = \mathbf{0}$.
+\end{enumerate}
+
+% ==============================================================================
+% 4. TABLA RESUMEN MAESTRA DE VALORES CPM
+% ==============================================================================
+\section*{\normalsize\color{utiNavy}4. Tabla Maestra de Resultados CPM}
+
+\begin{center}
+\small
+\begin{tabularx}{\textwidth}{c X c c c c c c c}
+\toprule
+\textbf{Act.} & \textbf{Descripción Resumida} & \textbf{Dur.} & \textbf{IT} & \textbf{FT} & \textbf{IL} & \textbf{FL} & \textbf{Holgura ($H$)} & \textbf{¿Crítica?} \\
+\midrule
+\textbf{A} & Diagnóstico técnico de laboratorio y setup & 2 & 0 & 2 & 0 & 2 & $0 - 0 = \mathbf{0}$ & \textbf{\color{criticalRed}SÍ (Ruta Crítica)} \\
+\textbf{B} & Subsanación y aprobación de Cap. I & 2 & 2 & 4 & 2 & 4 & $2 - 2 = \mathbf{0}$ & \textbf{\color{criticalRed}SÍ (Ruta Crítica)} \\
+\textbf{C} & Metodología DCU y contexto de usuarios & 2 & 4 & 6 & 4 & 6 & $4 - 4 = \mathbf{0}$ & \textbf{\color{criticalRed}SÍ (Ruta Crítica)} \\
+\textbf{D} & Especificación formal de Requisitos & 1 & 6 & 7 & 6 & 7 & $6 - 6 = \mathbf{0}$ & \textbf{\color{criticalRed}SÍ (Ruta Crítica)} \\
+\textbf{E} & Prototipado interactivo UI/UX & 1 & 7 & 8 & 7 & 8 & $7 - 7 = \mathbf{0}$ & \textbf{\color{criticalRed}SÍ (Ruta Crítica)} \\
+\textbf{F} & Arquitectura frontend: Capas 1 y 2 & 2 & 8 & 10 & 8 & 10 & $8 - 8 = \mathbf{0}$ & \textbf{\color{criticalRed}SÍ (Ruta Crítica)} \\
+\textbf{G} & Capa 3: Servicios REST y datos & 1 & 8 & 9 & 9 & 10 & $9 - 8 = \mathbf{1}$ & \color{slackGreen}No (1 sem) \\
+\textbf{H} & Optimización Core Web Vitals & 2 & 10 & 12 & 10 & 12 & $10 - 10 = \mathbf{0}$ & \textbf{\color{criticalRed}SÍ (Ruta Crítica)} \\
+\textbf{I} & Redacción borrador Capítulo III & 1 & 10 & 11 & 13 & 14 & $13 - 10 = \mathbf{3}$ & \color{slackGreen}No (3 sem) \\
+\textbf{J} & Re-auditorías técnicas (Lighthouse/WAVE) & 1 & 12 & 13 & 13 & 14 & $13 - 12 = \mathbf{1}$ & \color{slackGreen}No (1 sem) \\
+\textbf{K} & Pruebas con usuarios PCD y escala SUS & 2 & 12 & 14 & 12 & 14 & $12 - 12 = \mathbf{0}$ & \textbf{\color{criticalRed}SÍ (Ruta Crítica)} \\
+\textbf{L} & Capítulo IV, Formato y Defensa de Grado & 2 & 14 & 16 & 14 & 16 & $14 - 14 = \mathbf{0}$ & \textbf{\color{criticalRed}SÍ (Ruta Crítica)} \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\newpage
+
+% ==============================================================================
+% 5. DIAGRAMA DE RED DEL PROYECTO (AON)
+% ==============================================================================
+\section*{\normalsize\color{utiNavy}5. Diagrama de Red del Proyecto (AON - Activity On Node)}
+
+En el siguiente diagrama se presenta la red completa de actividades con sus 6 cuadrantes de tiempos calculados. Las flechas rojas dobles y nodos destacados representan la \textbf{Ruta Crítica}:
+
+\begin{center}
+\resizebox{\textwidth}{!}{
+\begin{tikzpicture}[
+    % Estilo del nodo estándar
+    cpmNode/.style={
+        rectangle, rounded corners=2pt, draw=utiBlue, line width=1pt, fill=white,
+        inner sep=0pt, minimum width=2.4cm, minimum height=1.3cm
+    },
+    cpmCritical/.style={
+        rectangle, rounded corners=2pt, draw=criticalRed, line width=1.5pt, fill=criticalRedLight,
+        inner sep=0pt, minimum width=2.4cm, minimum height=1.3cm
+    },
+    % Flechas
+    arrowNorm/.style={->, >=Stealth, line width=1pt, color=borderSlate},
+    arrowCrit/.style={->, >=Stealth, line width=2.2pt, color=criticalRed}
+]
+
+% Macro para dibujar el bloque de 6 cuadrantes
+% #1: nombre nodo, #2: coords, #3: dur, #4: IT, #5: FT, #6: IL, #7: H, #8: FL, #9: estilo
+\newcommand{\cpmBox}[9]{
+    \node[#9] (box_#1) at #2 {
+        \begin{tabular}{c|c|c}
+        \footnotesize #4 & \footnotesize\bfseries #3 & \footnotesize #5 \\
+        \hline
+        \footnotesize #6 & \footnotesize\bfseries #7 & \footnotesize #8
+        \end{tabular}
+    };
+    \node[above=2pt of box_#1, font=\bfseries\scriptsize, text=utiNavy] {\textbf{Act. #1}};
+}
+
+% Nodos de la Red
+% Fila Principal
+\cpmBox{A}{(0, 6)}{2}{0}{2}{0}{0}{2}{cpmCritical}
+\cpmBox{B}{(3.2, 6)}{2}{2}{4}{2}{0}{4}{cpmCritical}
+\cpmBox{C}{(6.4, 6)}{2}{4}{6}{4}{0}{6}{cpmCritical}
+\cpmBox{D}{(9.6, 6)}{1}{6}{7}{6}{0}{7}{cpmCritical}
+\cpmBox{E}{(12.8, 6)}{1}{7}{8}{7}{0}{8}{cpmCritical}
+
+% Ramificaciones en Desarrollo
+\cpmBox{F}{(16.2, 7.5)}{2}{8}{10}{8}{0}{10}{cpmCritical}
+\cpmBox{G}{(16.2, 4.5)}{1}{8}{9}{9}{1}{10}{cpmNode}
+
+% Convergencia en Optimización
+\cpmBox{H}{(19.6, 6)}{2}{10}{12}{10}{0}{12}{cpmCritical}
+
+% Paralelo Redacción Cap. III
+\cpmBox{I}{(19.6, 9.2)}{1}{10}{11}{13}{3}{14}{cpmNode}
+
+% Ramificaciones en Pruebas
+\cpmBox{J}{(23.0, 7.5)}{1}{12}{13}{13}{1}{14}{cpmNode}
+\cpmBox{K}{(23.0, 4.5)}{2}{12}{14}{12}{0}{14}{cpmCritical}
+
+% Cierre y Defensa
+\cpmBox{L}{(26.4, 6)}{2}{14}{16}{14}{0}{16}{cpmCritical}
+
+% Conexiones Críticas
+\draw[arrowCrit] (box_A) -- (box_B);
+\draw[arrowCrit] (box_B) -- (box_C);
+\draw[arrowCrit] (box_C) -- (box_D);
+\draw[arrowCrit] (box_D) -- (box_E);
+
+% Bifurcación E -> F y G
+\draw[arrowCrit] (box_E.east) -- ++(0.4, 0) |- (box_F.west);
+\draw[arrowNorm] (box_E.east) -- ++(0.4, 0) |- (box_G.west);
+
+% Convergencia F, G -> H
+\draw[arrowCrit] (box_F.east) -- ++(0.4, 0) |- (box_H.west);
+\draw[arrowNorm] (box_G.east) -- ++(0.4, 0) |- (box_H.west);
+
+% Salida F -> I (Redacción)
+\draw[arrowNorm] (box_F.north) |- (box_I.west);
+
+% Bifurcación H -> J y K
+\draw[arrowNorm] (box_H.east) -- ++(0.4, 0) |- (box_J.west);
+\draw[arrowCrit] (box_H.east) -- ++(0.4, 0) |- (box_K.west);
+
+% Convergencia I, J, K -> L
+\draw[arrowNorm] (box_I.east) -| ($(box_L.west)+(-0.4, 0)$) -- (box_L.west);
+\draw[arrowNorm] (box_J.east) -- ++(0.4, 0) |- (box_L.west);
+\draw[arrowCrit] (box_K.east) -- ++(0.4, 0) |- (box_L.west);
+
+\end{tikzpicture}
+}
+\end{center}
+
+\vspace{0.4cm}
+
+% ==============================================================================
+% 6. CONCLUSIONES PARA RESPONDER EN EL EXAMEN
+% ==============================================================================
+\section*{\normalsize\color{utiNavy}6. Respuestas Clave de Examen}
+
+\begin{tcolorbox}[colback=white, colframe=utiNavy, arc=4pt, title={\textbf{\color{white}SÍNTESIS DE RESULTADOS OPERATIVOS}}, fonttitle=\bfseries\small]
+\begin{enumerate}\setlength\itemsep{3pt}\small
+    \item \textbf{Duración Total del Proyecto:} $\mathbf{16\text{ semanas}}$ (4 meses calendario).
+    \item \textbf{Ruta Crítica Identificada:}
+    $$\mathbf{A \longrightarrow B \longrightarrow C \longrightarrow D \longrightarrow E \longrightarrow F \longrightarrow H \longrightarrow K \longrightarrow L}$$
+    \item \textbf{Actividades Críticas:} A, B, C, D, E, F, H, K, L. Su holgura es estrictamente cero ($H = 0$). Cualquier desviación en ellas aplaza la entrega o defensa de la tesis.
+    \item \textbf{Actividades No Críticas con Margen de Holgura:}
+    \begin{itemize}\footnotesize
+        \item \textbf{Actividad G (Servicios REST):} Holgura de $\mathbf{1\text{ semana}}$. Puede durar hasta 2 semanas sin retrasar la integración de optimización (H).
+        \item \textbf{Actividad I (Borrador Cap. III):} Holgura de $\mathbf{3\text{ semanas}}$. Al redactarse en paralelo con el software, no compromete la fecha final hasta la semana 14.
+        \item \textbf{Actividad J (Re-auditorías automatizadas):} Holgura de $\mathbf{1\text{ semana}}$. Puede ejecutarse de forma flexible mientras concluyen las pruebas de usuarios (K).
+    \end{itemize}
+\end{enumerate}
+\end{tcolorbox}
+
+\end{document}
