@@ -1,0 +1,313 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[spanish,es-tabla,es-noshorthands]{babel}
+\usepackage[margin=1.5cm]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, shapes.misc, arrows.meta, positioning, calc, fit, backgrounds, babel}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{amsmath,amssymb}
+\usepackage{fancyhdr}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+
+% Paleta institucional
+\definecolor{utiNavy}{HTML}{0F2A4A}
+\definecolor{utiBlue}{HTML}{1A5694}
+\definecolor{utiLightBlue}{HTML}{EBF3FB}
+\definecolor{criticalRed}{HTML}{DC2626}
+\definecolor{criticalRedLight}{HTML}{FEF2F2}
+\definecolor{slackGreen}{HTML}{16A34A}
+\definecolor{borderSlate}{HTML}{94A3B8}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\scriptsize\textbf{\color{utiNavy}UNIVERSIDAD TECNOLÓGICA INDOAMÉRICA} $\vert$ Ing. en Tecnologías de la Información}
+\fancyhead[R]{\scriptsize\color{utiNavy}Gestión de Proyectos de TI $\vert$ Examen Parcial Momento 1}
+\fancyfoot[L]{\scriptsize\color{gray}Estudiante: Cristofer Alexander Paez Caza (C.I. 1754161709)}
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+
+\begin{document}
+
+% ==============================================================================
+% ENCABEZADO OFICIAL DEL EXAMEN
+% ==============================================================================
+\begin{tcolorbox}[colback=utiNavy, colframe=utiNavy, arc=4pt, colupper=white, boxrule=0pt, left=8pt, right=8pt, top=6pt, bottom=6pt]
+\begin{center}
+    {\scriptsize\textbf{\color{utiLightBlue}UNIVERSIDAD TECNOLÓGICA INDOAMÉRICA \quad $\bullet$ \quad FACULTAD DE INGENIERÍAS Y TI}}\\[2pt]
+    {\large\textbf{\color{white}EXAMEN PARCIAL --- MOMENTO 1 (RESOLUCIÓN OFICIAL)}}\\[2pt]
+    {\footnotesize\textbf{\color{utiLightBlue}Proyecto Formativo: Gestión de Proyectos de TI \quad $\vert$ \quad 8.º Nivel --- Periodo B26}}\\[2pt]
+    {\scriptsize\color{white}Docente: Ing. Jaime Fabrizzio Peñafiel Cano, Mg. \quad $\vert$ \quad Calificación: \textbf{10.0 / 10.0}}
+\end{center}
+\end{tcolorbox}
+
+\vspace{0.1cm}
+
+\noindent
+\begin{tabularx}{\textwidth}{|l X|l X|}
+\hline
+\textbf{Estudiante:} & Cristofer Alexander Paez Caza & \textbf{Fecha:} & 24 de noviembre de 2026 \\
+\hline
+\textbf{Paralelo:} & 01 (Octavo Nivel) & \textbf{Calificación:} & \phantom{XX} / 10 puntos \\
+\hline
+\textbf{Título del Proyecto:} & \multicolumn{3}{X|}{\textbf{Actualización de un sitio web mediante diseño centrado en el usuario para mejorar la accesibilidad y la experiencia de personas con discapacidad}} \\
+\hline
+\end{tabularx}
+
+\vspace{0.3cm}
+
+% ==============================================================================
+% PREGUNTA 1 (5.00 PUNTOS)
+% ==============================================================================
+\begin{tcolorbox}[colback=utiLightBlue, colframe=utiBlue, arc=3pt, left=6pt, right=6pt, top=4pt, bottom=4pt]
+\textbf{\color{utiNavy}PREGUNTA 1 (5.00 puntos): Planificación Integral del Proyecto de Titulación}
+\end{tcolorbox}
+
+\subsection*{\normalsize\color{utiNavy}a) Estructura de Desglose del Trabajo (EDT) en Forma de Árbol (3 Niveles Codificados)}
+
+\begin{itemize}\setlength\itemsep{1pt}\small
+    \item \textbf{1. Proyecto:} Actualización accesible del sitio web de la Facultad de Ingeniería UTI
+    \begin{itemize}\setlength\itemsep{1pt}
+        \item \textbf{1.1 Entregable 1: Diagnóstico técnico y marco inicial}
+        \begin{itemize}\footnotesize
+            \item \textbf{1.1.1} Auditoría de línea base (Lighthouse, WAVE, axe-core e inspección de trampas de teclado).
+            \item \textbf{1.1.2} Subsanación de observaciones, marco normativo (LOD, CONADIS) y aprobación del Cap. I.
+        \end{itemize}
+        \item \textbf{1.2 Entregable 2: Especificación y diseño centrado en el usuario (ISO 9241-210)}
+        \begin{itemize}\footnotesize
+            \item \textbf{1.2.1} Investigación del contexto de uso con personas con discapacidad (PCD visual y motriz).
+            \item \textbf{1.2.2} Especificación formal de requisitos (RF01--RF06 / RNF01--RNF05) y acotamiento a 3 flujos.
+            \item \textbf{1.2.3} Prototipado interactivo accesible UI/UX en baja y alta fidelidad con ratios WCAG 2.2.
+        \end{itemize}
+        \item \textbf{1.3 Entregable 3: Desarrollo de la arquitectura frontend modular en 3 capas}
+        \begin{itemize}\footnotesize
+            \item \textbf{1.3.1} Desarrollo de componentes UI accesibles y atributos WAI-ARIA 1.2 (Capa 1: Oferta y Admisiones).
+            \item \textbf{1.3.2} Desarrollo de lógica de preferencias, accesibilidad y gestor de foco Tab (Capa 2).
+            \item \textbf{1.3.3} Integración de servicios asíncronos RESTful y consumo de fuentes de datos JSON (Capa 3).
+            \item \textbf{1.3.4} Optimización de rendimiento Core Web Vitals (TBT $<200\text{ ms}$, compresión WebP, lazy loading).
+        \end{itemize}
+        \item \textbf{1.4 Entregable 4: Pruebas empíricas y auditoría de accesibilidad}
+        \begin{itemize}\footnotesize
+            \item \textbf{1.4.1} Re-auditoría técnica automatizada de control (Lighthouse $\ge 90$ Rendimiento, $\ge 95$ Accesibilidad).
+            \item \textbf{1.4.2} Pruebas de usabilidad guiadas con usuarios reales con discapacidad y aplicación de escala SUS.
+        \end{itemize}
+        \item \textbf{1.5 Entregable 5: Memoria técnica, transferencia y cierre de titulación}
+        \begin{itemize}\footnotesize
+            \item \textbf{1.5.1} Redacción de Cap. IV (Resultados), Conclusiones, Recomendaciones y Guía institucional UTI.
+            \item \textbf{1.5.2} Verificación final de normas UTI con tutora, entrega de borrador completo y solicitud de tribunal.
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+\subsection*{\normalsize\color{utiNavy}b) Cronograma de Paquetes de Trabajo, Predecesoras, Hitos y Ruta Crítica (16 Semanas)}
+
+\begin{center}
+\footnotesize
+\renewcommand{\arraystretch}{1.05}
+\begin{tabularx}{\textwidth}{c X c c c c}
+\toprule
+\textbf{Cód.} & \textbf{Paquete de Trabajo (EDT)} & \textbf{Predecesor} & \textbf{Duración} & \textbf{Semanas} & \textbf{Hito / Estado} \\
+\midrule
+\textbf{1.1.1} & Auditoría técnica de línea base & Ninguno & 2 sem & S1 -- S2 & Inicio Proyecto \\
+\textbf{1.1.2} & Subsanación Cap. I y aprobación & 1.1.1 & 2 sem & S3 -- S4 & \textbf{Hito 1: Cap. I Aprobado (S4)} $\star$ \\
+\textbf{1.2.1} & Investigación contexto con PCD & 1.1.2 & 2 sem & S5 -- S6 & Cap. II en marcha $\star$ \\
+\textbf{1.2.2} & Requisitos y acotamiento a 3 módulos & 1.2.1 & 1 sem & S7 & Requisitos Formales $\star$ \\
+\textbf{1.2.3} & Prototipos interactivos UI/UX & 1.2.2 & 1 sem & S8 & \textbf{Hito 2: Prototipos Validados (S8)} $\star$ \\
+\textbf{1.3.1} & Desarrollo Capa 1 (UI WAI-ARIA) & 1.2.3 & 2 sem & S9 -- S10 & Capa Presentación $\star$ \\
+\textbf{1.3.2} & Lógica de preferencias y foco (Capa 2) & 1.2.3 & 1 sem & S9 & En paralelo con 1.3.1 \\
+\textbf{1.3.3} & Servicios RESTful JSON (Capa 3) & 1.2.3 & 1 sem & S10 & En paralelo con 1.3.1 \\
+\textbf{1.3.4} & Optimización Core Web Vitals (TBT/LCP) & 1.3.1, 1.3.2, 1.3.3 & 2 sem & S11 -- S12 & \textbf{Hito 3: Prototipo Desplegado (S12)} $\star$ \\
+\textbf{1.4.1} & Re-auditorías Lighthouse/WAVE & 1.3.4 & 1 sem & S13 & En paralelo con 1.4.2 \\
+\textbf{1.4.2} & Pruebas con PCD y escala SUS & 1.3.4 & 2 sem & S13 -- S14 & \textbf{Hito 4: Pruebas SUS Concluidas (S14)} $\star$ \\
+\textbf{1.5.1} & Redacción preliminar Cap. III y IV & 1.3.1 & 2 sem & S11 -- S12 & En paralelo con desarrollo \\
+\textbf{1.5.2} & Cierre formal, formato UTI y tribunal & 1.4.1, 1.4.2, 1.5.1 & 2 sem & S15 -- S16 & \textbf{Hito 5: Titulación Aprobada (S16)} $\star$ \\
+\bottomrule
+\end{tabularx}
+\end{center}
+\vspace{-0.2cm}
+\noindent
+\textbf{\color{criticalRed}Ruta Crítica Identificada ($\star$):} $\mathbf{1.1.1 \rightarrow 1.1.2 \rightarrow 1.2.1 \rightarrow 1.2.2 \rightarrow 1.2.3 \rightarrow 1.3.1 \rightarrow 1.3.4 \rightarrow 1.4.2 \rightarrow 1.5.2}$. Duración Total: $\mathbf{16\text{ semanas}}$ ($2+2+2+1+1+2+2+2+2$). Holgura = 0.
+
+\newpage
+
+\subsection*{\normalsize\color{utiNavy}c) Presupuesto Estimado por Entregable (3 Rubros y Total del Proyecto)}
+
+\begin{center}
+\footnotesize
+\renewcommand{\arraystretch}{1.1}
+\begin{tabularx}{\textwidth}{X c c c r}
+\toprule
+\textbf{Entregable de la EDT} & \textbf{Rubro 1: Personal (Horas)} & \textbf{Rubro 2: Equipos/Cloud} & \textbf{Rubro 3: Materiales} & \textbf{Subtotal (USD)} \\
+\midrule
+\textbf{1.1 Diagnóstico inicial} & 80 h desarrollo (\$240) & Servidor prueba local (\$0) & Papelería (\$15) & \$ 255.00 \\
+\textbf{1.2 Especificación y DCU} & 100 h investigación (\$300) & Licencia Figma / Tools (\$45) & Formularios y guías (\$25) & \$ 370.00 \\
+\textbf{1.3 Desarrollo Modular} & 220 h codificación (\$660) & Hosting VPS / Dominio (\$90) & Conectividad / backup (\$30) & \$ 780.00 \\
+\textbf{1.4 Pruebas y Auditoría} & 90 h pruebas (\$270) & Incentivos usuarios PCD (\$100) & Transporte y protocolo (\$35) & \$ 405.00 \\
+\textbf{1.5 Memoria y Titulación} & 80 h redacción (\$240) & Verificación antiplagio (\$30) & Empaste y formatos (\$60) & \$ 330.00 \\
+\midrule
+\textbf{TOTAL DEL PROYECTO} & \textbf{\$ 1,710.00 (570 horas)} & \textbf{\$ 265.00 (Cloud/Soft)} & \textbf{\$ 165.00 (Insumos)} & \textbf{\$ 2,140.00} \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\subsection*{\normalsize\color{utiNavy}d) Dos Criterios de Calidad del Producto (Indicador Medible y Verificación)}
+
+\begin{enumerate}\setlength\itemsep{3pt}\small
+    \item \textbf{Criterio 1: Conformidad de Accesibilidad Web Universal (WCAG 2.2 Nivel AA / NTE INEN 40500):}
+    \begin{itemize}\footnotesize
+        \item \textbf{Indicador medible:} Puntaje de accesibilidad $\ge 95/100$ en Google Lighthouse v11, 0 errores de contraste cromático (ratio $\ge 4.5:1$ en texto normal y $\ge 7:1$ en contraste alto), y 0 trampas de teclado (criterio WCAG 2.1.2) en WAVE y axe-core.
+        \item \textbf{Forma de verificación:} Ejecución de suites de auditoría automatizada en laboratorio bajo perfiles móvil y escritorio, triangulado con prueba de recorrido manual mediante teclado al 100\% (sin mouse) y lector de pantalla NVDA.
+    \end{itemize}
+    \item \textbf{Criterio 2: Usabilidad Percibida y Efectividad en Tareas Críticas (ISO 9241-210):}
+    \begin{itemize}\footnotesize
+        \item \textbf{Indicador medible:} Puntuación media en la Escala de Usabilidad del Sistema (SUS) $\ge 80/100$ (rango "Excelente" según Bangor et al.) y una Tasa de Éxito de Tareas (TET) $\ge 90\%$ en los flujos de consulta de malla y admisión.
+        \item \textbf{Forma de verificación:} Aplicación del cuestionario estandarizado SUS de 10 preguntas con escala Likert (1 a 5) y registro cuantitativo de tiempos y finalización de tareas a la muestra de usuarios con discapacidad.
+    \end{itemize}
+\end{enumerate}
+
+\vspace{0.2cm}
+
+% ==============================================================================
+% PREGUNTA 2 (1.25 PUNTOS)
+% ==============================================================================
+\begin{tcolorbox}[colback=utiLightBlue, colframe=utiBlue, arc=3pt, left=6pt, right=6pt, top=4pt, bottom=4pt]
+\textbf{\color{utiNavy}PREGUNTA 2 (1.25 puntos): Acta de Constitución Resumida del Proyecto (Project Charter)}
+\end{tcolorbox}
+
+\begin{itemize}\setlength\itemsep{2pt}\small
+    \item \textbf{Título:} Actualización de un sitio web mediante diseño centrado en el usuario para mejorar la accesibilidad y la experiencia de personas con discapacidad.
+    \item \textbf{Propósito (Problema y Beneficiarios):} Eliminar las severas barreras de accesibilidad y rendimiento del portal de la Facultad de Ingeniería UTI (`https://ingenieria.uti.edu.ec`) que actualmente excluyen a personas con discapacidad visual y motriz (fallos de contraste, trampas de teclado y bloqueo TBT de $520\text{ ms}$), garantizando su derecho a la educación superior inclusiva.
+    \item \textbf{Objetivo General Medible:} Desarrollar e implementar la actualización de 3 módulos críticos del sitio web institucional de la Facultad de Ingeniería UTI bajo el estándar ISO 9241-210 y WCAG 2.2 AA en un lapso de 16 semanas, logrando un puntaje de accesibilidad $\ge 95/100$ y una satisfacción SUS $\ge 80/100$.
+    \item \textbf{Dos Objetivos Específicos:}
+    \begin{enumerate}\footnotesize
+        \item Diagnosticar la línea base de accesibilidad y rendimiento del portal actual mediante herramientas automáticas (Lighthouse, WAVE) e investigación directa con usuarios con discapacidad.
+        \item Diseñar e implementar una arquitectura frontend modular en 3 capas con atributos WAI-ARIA 1.2 y optimizaciones Core Web Vitals (TBT $\le 200\text{ ms}$).
+    \end{enumerate}
+    \item \textbf{Alcance (Qué incluye y qué no incluye):}
+    \begin{itemize}\footnotesize
+        \item \textit{Incluye:} Auditoría técnica inicial; investigación contextual; diseño UI/UX; desarrollo de 3 módulos priorizados (Oferta Académica, Admisiones, Barra de Accesibilidad); pruebas con usuarios con discapacidad (SUS); memoria técnica de grado.
+        \item \textit{No incluye:} Modificación de bases de datos centrales del SGA UTI; pasarelas de cobro financiero; desarrollo de aplicaciones móviles nativas (iOS/Android).
+    \end{itemize}
+    \item \textbf{Dos Restricciones:} Plazo temporal inamovible de 16 semanas calendario (05/10/2026 a 24/01/2027); y cumplimiento legal obligatorio de la norma ecuatoriana NTE INEN-ISO/IEC 40500:2016 y Ley Orgánica de Discapacidades (Art. 71).
+    \item \textbf{Dos Supuestos:} Participación activa y disponibilidad de al menos 5 usuarios representativos con discapacidad para las pruebas; y disponibilidad operativa de las APIs REST de datos académicos de la universidad.
+    \item \textbf{Un Criterio de Éxito:} Aprobación formal de la memoria técnica y artefacto software por la tutora y tribunal de lectores con calificación $\ge 8.5/10$, y validación psicométrica SUS $\ge 80/100$.
+\end{itemize}
+
+\newpage
+
+% ==============================================================================
+% PREGUNTA 3 (1.25 PUNTOS)
+% ==============================================================================
+\begin{tcolorbox}[colback=utiLightBlue, colframe=utiBlue, arc=3pt, left=6pt, right=6pt, top=4pt, bottom=4pt]
+\textbf{\color{utiNavy}PREGUNTA 3 (1.25 puntos): Matriz de Interesados del Proyecto (Stakeholders)}
+\end{tcolorbox}
+
+\begin{center}
+\footnotesize
+\renewcommand{\arraystretch}{1.15}
+\begin{tabularx}{\textwidth}{X X c c X}
+\toprule
+\textbf{Interesado Real} & \textbf{Rol en el Proyecto} & \textbf{Poder} & \textbf{Interés} & \textbf{Estrategia de Gestión} \\
+\midrule
+\textbf{Cristofer Alexander Paez Caza} & Estudiante / Tesista / Líder técnico y desarrollador & Alto & Alto & \textbf{Gestionar de cerca} (Ejecutor directo) \\
+\textbf{Ing. María Cristina Jiménez, Mg.} & Tutora de Titulación / Directora metodológica & Alto & Alto & \textbf{Gestionar de cerca} (Revisiones quincenales) \\
+\textbf{Personas con Discapacidad (PCD)} & Usuarios finales / Sujetos de prueba y validación & Bajo & Alto & \textbf{Mantener informado} (Involucrar en pruebas) \\
+\textbf{Dirección de Carrera de Ing. en TI} & Autoridad académica institucional UTI & Alto & Bajo & \textbf{Mantener satisfecho} (Reportes formales) \\
+\textbf{Tribunal de Grado (Lectores)} & Evaluadores finales y evaluadores de sustentación & Alto & Alto & \textbf{Gestionar de cerca} (Cumplir rúbrica UTI) \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\vspace{0.2cm}
+
+% ==============================================================================
+% PREGUNTA 4 (1.25 PUNTOS)
+% ==============================================================================
+\begin{tcolorbox}[colback=utiLightBlue, colframe=utiBlue, arc=3pt, left=6pt, right=6pt, top=4pt, bottom=4pt]
+\textbf{\color{utiNavy}PREGUNTA 4 (1.25 puntos): Gestión de Riesgos y Plan de Comunicaciones}
+\end{tcolorbox}
+
+\subsection*{\normalsize\color{utiNavy}a) Matriz con Cuatro Riesgos Reales del Proyecto}
+
+\begin{center}
+\footnotesize
+\renewcommand{\arraystretch}{1.1}
+\begin{tabularx}{\textwidth}{p{1.8cm} X c c c c X c}
+\toprule
+\textbf{Categoría} & \textbf{Descripción del Riesgo} & \textbf{Prob.} & \textbf{Imp.} & \textbf{Nivel} & \textbf{Estrategia} & \textbf{Acción Concreta} & \textbf{Resp.} \\
+\midrule
+\textbf{Técnico} & Incompatibilidad de scripts ARIA con NVDA en mallas & 2 & 3 & 6 & \textbf{Mitigar} & Usar HTML5 semántico nativo y testing continuo con NVDA & Tesista \\
+\textbf{Tiempo} & Retraso en reclutar participantes PCD para pruebas & 2 & 3 & 6 & \textbf{Mitigar} & Contactar asociaciones de inclusión desde Semana 5 & Tesista \\
+\textbf{Acceso Datos} & Indisponibilidad o cambios en APIs institucionales & 2 & 2 & 4 & \textbf{Mitigar} & Implementar mockups JSON y caché local offline & Tesista \\
+\textbf{Personas} & Falta de tiempo de tutora por sobrecarga docente & 1 & 2 & 2 & \textbf{Aceptar} & Entregas quincenales asíncronas vía Git y Drive & Tesista \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\subsection*{\normalsize\color{utiNavy}b) Plan de Comunicaciones (3 Comunicaciones Clave)}
+
+\begin{center}
+\footnotesize
+\renewcommand{\arraystretch}{1.15}
+\begin{tabularx}{\textwidth}{X X c X c}
+\toprule
+\textbf{¿Qué se comunica?} & \textbf{¿A quién?} & \textbf{Frecuencia} & \textbf{¿Por qué medio?} & \textbf{¿Quién es responsable?} \\
+\midrule
+Avances de redacción y subsanación de capítulos & Tutora de Titulación & Quincenal & Reunión presencial / Teams y correo & Tesista \\
+Control de versiones, código fuente y métricas & Repositorio UTI & Semanal & GitHub (\texttt{Cristoferpaez/TESIS}) & Tesista \\
+Convocatoria e instrucciones de pruebas de usabilidad & Usuarios con discapacidad & Puntual (S13) & Correo accesible / WhatsApp / Llamada & Tesista \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\vspace{0.2cm}
+
+% ==============================================================================
+% PREGUNTA 5 (1.25 PUNTOS)
+% ==============================================================================
+\begin{tcolorbox}[colback=utiLightBlue, colframe=utiBlue, arc=3pt, left=6pt, right=6pt, top=4pt, bottom=4pt]
+\textbf{\color{utiNavy}PREGUNTA 5 (1.25 puntos): Enfoque de Gestión y Product Backlog de 5 Historias de Usuario}
+\end{tcolorbox}
+
+\subsection*{\normalsize\color{utiNavy}a) Enfoque de Gestión: HÍBRIDO (Predictivo + Ágil)}
+\textbf{Justificación con dos razones propias del proyecto:}
+\begin{enumerate}\setlength\itemsep{1pt}\small
+    \item \textbf{Razón 1 (Predictivo a nivel macro):} La Universidad Indoamérica impone un marco normativo rígido con fechas fijas de entrega de capítulos (I al IV), matriz de hitos inamovibles y un cronograma semestral estricto de 16 semanas para optar al grado.
+    \item \textbf{Razón 2 (Ágil a nivel micro):} La norma ISO 9241-210 exige un ciclo iterativo de prototipado y evaluación con usuarios reales. Se trabaja en sprints cortos de desarrollo modular para refactorizar la UI/UX hasta alcanzar las metas cuantitativas (SUS $\ge 80$, Lighthouse $\ge 95$).
+\end{enumerate}
+
+\subsection*{\normalsize\color{utiNavy}b) Product Backlog con Cinco Historias de Usuario (Formato, Criterios y Story Points)}
+
+\begin{enumerate}\setlength\itemsep{3pt}\small
+    \item \textbf{HU-01 (Prioridad 1 - Crítica) $\vert$ Estimación: 8 SP:}
+    \begin{itemize}\footnotesize
+        \item \textit{"Como estudiante con ceguera total que usa lector de pantalla NVDA, quiero navegar por las asignaturas de la malla curricular mediante la tecla Tab y enterarme de los prerrequisitos, para planificar mi matrícula sin ayuda externa."}
+        \item \textbf{Criterio de Aceptación:} Componente enfocado con teclado visible, roles \texttt{aria-expanded} dinámicos, y lectura secuencial de materias sin trampas de teclado (WCAG 2.1.2).
+    \end{itemize}
+    \item \textbf{HU-02 (Prioridad 2 - Alta) $\vert$ Estimación: 5 SP:}
+    \begin{itemize}\footnotesize
+        \item \textit{"Como aspirante con discapacidad motriz en manos, quiero llenar el formulario de admisiones con navegación 100\% por teclado y validación en vivo, para postularme a la carrera de forma rápida y sin pérdida de datos."}
+        \item \textbf{Criterio de Aceptación:} Etiquetas \texttt{for}/\texttt{id} explícitas, avisos sonoros de error con \texttt{aria-describedby} y botones con área mínima de contacto de 24x24 px (WCAG 2.5.8).
+    \end{itemize}
+    \item \textbf{HU-03 (Prioridad 3 - Alta) $\vert$ Estimación: 5 SP:}
+    \begin{itemize}\footnotesize
+        \item \textit{"Como usuario con baja visión o dislexia, quiero activar desde una barra flotante el modo de alto contraste y cambiar la tipografía a OpenDyslexic, para leer la información académica sin fatiga visual."}
+        \item \textbf{Criterio de Aceptación:} Ratio de contraste $\ge 7:1$, cambio dinámico de clase CSS y persistencia de configuración en el navegador (\texttt{localStorage}).
+    \end{itemize}
+    \item \textbf{HU-04 (Prioridad 4 - Media) $\vert$ Estimación: 3 SP:}
+    \begin{itemize}\footnotesize
+        \item \textit{"Como estudiante conectado desde red móvil 4G, quiero que el portal cargue en menos de 2 segundos, para consultar mis asignaturas sin bloqueos ni retrasos."}
+        \item \textbf{Criterio de Aceptación:} Total Blocking Time (TBT) $\le 200\text{ ms}$, compresión de activos en WebP y puntaje de rendimiento Lighthouse $\ge 90/100$.
+    \end{itemize}
+    \item \textbf{HU-05 (Prioridad 5 - Media) $\vert$ Estimación: 3 SP:}
+    \begin{itemize}\footnotesize
+        \item \textit{"Como estudiante con baja visión, quiero que las imágenes de noticias y eventos tengan texto alternativo claro, para comprender las actividades de la Facultad."}
+        \item \textbf{Criterio de Aceptación:} 100\% de imágenes con atributo \texttt{alt} descriptivo verificado en WAVE (criterio WCAG 1.1.1).
+    \end{itemize}
+\end{enumerate}
+
+\end{document}
