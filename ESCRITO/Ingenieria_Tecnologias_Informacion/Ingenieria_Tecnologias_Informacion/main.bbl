@@ -91,10 +91,6 @@ M.~Richards and N.~Ford, \emph{Fundamentals of Software Architecture: An
   Engineering Approach}.\hskip 1em plus 0.5em minus 0.4em\relax Sebastopol, CA,
   USA: O'Reilly Media, 2020.
 
-\bibitem{google2023corewebvitals}
-{Google Developers}, ``Web vitals: Essential metrics for a healthy site,''
-  2024, disponible en: \url{https://web.dev/vitals/}.
-
 \bibitem{pautasso2008rest}
 C.~Pautasso, O.~Zimmermann, and F.~Leymann, ``Restful web services vs. big web
   services: Making the right architectural decision,'' in \emph{Proceedings of

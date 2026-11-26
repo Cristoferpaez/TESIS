@@ -25,7 +25,7 @@ En el contexto ecuatoriano, la accesibilidad de los portales de educación super
 
 Por otra parte, la investigación aplicada confirma que la conformidad técnica de accesibilidad debe articularse con la arquitectura de software y el rendimiento para lograr una experiencia de usuario óptima. Jaeger \cite{jaeger2006assessing} y Vollenwyder et al. \cite{vollenwyder2023how} demostraron que el cumplimiento formal de estándares técnicos no se traduce automáticamente en una experiencia satisfactoria si la interfaz presenta una navegación confusa o tiempos de respuesta prolongados. Asimismo, Binyamin y Aslam \cite{binyamin2024accessibility} constataron en evaluaciones empíricas que las deficiencias de usabilidad y accesibilidad en portales universitarios perjudican de forma desproporcionada a usuarios que dependen de lectores de pantalla o navegación por teclado.
 
-En el ámbito de la ingeniería de software contemporánea, la investigación de Peltonen, Mezzalira y Taibi \cite{peltonen2021microfrontends} fundamenta los beneficios y desafíos de la descomposición modular y las arquitecturas de microfrontends para desacoplar interfaces complejas, favoreciendo la escalabilidad y el mantenimiento independiente. Este enfoque se complementa con patrones de arquitectura limpia descritos por Richards y Ford \cite{richards2020fundamentals}, la optimización de métricas de rendimiento basadas en los \textit{Core Web Vitals} \cite{google2023corewebvitals}, el desacoplamiento mediante servicios RESTful \cite{pautasso2008rest} y el desarrollo moderno multiplataforma \cite{biornhansen2020crossplatform}. La Tabla~\ref{tab:antecedentes} sintetiza estos antecedentes y su aporte al proyecto.
+En el ámbito de la ingeniería de software contemporánea, la investigación de Peltonen, Mezzalira y Taibi \cite{peltonen2021microfrontends} fundamenta los beneficios y desafíos de la descomposición modular y las arquitecturas de microfrontends para desacoplar interfaces complejas, favoreciendo la escalabilidad y el mantenimiento independiente. Este enfoque se complementa con patrones de arquitectura limpia descritos por Richards y Ford \cite{richards2020fundamentals}, el desacoplamiento de componentes mediante servicios RESTful \cite{pautasso2008rest} y el desarrollo moderno multiplataforma \cite{biornhansen2020crossplatform}. La Tabla~\ref{tab:antecedentes} sintetiza estos antecedentes y su aporte al proyecto.
 
 \begin{table}[htbp]
   \centering
@@ -58,103 +58,95 @@ En el ámbito de la ingeniería de software contemporánea, la investigación de
 \fuente{Elaboración propia a partir de las fuentes consultadas}
 
 \subsection{Brecha de Investigación Identificada}
-A partir de la revisión del estado del arte, se constata que los estudios previos en el contexto universitario ecuatoriano e internacional presentan una marcada limitación diagnóstica: identifican y catalogan barreras de accesibilidad mediante herramientas automáticas, pero no implementan soluciones de software funcionales ni evalúan experimentalmente su impacto en usuarios con discapacidad. Asimismo, las investigaciones en ingeniería de software abordan la arquitectura modular de frontend y la optimización de rendimiento de forma desacoplada de los marcos de accesibilidad. Frente a esta brecha, el presente proyecto articula el diseño centrado en el usuario (ISO 9241-210) con una arquitectura basada en componentes y las pautas WCAG 2.2, desarrollando e implementando los flujos académicos críticos de la facultad y evaluando su impacto tanto en métricas técnicas de software como en la interacción de personas con discapacidad.
+A partir de la revisión del estado del arte, se constata que los estudios previos en el contexto universitario ecuatoriano e internacional presentan una marcada limitación diagnóstica: identifican y catalogan barreras de accesibilidad mediante herramientas automáticas, pero no implementan soluciones de software funcionales ni evalúan experimentalmente su impacto en usuarios con discapacidad. Asimismo, las investigaciones en ingeniería de software abordan la arquitectura modular de frontend de forma desacoplada de los marcos de accesibilidad e inclusión digital. Frente a esta brecha, el presente proyecto articula el diseño centrado en el usuario (ISO 9241-210) con una arquitectura basada en componentes y las pautas WCAG 2.2, desarrollando e implementando los flujos académicos críticos de la facultad y verificando técnicamente la eliminación de las barreras de interacción para personas con discapacidad.
 
 \section{Planteamiento del Problema}
-El sitio web actual de la Facultad de Ingeniería de la Universidad Indoamérica opera con una estructura que genera fricción e inequidad en el acceso a la información académica. La plataforma existente presenta deficiencias de rendimiento, carece de principios de diseño adaptable y excluye a usuarios que navegan mediante tecnologías de asistencia o exclusivamente mediante el teclado.
+El portal web oficial de la Facultad de Ingenierías de la Universidad Indoamérica (\url{https://facultad.indoamericatech.com/}) constituye el canal digital central para la difusión académica, la consulta de mallas curriculares y la gestión de trámites estudiantiles. No obstante, en su estado actual, la plataforma presenta barreras de accesibilidad web que impiden su uso autónomo por parte de personas con discapacidad, contraviniendo los principios del diseño universal y la normativa técnica nacional e internacional.
 
-Para fundamentar objetivamente la problemática con datos propios y verificables, se llevó a cabo una auditoría técnica preliminar sobre el portal actual de la Facultad de Ingeniería (\url{https://ingenieria.uti.edu.ec}). La evaluación se ejecutó el 15 de octubre de 2026, abarcando las tres páginas representativas de la interacción académica: la página de inicio (\textit{Home}), la sección de oferta académica y el formulario de contacto/admisiones. Las mediciones se realizaron bajo emulación en modo móvil y modo escritorio, efectuando 5 corridas consecutivas por página mediante Google Lighthouse (v11) y la herramienta automatizada WAVE (\textit{Web Accessibility Evaluation Tool}), promediando los resultados para mitigar fluctuaciones de red. Los valores consolidados se detallan en la Tabla~\ref{tab:diagnostico_inicial}.
+Para fundamentar objetivamente la problemática con datos técnicos verificables, se llevó a cabo una evaluación inicial de accesibilidad sobre el portal (\url{https://facultad.indoamericatech.com/}), analizando las páginas representativas de mayor consulta: la página principal (\textit{Home}), la sección de carreras de ingeniería y el área de trámites y preguntas frecuentes. La evaluación se ejecutó mediante herramientas automatizadas de auditoría de accesibilidad (Google Lighthouse y WAVE - \textit{Web Accessibility Evaluation Tool}) complementadas con pruebas técnicas manuales de navegación por teclado y verificación con el lector de pantalla NVDA. Los resultados consolidados se presentan en la Tabla~\ref{tab:diagnostico_inicial}.
 
 \begin{table}[htbp]
   \centering
   \small
-  \caption{Diagnóstico cuantitativo preliminar del sitio web actual de la Facultad de Ingeniería.}
+  \caption{Diagnóstico técnico inicial de accesibilidad del portal web de la Facultad de Ingenierías.}
   \label{tab:diagnostico_inicial}
   \setlength{\tabcolsep}{4pt}
   \renewcommand{\arraystretch}{1.25}
-  \begin{tabular}{|p{0.28\textwidth}|p{0.18\textwidth}|p{0.18\textwidth}|p{0.28\textwidth}|}
+  \begin{tabular}{|p{0.32\textwidth}|p{0.18\textwidth}|p{0.18\textwidth}|p{0.26\textwidth}|}
     \hline
-    \textbf{Herramienta / Métrica} & \textbf{Valor Diagnosticado} & \textbf{Estándar / Meta} & \textbf{Estado Crítico Observado} \\
+    \textbf{Criterio / Métrica} & \textbf{Valor Diagnosticado} & \textbf{Estándar / Meta} & \textbf{Estado Observado} \\
     \hline
-    Lighthouse Rendimiento (Móvil) & 42 / 100 & $\ge$ 90 / 100 & Crítico (latencia excesiva en carga) \\
+    Puntaje de Accesibilidad (Lighthouse) & 68 / 100 & $\ge$ 95 / 100 & Deficiente (barreras detectadas en interfaz) \\
     \hline
-    Lighthouse Accesibilidad & 56 / 100 & $\ge$ 95 / 100 & Deficiente (barreras severas detectadas) \\
+    Conformidad WCAG 2.2 (Nivel AA) & No conforme & 100\,\% conforme & Incumplimiento de criterios básicos \\
     \hline
-    Largest Contentful Paint (LCP) & 4.3 s & $\le$ 2.5 s & Deficiente (renderizado lento de recursos) \\
+    Errores de contraste de color (WAVE) & 38 incidencias & 0 incidencias & Incumplimiento del Criterio 1.4.3 (Contraste mínimo) \\
     \hline
-    Total Blocking Time (TBT) & 520 ms & $\le$ 200 ms & Deficiente (bloqueo del hilo principal por scripts) \\
+    Elementos e imágenes sin texto alternativo & 14 recursos & 0 recursos & Incumplimiento del Criterio 1.1.1 (Contenido no textual) \\
     \hline
-    Cumulative Layout Shift (CLS) & 0.28 & $\le$ 0.10 & Deficiente (inestabilidad visual del diseño) \\
+    Navegación exclusiva por teclado & Incompleta & 100\,\% navegable & Foco visual invisible y dificultad de tabulación (Criterio 2.4.7) \\
     \hline
-    Errores de contraste (WAVE) & 46 incidencias & 0 incidencias & Incumplimiento de WCAG 2.2 (Criterio 1.4.3) \\
-    \hline
-    Imágenes sin texto alternativo & 22 recursos & 0 recursos & Incumplimiento de WCAG 2.2 (Criterio 1.1.1) \\
-    \hline
-    Navegación por teclado & Inaccesible & 100\,\% navegable & Foco visual invisible y trampa de teclado (Criterios 2.1.2 y 2.4.7) \\
+    Etiquetado semántico y WAI-ARIA & Inexistente / Parcial & Totalmente etiquetado & Lectores de pantalla no anuncian el estado de menús y botones (Criterio 4.1.2) \\
     \hline
   \end{tabular}
 \end{table}
 \elaboradopor{Cristofer Paez}
-\fuente{Auditoría técnica ejecutada en el portal institucional (15 de octubre de 2026, 5 corridas promediadas en Lighthouse y WAVE)}
+\fuente{Auditoría técnica ejecutada en el portal oficial \url{https://facultad.indoamericatech.com/}}
 
-Las causas principales de este estado radican en:
+Las causas principales de estas barreras radican en:
 \begin{enumerate}
-  \item \textbf{Arquitectura frontend heredada y acoplada:} El código fuente actual carece de encapsulamiento modular de componentes, cargando hojas de estilo globales redundantes y librerías de scripts masivas que saturan el hilo de procesamiento del navegador (evidenciado en un TBT crítico de 520 ms).
-  \item \textbf{Omisión de especificaciones WAI-ARIA 1.2 y semántica HTML5:} La plataforma recurre a etiquetas genéricas (\texttt{<div>} y \texttt{<span>}) sin roles accesibles, provocando que los lectores de pantalla interpreten la interfaz como elementos no descriptivos.
-  \item \textbf{Inexistencia de un proceso de diseño centrado en el usuario:} Las decisiones de maquetación y estructura se implementaron sin consultar los requerimientos de estudiantes con discapacidad visual o motriz.
-  \item \textbf{Carencia de optimización de activos:} Imágenes pesadas en formatos no comprimidos y ausencia de carga diferida (\textit{lazy loading}), incrementando la latencia en redes móviles.
+  \item \textbf{Omisión de directrices técnicas de accesibilidad web (WCAG 2.2 / NTE INEN 40500):} Durante el diseño visual de la interfaz se priorizó la estética sobre la legibilidad, empleando combinaciones de colores con bajo contraste y botones sin texto accesible.
+  \item \textbf{Carencia de soporte para navegación por teclado:} Las hojas de estilo suprimen el contorno o indicador visual de foco, impidiendo que los usuarios que no utilizan mouse sepan qué elemento interactivo se encuentra seleccionado.
+  \item \textbf{Ausencia de atributos WAI-ARIA 1.2:} Los elementos dinámicos (menús desplegables, tarjetas de carreras y modales) carecen de roles y estados accesibles, provocando que los lectores de pantalla los interpreten como simples bloques de texto estático sin indicar que son interactivos.
 \end{enumerate}
 
-Los efectos directos de estas limitaciones se traducen en barreras cognitivas para ubicar mallas curriculares y requisitos académicos, fricciones de navegación en los formularios de admisión que dificultan el registro oportuno de los aspirantes y la exclusión de usuarios que requieren tecnologías de asistencia. Frente a este panorama, se formula la siguiente pregunta de investigación:
+Las consecuencias directas de estas barreras son la desorientación y la exclusión digital de estudiantes y aspirantes con discapacidad visual o físico-motriz, quienes no pueden consultar planes de estudio ni realizar trámites con autonomía. Frente a esta situación, se formula la siguiente pregunta de investigación:
 
 \begin{quote}
-\textit{¿De qué manera la actualización del sitio web de la Facultad de Ingeniería de la Universidad Indoamérica, mediante diseño centrado en el usuario y directrices de accesibilidad digital WCAG 2.2, contribuye a resolver las barreras de interacción y a mejorar la usabilidad y experiencia de personas con discapacidad y de la comunidad académica?}
+\textit{¿De qué manera la actualización del portal web de la Facultad de Ingenierías de la Universidad Indoamérica (\url{https://facultad.indoamericatech.com/}), mediante diseño centrado en el usuario y directrices de accesibilidad WCAG 2.2 Nivel AA, contribuye a eliminar las barreras de interacción y garantizar el acceso autónomo a personas con discapacidad visual y motriz?}
 \end{quote}
 
 \section{Justificación}
 La relevancia del proyecto se sustenta en fundamentos técnicos, metodológicos, operativos y de responsabilidad social:
 
-\textbf{Justificación Técnica:} La actualización del sitio web incorpora las especificaciones internacionales de la W3C mediante WCAG 2.2 (Nivel AA) y WAI-ARIA 1.2, junto con una arquitectura moderna basada en componentes reutilizables. Este enfoque facilita la separación limpia entre estructura, presentación y lógica, habilitando técnicas de optimización frontend (compresión moderna de activos, división de código y foco visible persistente) que elevan el rendimiento y la interoperabilidad de la plataforma.
+\textbf{Justificación Técnica:} La actualización del portal web incorpora las especificaciones internacionales de la W3C mediante WCAG 2.2 (Nivel AA) y WAI-ARIA 1.2, junto con una arquitectura moderna basada en componentes reutilizables. Este enfoque permite separar limpiamente la estructura semántica de la interfaz de su capa visual, asegurando que los elementos interactivos cuenten con foco visible continuo, contraste cromático suficiente y etiquetas accesibles para tecnologías de asistencia.
 
-\textbf{Justificación Metodológica:} Se adopta el estándar internacional ISO 9241-210:2019 de diseño centrado en el humano, asegurando que las decisiones de diseño surjan de la investigación rigurosa de las necesidades reales de los usuarios. Esta aproximación complementa las auditorías automáticas con inspecciones heurísticas y pruebas empíricas de usabilidad con usuarios representativos, contrastando cuantitativamente el estado inicial y final del sitio.
+\textbf{Justificación Metodológica:} Se adopta el marco de diseño centrado en el usuario (ISO 9241-210), adaptado a la práctica de la ingeniería de software web. Este proceso asegura que las decisiones de rediseño e implementación respondan a las necesidades concretas de accesibilidad digital, complementando las auditorías automáticas de software con pruebas técnicas de verificación manual con teclado y lectores de pantalla.
 
 \textbf{Justificación Social y Legal:} En el Ecuador, según los datos oficiales del Registro Nacional de Discapacidades reportados por el CONADIS y el Ministerio de Salud Pública \cite{conadis2023estadisticas}, existen 471.205 personas con discapacidad registradas, de las cuales el 45.4\,\% corresponde a discapacidad física/motora y el 11.6\,\% a discapacidad visual. Estos dos colectivos son los más afectados por la inaccesibilidad digital de plataformas web no diseñadas para lectores de pantalla o navegación por teclado.
 
 En el marco jurídico nacional, el Artículo 64 de la Ley Orgánica de Discapacidades (LOD) \cite{lod_ecuador} establece la obligatoriedad de que las instituciones públicas y de educación superior garanticen la accesibilidad a sus tecnologías de la información y comunicación. Asimismo, el Artículo 65 promueve la adopción de normas de diseño universal. En el ámbito técnico nacional, el Servicio Ecuatoriano de Normalización oficializó la Norma Técnica Ecuatoriana NTE INEN-ISO/IEC 40500:2016 \cite{inen40500}, que adopta como obligatorias las directrices de accesibilidad web para los portales del país. Modernizar el sitio web de la facultad responde, por lo tanto, a un mandato legal y a una exigencia ética de inclusión educativa.
 
-\textbf{Participación de Personas con Discapacidad en el Proyecto:}
-Dado que las personas con discapacidad son el centro del proyecto, su participación se estructura de forma explícita en dos perfiles clave de la comunidad universitaria:
+\textbf{Perfiles de Accesibilidad Considerados en el Proyecto:}
+Dado que la accesibilidad universal es el eje central del trabajo, las mejoras técnicas se diseñan e implementan en función de dos perfiles prioritarios de usuarios:
 \begin{enumerate}
-  \item \textbf{Perfil con discapacidad visual:} Usuarios con baja visión que requieren combinaciones de alto contraste cromático y escalado tipográfico, así como usuarios con ceguera total que navegan mediante el lector de pantalla libre de código abierto NVDA (\textit{NonVisual Desktop Access}) acoplado a navegadores web estándar.
-  \item \textbf{Perfil con discapacidad motriz en miembros superiores:} Usuarios con limitaciones de motricidad fina o parálisis parcial que prescinden por completo del mouse y operan la interfaz de forma exclusiva mediante el teclado físico o dispositivos de conmutación asistida.
+  \item \textbf{Perfil con discapacidad visual:} Usuarios con baja visión que requieren combinaciones de alto contraste cromático y escalado tipográfico, así como usuarios con ceguera total que dependen de un lector de pantalla (como NVDA) acoplado al navegador web.
+  \item \textbf{Perfil con discapacidad motriz en miembros superiores:} Usuarios con limitaciones de motricidad fina que navegan de forma exclusiva mediante el teclado físico estándar o conmutadores, sin posibilidad de manipular un mouse.
 \end{enumerate}
-Estos usuarios participarán en la fase inicial de identificación de barreras, en la revisión de prototipos de interacción y en las pruebas de usabilidad guiadas de tareas críticas para evaluar la experiencia de uso resultante.
 
 \textbf{Beneficiarios:}
 \begin{itemize}
-  \item \textbf{Beneficiarios directos:} Estudiantes activos de la Facultad de Ingeniería (en particular aquellos con discapacidades visuales o motoras), aspirantes que buscan información de admisiones y docentes que difunden su producción académica.
-  \item \textbf{Beneficiarios indirectos:} Personal administrativo encargado de la gestión institucional y la comunidad universitaria en general.
+  \item \textbf{Beneficiarios directos:} Estudiantes activos de la Facultad de Ingenierías (en particular aquellos con discapacidades visuales o motoras), aspirantes que buscan información de carreras y trámites de admisión.
+  \item \textbf{Beneficiarios indirectos:} Docentes y personal administrativo que gestionan la información del portal institucional.
 \end{itemize}
 
 \textbf{Factibilidad del Proyecto:}
 \begin{itemize}
   \item \textbf{Factibilidad técnica:} Se cuenta con estándares y tecnologías web abiertas consolidadas (HTML5 semántico, CSS3 adaptable, JavaScript, arquitecturas de componentes y herramientas de auditoría técnica como Lighthouse, axe-core y WAVE).
-  \item \textbf{Factibilidad operativa:} Se dispone de apertura institucional en la Facultad de Ingeniería y acceso a muestras representativas de estudiantes para ejecutar pruebas de usabilidad y accesibilidad.
+  \item \textbf{Factibilidad operativa:} Se dispone de acceso libre y directo al portal web en producción (\url{https://facultad.indoamericatech.com/}), permitiendo auditar, diseñar prototipos y verificar el código sin dependencias externas complejas.
   \item \textbf{Factibilidad económica:} El proyecto se ejecuta íntegramente con herramientas de código abierto y software libre, garantizando sostenibilidad sin costos de licenciamiento privativo.
 \end{itemize}
 
 \section{Objetivos}
 
 \subsection{Objetivo General}
-Actualizar el sitio web de la Facultad de Ingeniería de la Universidad Indoamérica mediante un proceso de diseño centrado en el usuario y la aplicación de directrices de accesibilidad digital WCAG 2.2 y optimización técnica frontend, para mejorar la usabilidad, inclusión y experiencia de personas con discapacidad y de la comunidad académica.
+Actualizar el portal web de la Facultad de Ingenierías de la Universidad Indoamérica (\url{https://facultad.indoamericatech.com/}) mediante diseño centrado en el usuario y la implementación de directrices de accesibilidad WCAG 2.2 Nivel AA, para mitigar las barreras de interacción digital de personas con discapacidad visual y motriz.
 
 \subsection{Objetivos Específicos}
 \begin{itemize}
-  \item Diagnosticar cuantitativa y cualitativamente el estado técnico inicial de accesibilidad (WCAG 2.2), rendimiento web y navegación en el portal actual de la Facultad de Ingeniería mediante herramientas de auditoría técnica e inspección heurística.
-  \item Levantar y priorizar los requerimientos funcionales, de accesibilidad y de contenido a partir del análisis de las necesidades de estudiantes, docentes, aspirantes y personas con discapacidad visual y motriz.
-  \item Diseñar la arquitectura de información, los componentes modulares y los prototipos interactivos bajo principios de diseño centrado en el usuario (ISO 9241-210) y diseño responsive.
-  \item Implementar las mejoras en los flujos prioritarios seleccionados del sitio web, incorporando componentes accesibles bajo especificaciones WAI-ARIA 1.2, optimización frontend y una barra de herramientas de accesibilidad.
-  \item Evaluar el impacto de la actualización mediante una comparación cuantitativa de los indicadores de rendimiento, nivel de conformidad de accesibilidad y usabilidad percibida por los usuarios.
+  \item Evaluar el estado técnico actual de accesibilidad digital en el portal web institucional (\url{https://facultad.indoamericatech.com/}) bajo el estándar WCAG 2.2 Nivel AA y la norma NTE INEN-ISO/IEC 40500, mediante herramientas automatizadas de auditoría y pruebas técnicas de navegación por teclado y lector de pantalla.
+  \item Diseñar e implementar componentes frontend accesibles en los flujos prioritarios del portal web (mallas curriculares, trámites y formulario de contacto), incorporando contraste cromático normativo, compatibilidad con lector de pantalla (WAI-ARIA 1.2) y una barra de herramientas de accesibilidad.
+  \item Verificar técnicamente las mejoras implementadas mediante la re-evaluación con herramientas automatizadas y pruebas de navegación asistida, evidenciando la eliminación de las barreras de accesibilidad identificadas.
 \end{itemize}
 
 \section{Alcance del Proyecto}
@@ -214,14 +206,10 @@ La norma internacional ISO 9241-210:2019 \cite{iso9241_210_2019} define el dise�
 \subsection{Arquitectura de Software Basada en Componentes}
 El desarrollo basado en componentes organiza el frontend en unidades modulares independientes y reutilizables que encapsulan lógica, presentación y estilos \cite{peltonen2021microfrontends,richards2020fundamentals,sommerville2016software}. En la modernización del sitio web, este paradigma permite construir componentes accesibles especializados (como tarjetas de carreras, formularios con validación accesible, botones con roles ARIA y barras de accesibilidad) que facilitan el mantenimiento continuo, promueven la consistencia visual y previenen regresiones técnicas \cite{biornhansen2020crossplatform}.
 
-\subsection{Optimización de Rendimiento Web y Core Web Vitals}
-El rendimiento técnico de una interfaz es un determinante crítico de la experiencia de usuario y de la accesibilidad digital, ya que páginas lentas o inestables degradan la interacción en dispositivos móviles o con tecnologías de asistencia. Los \textit{Core Web Vitals} establecidos por Google \cite{google2023corewebvitals} definen métricas clave centradas en la experiencia:
-\begin{itemize}
-  \item \textbf{Largest Contentful Paint (LCP):} Tiempo de renderizado del contenido visual principal (meta óptima $\le$ 2.5 s).
-  \item \textbf{Total Blocking Time (TBT):} Tiempo acumulado durante el cual el hilo principal del navegador está bloqueado por scripts largos, impidiendo responder a entradas del usuario (meta óptima $\le$ 200 ms).
-  \item \textbf{Cumulative Layout Shift (CLS):} Estabilidad visual del diseño durante la carga (meta óptima $\le$ 0.1).
-\end{itemize}
-Para alcanzar estos umbrales se implementan técnicas de división de código (\textit{code splitting}), compresión moderna de imágenes (WebP), precarga de fuentes y carga diferida (\textit{lazy loading}).
+\subsection{Tecnologías de Asistencia y Lectores de Pantalla}
+Las tecnologías de asistencia son herramientas de hardware o software que permiten a personas con discapacidad interactuar con sistemas informáticos en igualdad de condiciones. Entre ellas, los lectores de pantalla constituyen la tecnología fundamental para usuarios con ceguera o baja visión severa. Estas herramientas traducen el contenido visual del navegador y el árbol de accesibilidad en síntesis de voz o salida braille. 
+
+En este proyecto se utiliza como referencia técnica el lector libre y de código abierto NVDA (\textit{NonVisual Desktop Access}), estándar de la industria que procesa la semántica HTML5 y los atributos WAI-ARIA 1.2 \cite{wai_aria12} para anunciar en voz alta el nombre accesible, rol y estado de los componentes interactivos (por ejemplo, botones, campos de texto y menús desplegables), garantizando la operación fluida mediante atajos de teclado sin requerir mouse.
 
 \subsection{Integración de Servicios mediante APIs REST}
 La modernización del sitio web adopta una arquitectura desacoplada entre la interfaz de usuario y las fuentes de información académica \cite{pautasso2008rest,pressman2020software}. Esta comunicación se articula mediante servicios web RESTful que intercambian datos ligeros en formato JSON. Esta estrategia permite que los administradores de la facultad actualicen planes de estudio y comunicados sin requerir modificaciones en el código fuente de la interfaz.
