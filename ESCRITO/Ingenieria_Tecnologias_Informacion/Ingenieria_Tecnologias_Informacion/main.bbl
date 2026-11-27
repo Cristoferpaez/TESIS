@@ -91,12 +91,6 @@ M.~Richards and N.~Ford, \emph{Fundamentals of Software Architecture: An
   Engineering Approach}.\hskip 1em plus 0.5em minus 0.4em\relax Sebastopol, CA,
   USA: O'Reilly Media, 2020.
 
-\bibitem{pautasso2008rest}
-C.~Pautasso, O.~Zimmermann, and F.~Leymann, ``Restful web services vs. big web
-  services: Making the right architectural decision,'' in \emph{Proceedings of
-  the 17th International Conference on World Wide Web (WWW '08)}.\hskip 1em
-  plus 0.5em minus 0.4em\relax New York, NY, USA: ACM, 2008, pp. 805--814.
-
 \bibitem{biornhansen2020crossplatform}
 A.~Bi{\o}rn-Hansen, T.-M. Gr{\o}nli, G.~Ghinea, and C.~Alcock, ``A survey and
   taxonomy of core concepts and approaches in mobile cross-platform and web
@@ -127,14 +121,5 @@ J.~Brooke, ``{SUS}: A `quick and dirty' usability scale,'' in \emph{Usability
 \bibitem{sommerville2016software}
 I.~Sommerville, \emph{Software Engineering}, 10th~ed.\hskip 1em plus 0.5em
   minus 0.4em\relax Boston, MA, USA: Pearson, 2016.
-
-\bibitem{pressman2020software}
-R.~S. Pressman and B.~R. Maxim, \emph{Software Engineering: A Practitioner's
-  Approach}, 9th~ed.\hskip 1em plus 0.5em minus 0.4em\relax New York, NY, USA:
-  McGraw-Hill, 2020.
-
-\bibitem{hevner2004design}
-A.~R. Hevner, S.~T. March, J.~Park, and S.~Ram, ``Design science in information
-  systems research,'' \emph{MIS Quarterly}, vol.~28, no.~1, pp. 75--105, 2004.
 
 \end{thebibliography}

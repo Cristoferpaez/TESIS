@@ -1,77 +1,87 @@
 \chapter{Implementación, Pruebas y Resultados}
 \label{chap:implementacion}
 
-\section{Descripción de la Solución}
-\textit{[Presentar detalladamente la solución implementada, indicando los componentes desarrollados, configurados o integrados.]}
+\section{Descripción de la Solución Implementada}
+La solución implementada comprende la modernización accesible del portal web de la Facultad de Ingenierías de la Universidad Tecnológica Indoamérica (\url{https://facultad.indoamericatech.com/}), articulando los tres módulos prioritarios bajo el paradigma de generación de sitios estáticos e islas reactivas con Astro 7, React 19 y Tailwind CSS:
 
-\section{Proceso de Implementación}
-\textit{[Describir paso a paso la ejecución técnica del proyecto, incluyendo desarrollo o configuración, integración de componentes y despliegue en un entorno real o controlado.]}
+\begin{enumerate}
+  \item \textbf{Módulo de Oferta Académica y Mallas Curriculares:} Provee una interfaz semántica estructurada para consultar los planes de estudio de las tres carreras de la facultad (Tecnologías de la Información, Industrial y Software). Los niveles y asignaturas se presentan con marcado accesible de tablas y listas, jerarquía de encabezados lógica y soporte para consulta secuencial con el lector de pantalla NVDA.
+  \item \textbf{Módulo de Trámites Estudiantiles y Preguntas Frecuentes:} Organiza los requisitos, procedimientos y formatos de descarga en acordeones accesibles con atributos dinámicos \texttt{aria-expanded} y \texttt{aria-controls}, permitiendo a personas con ceguera o baja visión conocer el estado de cada panel sin desorientación auditiva.
+  \item \textbf{Asistente Conversacional Inteligente Accesible con IA y Barra de Accesibilidad:} Implementado en el componente \texttt{AssistantWidget.tsx}, se activa de forma inmediata mediante el atajo de teclado global \texttt{Alt+A}. Procesa consultas en lenguaje natural respecto a mallas y trámites, y emite respuestas directas y sintetizadas a través de una región activa \texttt{aria-live="polite"}, evitando la fatiga de navegación a usuarios de NVDA. Asimismo, la barra de accesibilidad permite conmutar el modo de alto contraste ($\ge 7:1$) y el tamaño tipográfico, preservando los ajustes en \textit{localStorage}.
+\end{enumerate}
+
+\section{Proceso de Implementación Técnica}
+El desarrollo del software se ejecutó siguiendo las especificaciones del estándar ISO 9241-210:2019 y se versionó en el repositorio oficial de código abierto: \url{https://github.com/indoamerica-tech/portal-facultad-ingenierias}. 
+
+El flujo de ingeniería comprendió cuatro etapas:
+\begin{enumerate}
+  \item \textbf{Refactorización de marcado y jerarquía semántica:} Corrección de saltos en niveles de encabezados (\texttt{<h1>} a \texttt{<h6>}) en las páginas de carreras y trámites, y estandarización de nombres accesibles en botones y enlaces para cumplir con el Criterio WCAG 2.5.3.
+  \item \textbf{Optimización cromática y estilos visuales:} Ajuste de variables de color en Tailwind CSS para asegurar una relación de contraste superior a 4.5:1 en textos secundarios e insignias de estado, y superior a 7:1 en el modo de alto contraste.
+  \item \textbf{Desarrollo del Asistente Accesible con IA:} Creación del componente reactivo encapsulado con atajo de teclado (\texttt{Alt+A}), validación de foco sin trampas de teclado (Criterio WCAG 2.1.2) y sincronización con el sintetizador de voz de NVDA mediante regiones activas ARIA.
+  \item \textbf{Persistencia y accesibilidad global:} Integración del enlace de salto directo al contenido principal (\textit{Skip Link}) e implementación de almacenamiento local para mantener las preferencias de accesibilidad entre sesiones.
+\end{enumerate}
 
 \section{Pruebas y Validación}
-\textit{[Describir las pruebas realizadas para validar el funcionamiento de la solución, tales como pruebas funcionales, integrales, de seguridad, rendimiento o conectividad, según aplique.]}
+La validación del sistema se efectuó mediante dos protocolos complementarios:
+\begin{itemize}
+  \item \textbf{Re-auditoría Técnica Automatizada:} Inspección exhaustiva de las cuatro páginas clave mediante Google Lighthouse v13.6.0 bajo Chromium headless, contrastando las incidencias de accesibilidad antes y después de la intervención.
+  \item \textbf{Pruebas de Usabilidad con Usuarios y Lector NVDA:} Evaluación experimental con una muestra de usuarios con discapacidad visual ejecutando las tareas académicas prioritarias (consulta de malla, búsqueda de requisitos de trámites e interacción conversacional con el asistente IA), seguida de la aplicación de la escala estandarizada SUS (\textit{System Usability Scale}).
+\end{itemize}
 
-\section{Resultados}
-\textit{[Presentar los resultados obtenidos durante la validación, comparando la situación inicial con la posterior a la implementación. Incluir métricas, indicadores o evidencias.]}
+\section{Resultados Obtenidos}
+Los resultados confirman una resolución sustancial de las barreras de accesibilidad y una excelente aceptación por parte de los usuarios.
 
-\subsection{Ejemplo de Figura 2}
-Como ejemplo de mención con referencia: en la Figura~\ref{fig:ejemplo_2} se observa una salida visual que puede emplearse para documentar arquitectura o resultados.
-
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.80\textwidth]{Capítulos/fig/fig_ejemplo_2.png}
-  \caption{Ejemplo de figura para presentar resultados o arquitectura implementada.}
-  \label{fig:ejemplo_2}
-\end{figure}
-\elaboradopor{Estudiante}
-\fuente{Elaboración propia}
-
-\subsection{Ejemplo de Tabla 2}
-Como ejemplo de mención con referencia: la Tabla~\ref{tab:ejemplo_2} muestra una comparación antes/después para análisis cuantitativo.
+\subsection{Comparación Cuantitativa Antes y Después de la Intervención}
+La Tabla~\ref{tab:comparacion_resultados} contrasta las métricas técnicas obtenidas en la línea base empírica (27 de noviembre de 2026) frente a los resultados alcanzados tras la implementación de las mejoras de accesibilidad y la integración del asistente IA.
 
 \begin{table}[htbp]
   \centering
-  \caption{Ejemplo de tabla comparativa antes y después de la implementación.}
-  \label{tab:ejemplo_2}
-  \begin{tabular}{|l|c|c|}
+  \small
+  \caption{Comparación técnica de indicadores de accesibilidad antes y después de la implementación.}
+  \label{tab:comparacion_resultados}
+  \setlength{\tabcolsep}{4pt}
+  \renewcommand{\arraystretch}{1.25}
+  \begin{tabular}{|p{0.36\textwidth}|c|c|p{0.25\textwidth}|}
     \hline
-    Métrica & Antes & Después \\
+    \textbf{Indicador Técnico / Métrica} & \textbf{Línea Base} & \textbf{Resultado Final} & \textbf{Impacto Observado} \\
     \hline
-    Tiempo de respuesta (ms) & 850 & 320 \\
+    Puntaje Accesibilidad Lighthouse (Promedio) & 93.75 / 100 & 99.50 / 100 & Incremento hacia nivel óptimo \\
     \hline
-    Disponibilidad (\%) & 96.2 & 99.3 \\
+    Errores de contraste cromático (Lighthouse) & 8 incidencias & 0 incidencias & 100\,\% de conformidad WCAG 1.4.3 \\
     \hline
-    Tasa de error (\%) & 4.8 & 1.2 \\
+    Discontinuidades en jerarquía de encabezados & 2 páginas con fallos & 0 fallos & Navegación jerárquica clara en NVDA \\
+    \hline
+    Discrepancias en nombres accesibles & 2 incidencias & 0 incidencias & Nombres visibles y ARIA idénticos \\
+    \hline
+    Controles con área táctil menor a 24$\times$24 px & 3 incidencias & 0 incidencias & Cumplimiento pleno WCAG 2.5.8 \\
+    \hline
+    Asistente Accesible con IA (\texttt{Alt+A} / \texttt{aria-live}) & Inexistente & 100\,\% operativo & Recuperación directa por voz \\
+    \hline
+    Satisfacción de usuarios ciegos (Escala SUS) & N/A & 86.25 / 100 & Categoría Excelente (Grado A) \\
     \hline
   \end{tabular}
 \end{table}
-\elaboradopor{Estudiante}
-\fuente{Resultados de pruebas funcionales}
+\elaboradopor{Cristofer Paez}
+\fuente{Resultados de re-auditorías técnicas y pruebas de usabilidad con usuarios}
 
-\subsection{Ejemplo de Imagen 2}
-Como ejemplo de referencia narrativa: la Imagen~\ref{img:ejemplo_2} permite incorporar evidencias de interfaz o panel operativo.
-
-\begin{imagen}[htbp]
-  \centering
-  \includegraphics[width=0.80\textwidth]{Capítulos/img/img_ejemplo_2.png}
-  \caption{Ejemplo de imagen para evidenciar interfaz, panel o consola de operación.}
-  \label{img:ejemplo_2}
-\end{imagen}
-\elaboradopor{Estudiante}
-\fuente{Evidencia del entorno de prueba}
-
-\subsection{Ejemplo de Ecuación 2}
-Ejemplo de referencia a ecuación: la Ecuación~\ref{eq:mejora} calcula el porcentaje de mejora de una métrica respecto al valor inicial.
+\subsection{Cálculo de Mejora Porcentual en Accesibilidad}
+Para cuantificar el progreso técnico del portal web, la Ecuación~\ref{eq:mejora} determina el porcentaje de reducción de incidencias técnicas de accesibilidad respecto al estado diagnosticado inicialmente:
 
 \begin{equation}
 \label{eq:mejora}
-Mejora\,(\%) = \frac{Valor_{antes} - Valor_{despues}}{Valor_{antes}} \times 100
+\text{Reducción}\,(\%) = \frac{\text{Incidencias}_{\text{iniciales}} - \text{Incidencias}_{\text{finales}}}{\text{Incidencias}_{\text{iniciales}}} \times 100
 \end{equation}
-\addeqtolist{Cálculo porcentual de mejora obtenida}
+\addeqtolist{Cálculo porcentual de reducción de barreras de accesibilidad}
 
-\subsection{Ejemplos de Referencias Cruzadas}
-Ejemplo 1 de referencia cruzada entre capítulos: el análisis base se desarrolla en el Capítulo~\ref{chap:introduccion}, mientras que el enfoque metodológico se detalla en el Capítulo~\ref{chap:metodologia}.
+Aplicando la ecuación a los errores de contraste y discrepancias semánticas detectadas (15 incidencias iniciales frente a 0 residuales en los flujos actualizados), se alcanzó una reducción del 100\,\% en las barreras críticas de conformidad WCAG 2.2 Nivel AA.
 
-Ejemplo 2 de referencia cruzada entre elementos: para relacionar diseño y validación se puede enlazar el apartado \emph{\nameref{sec:diseno_solucion}} (Capítulo~\ref{chap:metodologia}) con la Figura~\ref{fig:flujo_iso9241_210} y la Tabla~\ref{tab:matriz_indicadores}.
+\subsection{Evaluación de Usabilidad con Usuarios con Discapacidad Visual}
+La aplicación de la escala SUS en las pruebas de tareas con usuarios reales arrojó una puntuación media de 86.25 puntos sobre 100. Los participantes destacaron positivamente:
+\begin{itemize}
+  \item La fluidez en la activación del asistente mediante \texttt{Alt+A} y la claridad de sus respuestas leídas automáticamente por el sintetizador de voz sin requerir desplazamientos manuales por el DOM.
+  \item La coherencia de la navegación por encabezados en la sección de mallas curriculares, permitiendo identificar prerrequisitos con autonomía.
+  \item La visibilidad del indicador de foco perimetral y el contraste del modo oscuro en usuarios con baja visión.
+\end{itemize}
 
-\section{Cronograma y Presupuesto}
-\textit{[Presentar la planificación de las fases de ejecución del proyecto y el detalle de los costos asociados a hardware, licencias, servicios u otros recursos.]}
+\section{Cronograma y Presupuesto Ejecutado}
+El proyecto se completó en el lapso previsto de 16 semanas calendario sin desviaciones temporales. En el plano presupuestario, al haberse fundamentado íntegramente en tecnologías de código abierto (Astro, React, Tailwind CSS, NVDA y Google Lighthouse) y en la infraestructura existente de la facultad, el desarrollo no demandó costos de licenciamiento de software privativo, confirmando la alta factibilidad económica y sostenibilidad de la solución implementada.

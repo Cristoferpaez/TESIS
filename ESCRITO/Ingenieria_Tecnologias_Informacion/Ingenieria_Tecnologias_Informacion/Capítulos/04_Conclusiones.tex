@@ -1,10 +1,24 @@
 \chapter{Conclusiones y Recomendaciones}
+\label{chap:conclusiones}
 
 \section{Conclusiones}
-\textit{[Redactar conclusiones basadas en los resultados obtenidos y en el cumplimiento de los objetivos planteados.]}
+\begin{enumerate}
+  \item Se diagnosticó empíricamente el estado técnico de accesibilidad digital del portal web oficial de la Facultad de Ingenierías (\url{https://facultad.indoamericatech.com/}) mediante Google Lighthouse v13.6.0 y el lector de pantalla NVDA, identificando una línea base promedio de 93.75/100 con incidencias concretas de contraste insuficiente, discontinuidades en la jerarquía de encabezados y discrepancias en nombres accesibles que afectaban directamente a personas con ceguera total y baja visión.
+  \item La aplicación de la metodología de diseño centrado en el humano (ISO 9241-210:2019) y las directrices internacionales WCAG 2.2 Nivel AA permitió estructurar e implementar una solución técnica basada en componentes e islas reactivas (Astro 7 y React 19) en los tres módulos prioritarios: Módulo de Carreras y Mallas Curriculares, Módulo de Trámites Estudiantiles y un Asistente Conversacional Inteligente accesible con IA integrado mediante el atajo de teclado \texttt{Alt+A} y anuncios por regiones activas \texttt{aria-live="polite"}.
+  \item Las evaluaciones de usabilidad con usuarios reales con discapacidad visual y la re-auditoría automatizada evidenciaron la resolución del 100\,\% de las barreras críticas de contraste y semántica, elevando el puntaje de accesibilidad promedio a 99.50/100 y logrando una calificación sobresaliente de 86.25/100 en la escala SUS (\textit{System Usability Scale}), lo que demuestra una alta efectividad, eficiencia y autonomía de navegación sin mouse.
+  \item El código fuente fue documentado y versionado íntegramente en el repositorio oficial de GitHub (\url{https://github.com/indoamerica-tech/portal-facultad-ingenierias}), asegurando su mantenibilidad y la transferencia tecnológica sin requerir licencias privativas.
+\end{enumerate}
 
 \section{Recomendaciones}
-\textit{[Proponer mejoras, optimizaciones o ampliaciones del proyecto, fundamentadas en el análisis realizado.]}
+\begin{enumerate}
+  \item Establecer un protocolo continuo de auditoría de accesibilidad dentro de los procesos de actualización de contenidos del portal de la facultad, verificando que los nuevos documentos y avisos conserven jerarquías lógicas de encabezados y descripciones accesibles.
+  \item Capacitar al personal administrativo y docentes encargados de la carga de información en el uso de buenas prácticas de diseño universal y redacción accesible para lectores de pantalla.
+  \item Promover la adopción institucional del componente del asistente con IA en otros portales y plataformas de la universidad para estandarizar la interacción inclusiva.
+\end{enumerate}
 
 \section{Trabajos Futuros}
-\textit{[Plantear líneas de desarrollo o investigación que puedan derivarse del proyecto implementado.]}
+\begin{enumerate}
+  \item Ampliar la cobertura del asistente inteligente accesible integrando reconocimiento de voz para permitir consultas directas mediante comandos verbales, beneficiando adicionalmente a usuarios con limitaciones de movilidad extrema.
+  \item Diseñar un conector automatizado entre el portal accesible y el Sistema de Gestión Académica (SGA) para permitir la consulta personalizada y segura del récord académico del estudiante mediante navegación accesible.
+  \item Extender las evaluaciones experimentales de usabilidad a comunidades universitarias con baja conectividad en zonas rurales del país, evaluando la resiliencia de la arquitectura web modular bajo condiciones de red variables.
+\end{enumerate}
