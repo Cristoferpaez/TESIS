@@ -1,50 +1,50 @@
 \babel@toc {spanish}{}\relax 
-\contentsline {chapter}{\numberline {I}Introducción}{17}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Contextualización}{17}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Estado del Arte}{18}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Brecha de Investigación Identificada}{20}{subsection.1.2.1}%
+\contentsline {chapter}{\numberline {I}Introducción}{16}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Contextualización}{16}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Estado del Arte}{17}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Brecha de Investigación Identificada}{18}{subsection.1.2.1}%
 \contentsline {section}{\numberline {1.3}Planteamiento del Problema}{20}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Justificación}{24}{section.1.4}%
-\contentsline {section}{\numberline {1.5}Objetivos}{26}{section.1.5}%
-\contentsline {subsection}{\numberline {1.5.1}Objetivo General}{26}{subsection.1.5.1}%
-\contentsline {subsection}{\numberline {1.5.2}Objetivos Específicos}{27}{subsection.1.5.2}%
-\contentsline {section}{\numberline {1.6}Alcance del Proyecto}{27}{section.1.6}%
-\contentsline {section}{\numberline {1.7}Fundamentación Teórica}{29}{section.1.7}%
-\contentsline {subsection}{\numberline {1.7.1}Accesibilidad Web y Pautas WCAG 2.2}{29}{subsection.1.7.1}%
-\contentsline {subsection}{\numberline {1.7.2}Diseño Centrado en el Usuario y Usabilidad Web}{30}{subsection.1.7.2}%
-\contentsline {subsection}{\numberline {1.7.3}Arquitectura Moderna de Frontend e Islas de Interactividad}{30}{subsection.1.7.3}%
-\contentsline {subsection}{\numberline {1.7.4}Tecnologías de Asistencia y Lectores de Pantalla}{31}{subsection.1.7.4}%
-\contentsline {subsection}{\numberline {1.7.5}Asistentes Inteligentes Basados en IA para la Accesibilidad Web}{31}{subsection.1.7.5}%
-\contentsline {chapter}{\numberline {II}Metodología}{32}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Contextualización}{32}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Diagnóstico Empírico de la Situación Actual}{33}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Área de Estudio}{34}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Metodología de Desarrollo: Diseño Centrado en el Humano (ISO 9241-210)}{36}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Técnicas e Instrumentos de Recolección y Evaluación}{37}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}Herramientas de Auditoría Técnica Automatizada}{37}{subsection.2.5.1}%
-\contentsline {subsection}{\numberline {2.5.2}Protocolo de Pruebas de Usabilidad con Usuarios y Lector NVDA}{38}{subsection.2.5.2}%
-\contentsline {subsection}{\numberline {2.5.3}Medición de Satisfacción: Escala de Usabilidad del Sistema (SUS)}{38}{subsection.2.5.3}%
-\contentsline {section}{\numberline {2.6}Matriz de Indicadores y Criterios de Aceptación}{39}{section.2.6}%
-\contentsline {section}{\numberline {2.7}Requerimientos del Proyecto}{39}{section.2.7}%
-\contentsline {subsection}{\numberline {2.7.1}Requerimientos Funcionales (RF)}{40}{subsection.2.7.1}%
-\contentsline {subsection}{\numberline {2.7.2}Requerimientos No Funcionales (RNF)}{40}{subsection.2.7.2}%
-\contentsline {section}{\numberline {2.8}Diseño de la Solución Técnica}{40}{section.2.8}%
-\contentsline {subsection}{\numberline {2.8.1}Criterios de Interacción Accesible para Discapacidad Visual}{43}{subsection.2.8.1}%
-\contentsline {section}{\numberline {2.9}Cronograma de Actividades del Proyecto}{44}{section.2.9}%
-\contentsline {chapter}{\numberline {III}Implementación, Pruebas y Resultados}{45}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Descripción de la Solución Implementada}{45}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Proceso de Implementación Técnica}{46}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Pruebas y Validación}{46}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Resultados Obtenidos}{47}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Comparación Cuantitativa Antes y Después de la Intervención}{47}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Cálculo de Mejora Porcentual en Accesibilidad}{48}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Evaluación de Usabilidad con Usuarios con Discapacidad Visual}{48}{subsection.3.4.3}%
-\contentsline {section}{\numberline {3.5}Cronograma y Presupuesto Ejecutado}{48}{section.3.5}%
-\contentsline {chapter}{\numberline {IV}Conclusiones y Recomendaciones}{50}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Conclusiones}{50}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Recomendaciones}{51}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Trabajos Futuros}{51}{section.4.3}%
-\contentsline {chapter}{REFERENCIAS}{52}{section*.11}%
-\contentsline {chapter}{GLOSARIO}{56}{chapter*.13}%
+\contentsline {section}{\numberline {1.4}Justificación}{22}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Objetivos}{24}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Objetivo General}{24}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.2}Objetivos Específicos}{25}{subsection.1.5.2}%
+\contentsline {section}{\numberline {1.6}Alcance del Proyecto}{25}{section.1.6}%
+\contentsline {section}{\numberline {1.7}Fundamentación Teórica}{26}{section.1.7}%
+\contentsline {subsection}{\numberline {1.7.1}Accesibilidad Web y Pautas WCAG 2.2}{26}{subsection.1.7.1}%
+\contentsline {subsection}{\numberline {1.7.2}Diseño Centrado en el Usuario y Usabilidad Web}{27}{subsection.1.7.2}%
+\contentsline {subsection}{\numberline {1.7.3}Arquitectura Moderna de Frontend e Islas de Interactividad}{28}{subsection.1.7.3}%
+\contentsline {subsection}{\numberline {1.7.4}Tecnologías de Asistencia y Lectores de Pantalla}{28}{subsection.1.7.4}%
+\contentsline {subsection}{\numberline {1.7.5}Asistentes Inteligentes Basados en IA para la Accesibilidad Web}{28}{subsection.1.7.5}%
+\contentsline {chapter}{\numberline {II}Metodología}{30}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Contextualización}{30}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Diagnóstico Empírico de la Situación Actual}{31}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Área de Estudio}{32}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Metodología de Desarrollo: Diseño Centrado en el Humano (ISO 9241-210)}{33}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Técnicas e Instrumentos de Recolección y Evaluación}{34}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Herramientas de Auditoría Técnica Automatizada}{34}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Protocolo de Pruebas de Usabilidad con Usuarios y Lector NVDA}{34}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Medición de Satisfacción: Escala de Usabilidad del Sistema (SUS)}{35}{subsection.2.5.3}%
+\contentsline {section}{\numberline {2.6}Matriz de Indicadores y Criterios de Aceptación}{35}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Requerimientos del Proyecto}{35}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}Requerimientos Funcionales (RF)}{37}{subsection.2.7.1}%
+\contentsline {subsection}{\numberline {2.7.2}Requerimientos No Funcionales (RNF)}{38}{subsection.2.7.2}%
+\contentsline {section}{\numberline {2.8}Diseño de la Solución Técnica}{38}{section.2.8}%
+\contentsline {subsection}{\numberline {2.8.1}Criterios de Interacción Accesible para Discapacidad Visual}{39}{subsection.2.8.1}%
+\contentsline {section}{\numberline {2.9}Cronograma de Actividades del Proyecto}{39}{section.2.9}%
+\contentsline {chapter}{\numberline {III}Implementación, Pruebas y Resultados}{42}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Descripción de la Solución Implementada}{42}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Proceso de Implementación Técnica}{43}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Pruebas y Validación}{43}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Resultados Obtenidos}{44}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Comparación Cuantitativa Antes y Después de la Intervención}{44}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Cálculo de Mejora Porcentual en Accesibilidad}{44}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Evaluación de Usabilidad con Usuarios con Discapacidad Visual}{45}{subsection.3.4.3}%
+\contentsline {section}{\numberline {3.5}Cronograma y Presupuesto Ejecutado}{45}{section.3.5}%
+\contentsline {chapter}{\numberline {IV}Conclusiones y Recomendaciones}{46}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Conclusiones}{46}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Recomendaciones}{47}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Trabajos Futuros}{47}{section.4.3}%
+\contentsline {chapter}{REFERENCIAS}{48}{section*.11}%
+\contentsline {chapter}{GLOSARIO}{51}{chapter*.13}%
 \renewcommand {\cftchappresnum }{ANEXO~}
-\contentsline {chapter}{\numberline {A}Título del Anexo A}{57}{appendix.A}%
+\contentsline {chapter}{\numberline {A}Título del Anexo A}{52}{appendix.A}%
