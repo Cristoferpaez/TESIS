@@ -9,12 +9,12 @@
 \contentsline {subsection}{\numberline {1.5.1}Objetivo General}{24}{subsection.1.5.1}%
 \contentsline {subsection}{\numberline {1.5.2}Objetivos Específicos}{25}{subsection.1.5.2}%
 \contentsline {section}{\numberline {1.6}Alcance del Proyecto}{25}{section.1.6}%
-\contentsline {section}{\numberline {1.7}Fundamentación Teórica}{26}{section.1.7}%
-\contentsline {subsection}{\numberline {1.7.1}Accesibilidad Web y Pautas WCAG 2.2}{26}{subsection.1.7.1}%
+\contentsline {section}{\numberline {1.7}Fundamentación Teórica}{27}{section.1.7}%
+\contentsline {subsection}{\numberline {1.7.1}Accesibilidad Web y Pautas WCAG 2.2}{27}{subsection.1.7.1}%
 \contentsline {subsection}{\numberline {1.7.2}Diseño Centrado en el Usuario y Usabilidad Web}{27}{subsection.1.7.2}%
 \contentsline {subsection}{\numberline {1.7.3}Arquitectura Moderna de Frontend e Islas de Interactividad}{28}{subsection.1.7.3}%
 \contentsline {subsection}{\numberline {1.7.4}Tecnologías de Asistencia y Lectores de Pantalla}{28}{subsection.1.7.4}%
-\contentsline {subsection}{\numberline {1.7.5}Asistentes Inteligentes Basados en IA para la Accesibilidad Web}{28}{subsection.1.7.5}%
+\contentsline {subsection}{\numberline {1.7.5}Asistentes Inteligentes Basados en IA para la Accesibilidad Web}{29}{subsection.1.7.5}%
 \contentsline {chapter}{\numberline {II}Metodología}{30}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Contextualización}{30}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Diagnóstico Empírico de la Situación Actual}{31}{section.2.2}%
