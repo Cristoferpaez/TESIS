@@ -2,16 +2,16 @@
 \contentsline {chapter}{\numberline {I}Introducción}{16}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Contextualización}{16}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Estado del Arte}{17}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Brecha de Investigación Identificada}{18}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.1}Brecha de Investigación Identificada}{20}{subsection.1.2.1}%
 \contentsline {section}{\numberline {1.3}Planteamiento del Problema}{20}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Justificación}{22}{section.1.4}%
+\contentsline {section}{\numberline {1.4}Justificación}{23}{section.1.4}%
 \contentsline {section}{\numberline {1.5}Objetivos}{24}{section.1.5}%
 \contentsline {subsection}{\numberline {1.5.1}Objetivo General}{24}{subsection.1.5.1}%
 \contentsline {subsection}{\numberline {1.5.2}Objetivos Específicos}{25}{subsection.1.5.2}%
 \contentsline {section}{\numberline {1.6}Alcance del Proyecto}{25}{section.1.6}%
 \contentsline {section}{\numberline {1.7}Fundamentación Teórica}{27}{section.1.7}%
 \contentsline {subsection}{\numberline {1.7.1}Accesibilidad Web y Pautas WCAG 2.2}{27}{subsection.1.7.1}%
-\contentsline {subsection}{\numberline {1.7.2}Diseño Centrado en el Usuario y Usabilidad Web}{27}{subsection.1.7.2}%
+\contentsline {subsection}{\numberline {1.7.2}Diseño Centrado en el Usuario y Usabilidad Web}{28}{subsection.1.7.2}%
 \contentsline {subsection}{\numberline {1.7.3}Arquitectura Moderna de Frontend e Islas de Interactividad}{28}{subsection.1.7.3}%
 \contentsline {subsection}{\numberline {1.7.4}Tecnologías de Asistencia y Lectores de Pantalla}{28}{subsection.1.7.4}%
 \contentsline {subsection}{\numberline {1.7.5}Asistentes Inteligentes Basados en IA para la Accesibilidad Web}{29}{subsection.1.7.5}%

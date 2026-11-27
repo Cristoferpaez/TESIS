@@ -63,17 +63,17 @@ W.~Chiriboga-Casanova, N.~Medina-Medina, and P.~Paderewski-Rodr{\'\i}guez,
   ``Accessibility analysis of ecuadorian university web sites,'' \emph{InGenio
   Journal}, vol.~7, no.~2, pp. 137--157, 2024.
 
-\bibitem{jaeger2006assessing}
-P.~T. Jaeger, ``Assessing section 508 compliance on federal e-government web
-  sites: A multi-method, user-centered evaluation of accessibility for persons
-  with disabilities,'' \emph{Government Information Quarterly}, vol.~23, no.~2,
-  pp. 169--190, 2006.
+\bibitem{borodin2010more}
+Y.~Borodin, J.~P. Bigham, G.~Dausch, and I.~V. Ramakrishnan, ``More than meets
+  the eye: A survey of screen-reader browsing strategies,'' in
+  \emph{Proceedings of the 2010 International Cross Disciplinary Conference on
+  Web Accessibility (W4A '10)}.\hskip 1em plus 0.5em minus 0.4em\relax New
+  York, NY, USA: ACM, 2010, pp. 1--10.
 
-\bibitem{vollenwyder2023how}
-B.~Vollenwyder, S.~Petralito, G.~H. Iten, F.~Br{\"u}hlmann, K.~Opwis, and E.~D.
-  Mekler, ``How compliance with web accessibility standards shapes the
-  experiences of users with and without disabilities,'' \emph{International
-  Journal of Human-Computer Studies}, vol. 170, p. 102956, 2023.
+\bibitem{vigo2013coping}
+M.~Vigo and S.~Harper, ``Coping tactics employed by visually disabled users on
+  the web,'' \emph{International Journal of Human-Computer Studies}, vol.~71,
+  no.~11, pp. 1013--1025, 2013.
 
 \bibitem{binyamin2024accessibility}
 S.~S. Binyamin and M.~Z. Aslam, ``Evaluating higher education web accessibility
@@ -81,20 +81,12 @@ S.~S. Binyamin and M.~Z. Aslam, ``Evaluating higher education web accessibility
   \emph{Universal Access in the Information Society}, vol.~23, no.~2, pp.
   415--433, 2024.
 
-\bibitem{peltonen2021microfrontends}
-S.~Peltonen, L.~Mezzalira, and D.~Taibi, ``Motivations, benefits, and issues
-  for adopting micro-frontends: A multivocal literature review,''
-  \emph{Information and Software Technology}, vol. 136, p. 106571, 2021.
-
-\bibitem{richards2020fundamentals}
-M.~Richards and N.~Ford, \emph{Fundamentals of Software Architecture: An
-  Engineering Approach}.\hskip 1em plus 0.5em minus 0.4em\relax Sebastopol, CA,
-  USA: O'Reilly Media, 2020.
-
-\bibitem{biornhansen2020crossplatform}
-A.~Bi{\o}rn-Hansen, T.-M. Gr{\o}nli, G.~Ghinea, and C.~Alcock, ``A survey and
-  taxonomy of core concepts and approaches in mobile cross-platform and web
-  development,'' \emph{ACM Computing Surveys}, vol.~53, no.~4, pp. 1--34, 2020.
+\bibitem{pradhan2018accessibility}
+A.~Pradhan, K.~Mehta, and L.~Findlater, ````{Accessibility Came by Accident}'':
+  Use of voice-controlled intelligent personal assistants by people with
+  disabilities,'' in \emph{Proceedings of the 2018 CHI Conference on Human
+  Factors in Computing Systems (CHI '18)}.\hskip 1em plus 0.5em minus
+  0.4em\relax New York, NY, USA: ACM, 2018, pp. 1--13.
 
 \bibitem{conadis2023estadisticas}
 {Consejo Nacional para la Igualdad de Discapacidades (CONADIS)},
@@ -117,6 +109,16 @@ J.~Brooke, ``{SUS}: A `quick and dirty' usability scale,'' in \emph{Usability
   Evaluation in Industry}, P.~W. Jordan, B.~Thomas, I.~L. McClelland, and
   B.~Weerdmeester, Eds.\hskip 1em plus 0.5em minus 0.4em\relax London, UK:
   Taylor \& Francis, 1996, pp. 189--194.
+
+\bibitem{peltonen2021microfrontends}
+S.~Peltonen, L.~Mezzalira, and D.~Taibi, ``Motivations, benefits, and issues
+  for adopting micro-frontends: A multivocal literature review,''
+  \emph{Information and Software Technology}, vol. 136, p. 106571, 2021.
+
+\bibitem{richards2020fundamentals}
+M.~Richards and N.~Ford, \emph{Fundamentals of Software Architecture: An
+  Engineering Approach}.\hskip 1em plus 0.5em minus 0.4em\relax Sebastopol, CA,
+  USA: O'Reilly Media, 2020.
 
 \bibitem{sommerville2016software}
 I.~Sommerville, \emph{Software Engineering}, 10th~ed.\hskip 1em plus 0.5em
